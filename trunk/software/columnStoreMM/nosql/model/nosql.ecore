@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="nosql" nsURI="http://nosql/1.0" nsPrefix="nosql">
+  <eClassifiers xsi:type="ecore:EClass" name="Cluster">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="keyspaces" upperBound="-1"
+        eType="#//KeySpace"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KeySpace">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cluster" eType="#//Cluster"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columnfamilies" upperBound="-1"
+        eType="#//ColumnFamily"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="replicationFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="replicaPlacementStrategy"
+        eType="#//ReplicaPlacementStrategies"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ColumnFamily">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="keyspace" lowerBound="1"
+        eType="#//KeySpace"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
+        eType="#//Column"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Column">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columnfamilies" eType="#//ColumnFamily"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rowkey" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columnfamilies" upperBound="-1"
+        eType="#//ColumnFamily"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleColumn" eSuperTypes="#//Column">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//Types"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SuperColumn" eSuperTypes="#//Column">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="simplecolumns" lowerBound="1"
+        upperBound="-1" eType="#//SimpleColumn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Types" instanceTypeName="Types">
+    <eLiterals name="ascii" literal="EEnumLiteral0"/>
+    <eLiterals name="bigint" value="1"/>
+    <eLiterals name="blob" value="2"/>
+    <eLiterals name="boolean" value="3"/>
+    <eLiterals name="counter" value="4"/>
+    <eLiterals name="decimal" value="5"/>
+    <eLiterals name="double" value="6"/>
+    <eLiterals name="float" value="7"/>
+    <eLiterals name="inet" value="8"/>
+    <eLiterals name="int" value="9"/>
+    <eLiterals name="text" value="10"/>
+    <eLiterals name="timestamp" value="11"/>
+    <eLiterals name="timeuuid" value="12"/>
+    <eLiterals name="uuid" value="13"/>
+    <eLiterals name="varchar" value="14"/>
+    <eLiterals name="varint" value="15"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="EDataType0"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ReplicaPlacementStrategies">
+    <eLiterals name="SimpleStrategy"/>
+    <eLiterals name="OldNetworkTopologyStrategy" value="1"/>
+    <eLiterals name="NetworkTopologyStrategy" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CollectionTypes">
+    <eLiterals name="set"/>
+    <eLiterals name="list" value="1"/>
+    <eLiterals name="map" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CollectionColumn" eSuperTypes="#//Column">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//CollectionTypes"/>
+  </eClassifiers>
+</ecore:EPackage>

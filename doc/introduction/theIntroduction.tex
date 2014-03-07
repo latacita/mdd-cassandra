@@ -1,0 +1,125 @@
+%%==================================================================%%
+%% Author : Abascal Fernández, Patricia                             %%
+%%          Sánchez Barreiro, Pablo                                 %%
+%% Version: 1.2, 18/06/2013                                         %%                                                                                    %%                                                                  %%
+%% Memoria del Proyecto Fin de Carrera                              %%
+%% Introducción                                                     %%
+%%==================================================================%%
+
+%%==================================================================%%
+%% NOTA(Pablo): Al final vamos a escribir la introducción de arriba %%
+%%              a abajo, es decir, comenzamos hablando de Líneas de %%
+%%              Productos Software, luego hablamos de TENTE,        %%
+%%              luego de Te.NET, del patrón Slicer y por último     %%
+%%              ya hablamos de los objetivos concretos del proyecto %%
+%%==================================================================%%
+
+Las \emph{Líneas de Productos Software}~\cite{pohl:2010,kakola:2006} se han popularizado en la última década como un adecuado paradigma para el desarrollo, mantenimiento y gestión de proyectos software altamente similares. Un ejemplo de ello sería el producto Partenón\footnote{http://www.isban.es/partenon.html (Accedido el 17/06/2013)} desarrollada por ISBAN (\emph{Ingeniería del Software Bancario}) el cual proporciona un sistema software de gestión bancaria a las diferentes entidades del Grupo Santander en Europa y Estados Unidos.
+Partenón es un \emph{corebanking} orientado al cliente que unifica el entorno operativo y de control, trasladando a cada entidad bancaria las prácticas que desean ser aplicadas de forma global a todas las entidades del Grupo Santander.
+
+No obstante, Partenón en sí no es un producto operativo. Partenón necesita ser personalizado y adecuado a las necesidades particulares de cada entidad. Por ejemplo, dependiendo del país donde opere cada entidad, habrá que adaptar partes de dicha aplicación para que cumpla con el marco legal de dicho país. De igual forma, dependiendo de si se trata de une entidad de banca on-line, de una entidad física o de una entidad de banca privada, se hará necesario instalar y desplegar una u otra serie de servicios.
+
+Si este proceso se realizara siguiendo un enfoque tradicional, necesitaríamos desarrollar cada producto solicitado de forma específica e independiente del resto. A partir de un conjunto de elementos software reutilizables, procederíamos a crear nuevas versiones de dichos elementos, de forma que se adapten a las necesidades del producto concreto que deseamos crear. Por tanto, la personalización del producto requiere un tiempo y esfuerzo de desarrollo no despreciable, lo que constituye un cierto coste. Además, a medida que crecen los productos concretos creados a partir del núcleo Partenón, nos encontraríamos con más y más versiones, ligeramente diferentes entre ellas, de los mismos elementos software. Llegado un cierto punto, la gestión de estas múltiples versiones podría volverse un problema inabordable.
+
+La finalidad última de una línea de productos software es evitar estos problemas mediante la aplicación de una idea basada en parte en las líneas de montaje industrial para la producción en masa. El objetivo de un línea de productos software es crear una infraestructura base común adecuada a partir de la cual se puedan derivar, tan automáticamente como sea posible, productos concretos pertenecientes a una familia de productos software, donde cada producto está personalizado de acuerdo a las necesidades de cada cliente particular concreto.
+
+En relación con las líneas de productos software, y dentro del proyecto europeo \emph{AMPLE (Aspect-oriented Model-Driven Product Line Engineering)}~\footnote{www.ample-project.net}, el profesor Pablo Sánchez, actualmente adscrito a la Universidad de Cantabria, junto con otros investigadores, creó la metodología TENTE~\cite{fuentes:2009:caise,sanchez:2011:tente}. La principal novedad de dicha metodología era la de integrar diversos avances que se habían ido realizando en los paradigmas del desarrollo software orientado a características y el desarrollo software dirigido por modelos.
+
+La \emph{orientación a características}~\cite{kastner:2008} tiene como objetivo encapsular porciones coherentes de la funcionalidad proporcionadas por una aplicación en módulos independientes llamados \emph{características}. La orientación a características eleva el nivel al cual se agrupa la funcionalidad de un sistema del concepto de clase al concepto de \emph{conjunto} o \emph{familia de clases}, las cuales se añaden o eliminan de una aplicación como piezas o módulos indivisibles. De esta forma, las variaciones existentes en una familia de productos software se encapsulan en \emph{características}, las cuales se añaden o eliminan de un producto concreto de acuerdo a las necesidades de cada cliente en particular.
+
+El \emph{desarrollo software dirigido por modelos}, entre otros objetivos, pretende automatizar partes del proceso de desarrollo de un producto software mediante la automatización de ciertos pasos del mismo, ya sea mediante técnicas de análisis de modelos, simulación, transformación de un modelo en otro o generación de código desde los modelos. En el caso de las líneas de productos software, el desarrollo software dirigido por modelos se suele utilizar principalmente para automatizar el proceso de configuración o personalización de un producto concreto a partir de un conjunto común de elementos software reutilizables~\cite{sami:2010}.
+
+Utilizando técnicas de desarrollo software dirigido por modelos, se puede generar el código necesario para la inclusión, exclusión configuración de las características una familia de productos software, a partir de modelos de alto nivel que especifican qué características deben estar presentes un determinado producto~\cite{sami:2010}.
+
+Una vez definida la metodología TENTE, se decidió proceder a su transferencia tecnológica. Fue en este punto donde se encontró un obstáculo que en principio parecía insalvable. TENTE está basado en la utilización de un lenguaje orientados a características que soporte el concepto de familia de clases, al estilo de \emph{CaesarJ}~\cite{aracic:2006} u \emph{ObjectTeams}~\cite{stephan:2002}. Desafortundamente, la mayor parte de las empresas del sector de desarrollo software se mostraron bastante reticentes a a adoptar como lenguaje de programación un lenguaje de este estilo debido fundamentalmente a dos motivos: (1) el coste de aprendizaje por parte de sus programadores de los nuevos conceptos utilizados por este tipo de lenguajes; y, (2) la utilización de un nuevo lenguaje podría dejar obsoletas muchas de las herramientas de la empresa como las \emph{suites} para ejecución de pruebas, al estilo de \emph{JUnit}~\cite{alasdair:2004}.
+
+Por tanto, se decidió que si se quería transferir la metodología TENTE a la industria software, debíamos rediseñar dicha metodología para que utilizase como lenguaje de programación un lenguaje orientado a objetos convencional, al estilo de Java o C\#, en lugar de CaesarJ. Dada la preferencia de la mayoría de las empresas del sector industrial cántabro por la plataforma .Net~\cite{david:2006}, se decidió elegir como lenguaje destino C\#, el lenguaje de programación insignia de la plataforma .Net. La siguiente sección describe el estado actual de la metodología .Net.
+
+
+
+
+
+
+
+%%===================================================================%%
+%% NOTA(Pablo): Mira a ver si de esto quieres aprovechar algo
+%%===================================================================%%
+%%
+%% El uso de las líneas de producto software permite la reducción
+%% de costes de desarrollo por la reutilización de la tecnología en
+%% los distintos sistemas, a mayor cantidad de productos a desarrollar
+%% mayor rentabilidad respecto a los sistemas creados individualmente.
+%% Ofrece alta calidad en el producto resultante porque se realizan
+%% pruebas de los componentes de la plataforma en diferentes tipos
+%% de producto para ayudar a detectar y corregir errores. Reduce el
+%% tiempo de creación debido a la reutilización de los componentes ya
+%% existentes para cada nuevo producto y reduce también el esfuerzo
+%% requerido por el mantenimiento ya que cuando se cambia algo de un
+%% componente de la plataforma, ese cambio se propaga a todos los
+%% componentes que lo empleen, y de esta forma se reduce el esfuerzo
+%% de aprender cómo funciona cada elemento individualmente.
+%%
+%% En contraposición a la flexibilidad que ofrece el desarrollo de
+%% software individual, específico para cliente pero que supone grandes
+%%  costes, las líneas de producto software delimitan las variaciones
+%% de sus productos a un conjunto prefijado y optimizan, por tanto, los
+%% procesos para dichas variaciones.
+%%
+%%
+%% La línea de productos software se puede extrapolar a otros ámbitos de
+%% producción. Un ejemplo clásico de línea de productos es la fabricación
+%% de automóviles, donde se ofrece al cliente un modelo base al cual puede
+%% añadir aquellos extras que así desee, personalizando el vehículo y
+%%  adaptándolo a sus necesidades. De esta forma partiendo del mismo modelo
+%% y de unas variaciones adicionales preestablecidas, y diseñadas de tal
+%% forma que se adaptan perfectamente al modelo seleccionado, se puede
+%% obtener gran cantidad de variaciones en el modelo final de manera
+%% automática.
+%%
+%%  En el ámbito del desarrollo software, las empresas ya no se centran en la creación
+%%  de un producto específico para un cliente (por ejemplo, diseñar y construir un
+%%  portal para la Universidad de Cantabria), sino en un domino (por ejemplo, diseñar
+%%  y construir un portal para universidades). Los principales desafíos a los que se
+%%  enfrentan las empresas son: delimitar dicho dominio, identificar las distintas
+%%  variaciones que se van a permitir y desarrollar la infraestructura que permita
+%%  realizar los productos a bajo coste sin reducir la calidad.
+%%
+
+%%==================================================================%%
+%% NOTA(Pablo): Este ejemplo no me gusta mucho, pero se podría      %%
+%%              utilizar                                            %%
+%%==================================================================%%
+%%
+%% Por ejemplo, supongamos que un cliente quiere un vehículo con varias
+%% características adicionales entre las que se encuentran: aire
+%% acondicionado, sensor de lluvia, medidor de temperatura en grados
+%% Celsius y GPS integrado en idioma español e inglés. La base de
+%% nuestro producto final será el vehículo, al cual iremos añadiendo
+%% las distintas características requeridas por el cliente. Hay
+%% algunas peculiaridades, la clase del medidor de temperatura puede
+%% estar a su vez fragmentada en varios componentes (temperatura en
+%% Celsius, temperatura en Farentheit) y de los cuales en el modelo
+%% final solo usaremos uno de ellos, el de temperatura en Celsius.
+%% Lo mismo ocurre con el selector de idiomas para el GPS, solo se
+%% elegirá el idioma español e inglés. De esta forma, el producto
+%% final juntará todas estas características dentro de un mismo
+%% elemento que será el vehículo entregado al usuario final
+%% atendiendo a sus requisitos.
+%%
+%%==================================================================%%
+
+
+%%%%%%%%%%%% Metodologías de desarrollo de líneas de productos software %%%%%%%%%%%%
+
+%%===================================================================%%
+%% NOTA(Pablo): Esto se va antecedentes
+%%===================================================================%%
+%%  El proceso de desarrollo de la línea de productos software se divide en dos procesos \cite{pohl:2010}: Ingeniería de %% Dominio e Ingeniería de la Aplicación. Por un lado la \emph{Ingeniería del Dominio} se encarga de la construcción de %% la plataforma mediante la delimitación del conjunto de aplicaciones para las que está creada, además de definir y
+%% construir qué características serán reusables y cuales específicas para cada uno de los productos que se desean
+%% fabricar.
+%%
+%% Por otra parte, la \emph{Ingeniería de la Aplicación} se encarga de la creación de los productos para clientes
+%% concretos. Partiendo de la plataforma creada en la fase de Ingeniería de Dominio, y reutilizando tantos componentes
+%% como fuera necesario, se crea una especialización del producto base acorde a los requisitos del cliente.
+%%
+%%

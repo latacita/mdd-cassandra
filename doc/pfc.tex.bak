@@ -1,0 +1,133 @@
+%%==================================================================%%
+%% Author : Abascal Fernández, Patricia                             %%
+%%          Sánchez Barreiro, Pablo                                 %%
+%% Version: 1.0, 14/02/2013                                         %%                                                                                    %%                                                                  %%
+%% Memoria del Proyecto Fin de Carrera                              %%
+%% Archivo raíz                                                     %%
+%%==================================================================%%
+
+\documentclass[a4paper,11pt]{itsas_pfc}
+
+%=====================================================================%
+%                       My imported packages                          %
+%=====================================================================%
+\usepackage[latin1]{inputenc}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{url}
+\usepackage{amsfonts}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{tabulary}
+\usepackage{longtable}
+\usepackage{natbib}
+
+% File with main configuration
+\input{config/pfc_options.tex}
+
+% File with some names
+\input{config/rename.tex}
+
+%=====================================================================%
+%                           Authoring's details                       %
+%=====================================================================%
+\newcommand{\myname}{Patricia Abascal Fernández}  % name of author
+\newcommand{\myboss}{Pablo Sánchez Barreiro} % name of supervisor
+\newcommand{\thesistitle}{Desarrollo de un entorno dirigido por modelos para el desarrollo de líneas de productos software para la plataforma .NET}
+
+\newcommand{\englishtitle}{Development of a model-driven development enviroment for software product lines on the .NET platform}
+												  % work title
+\newcommand{\worktype}{Proyecto Fin de Carrera}   % work type
+\newcommand{\logo}{images/uc.eps}            % logo file (e.g. for the cover)
+
+%=====================================================================%
+%                     Definition of my own commands                   %
+%=====================================================================%
+\newcommand{\nota}[1]{\color{red}$\ll$#1$\gg$\color{black}}
+\newcommand{\imp}[1]{{\small{\sf #1}}}
+\newcommand{\stereotype}[1]{$\ll${\small{\sf #1}}$\gg$}
+\newcommand{\todo}[1]{\color{red}$\ll$TODO: #1$\gg$\color{black}}
+
+\setcounter{minitocdepth}{1}
+
+\begin{document}
+
+\lstdefinelanguage{CSharp}
+{
+ morecomment = [l]{//},
+ morecomment = [l]{///},
+ morecomment = [s]{/*}{*/},
+ morestring=[b]",
+ sensitive = true,
+ morekeywords = {abstract,  event,  new,  struct,
+   as,  explicit,  null,  switch,
+   base,  extern,  object,  this,
+   bool,  false,  operator,  throw,
+   break,  finally,  out,  true,
+   byte,  fixed,  override,  try,
+   case,  float,  params,  typeof,
+   catch,  for,  private,  uint,
+   char,  foreach,  protected,  ulong,
+   checked,  goto,  public,  unchecked,
+   class,  if,  readonly,  unsafe,
+   const,  implicit,  ref,  ushort,
+   continue,  in,  return,  using,
+   decimal,  int,  sbyte,  virtual,
+   default,  interface,  sealed,  volatile,
+   delegate,  internal,  short,  void,
+   do,  is,  sizeof,  while,
+   double,  lock,  stackalloc,
+   else,  long,  static,
+   enum,  namespace,  string}
+}
+% Cover page
+\input{cover/cover.tex}
+
+\input{cover/firstPage.tex}
+
+% reset page numbering
+\input{config/begin.tex}
+
+% acknowledgement
+\input{cover/acknowledgements.tex} % acknowledgements
+
+% Preface
+\input{introduction/preface.tex}   % prefacio español
+\input{introduction/preface(english).tex}   % prefacio inglés
+
+% Toc
+\input{config/toc.tex}
+
+\input{Config/headers.tex}
+
+\input{config/chapters.tex}
+
+% Capítulo 1: Introducción
+\input{introduction/introduction.tex} % Chapter 1
+
+% Capítulo 2: Resumen del Estado del Arte
+\input{background/background.tex}
+
+% Capítulo 3: Domain Engineering
+\input{domainEngineering/domain.tex}
+
+% Capítulo 4: Application Engineering
+\input{applicationEngineering/application.tex}
+
+% Capítulo 5: Discusión, Conclusiones y Trabajos Futuros
+\input{applicationEngineering/application.tex}
+
+% CONTENT: Appendices, if desired
+% \input{config/appendix.tex}
+
+% Appendix A:
+% \input{populo/populo.tex} % Appendix I
+
+% CONFIG: Bibliography style
+% \input{config/bibliography.tex}
+% \bibliography{references/references}
+
+\end{document}

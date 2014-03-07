@@ -1,0 +1,42 @@
+%%==================================================================%%
+%% Author : Abascal Fernández, Patricia                             %%
+%% Author : Sánchez Barreiro, Pablo                                 %%
+%% Version: 1.1, 21/04/2013                                         %%
+%%                                                                  %%
+%% Memoria del Proyecto Fin de Carrera                              %%
+%% Capítulo Domain Engineering, Archivo raíz                        %%
+%%==================================================================%%
+
+\chapterheader{Ingeniería del Dominio}{Ingeniería del Dominio}
+\label{chap:domain}
+
+Este capítulo describe el proceso de desarrollo de los generadores de código para la fase de \emph{Ingeniería del Dominio} dentro de la metodología Te.Net. Para ello primero describiremos las reglas que especifican cómo se transforman los elementos del modelo a código C\#. A continuación,  profundizaremos en el desarrollo e implementación de los generadores de código. Para ilustrar cómo funcionan los generadores de código, proporcionaremos un ejemplo sencillo. Concluiremos detallando cómo se han realizado las pruebas de los generadores de código creados.
+
+\chaptertoc
+
+\section{Introducción}
+\label{domain:sec:intro}
+
+\input{domainEngineering/introduction.tex}
+
+\section{Transformaciones de Modelo UML a C\#}
+\label{domain:sec:transf}
+
+\input{domainEngineering/transformation(2).tex}
+
+\section{Generadores de Código C\#}
+\label{domain:sec:gen}
+
+\input{domainEngineering/gen.tex}
+
+\section{Ejemplo de Generación de Código C\#: Caso Sencillo}
+\label{domain:sec:ejsencillo}
+\input{domainEngineering/ejemploSencillo.tex}
+
+\section{Pruebas}
+\label{domain:sec:pruebas}
+\input{domainEngineering/pruebas.tex}
+
+\section{Sumario}
+
+Durante este capítulo se ha descrito el proceso de desarrollo de los generadores de código para la fase de \emph{Ingeniería del Dominio} de la metodología Te.Net. Para ello, primero se ha analizado cómo se transforman los elementos de un modelo UML 2.0 orientado a características en código C\#. A continuación, se ha descrito de forma superficial la implementación de los generadores de código, mostrando el funcionamiento de una sencilla plantilla. Por último, se han descrito las pruebas realizadas.

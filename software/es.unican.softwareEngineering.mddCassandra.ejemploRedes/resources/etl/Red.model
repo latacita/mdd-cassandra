@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<red:Red xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:red="http://red/1.0" nameRed="Red1">
+  <conexiones nameCable="A1">
+    <children xsi:type="red:PC" nameNodo="PC1"/>
+    <children xsi:type="red:Router" nameNodo="Router1"/>
+  </conexiones>
+  <conexiones nameCable="A2">
+    <children xsi:type="red:PC" nameNodo="PC2"/>
+    <children xsi:type="red:PC" nameNodo="PC3"/>
+  </conexiones>
+  <conexiones nameCable="A3">
+    <children xsi:type="red:Router" nameNodo="Router2"/>
+    <children xsi:type="red:PC" nameNodo="PC4"/>
+  </conexiones>
+</red:Red>

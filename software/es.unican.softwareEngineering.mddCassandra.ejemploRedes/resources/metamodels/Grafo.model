@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<grafo:Grafo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:grafo="http://grafo/1.0" xmi:id="_LAKK4JvvEeOHAr4A8-keww" nombreGrafo="Red1">
+  <conexiones xmi:id="_Lm_hYJvvEeOHAr4A8-keww" nombreArista="A1">
+    <children xmi:id="_ycB1MJ2YEeOs9KxkUpjCkw" nombreNodo="PC1"/>
+    <children xmi:id="_BPtr8J2ZEeOs9KxkUpjCkw" color="A" nombreNodo="R1"/>
+  </conexiones>
+  <conexiones xmi:id="_MhmvgJvvEeOHAr4A8-keww" nombreArista="A2">
+    <children xmi:id="_QhfsgJvvEeOHAr4A8-keww" nombreNodo="PC2"/>
+    <children xmi:id="_REBKwJvvEeOHAr4A8-keww" nombreNodo="PC3"/>
+  </conexiones>
+  <conexiones xmi:id="_Nhb00JvvEeOHAr4A8-keww" nombreArista="A3">
+    <children xmi:id="_RgSQAJvvEeOHAr4A8-keww" color="A" nombreNodo="R2"/>
+    <children xmi:id="_SCgMQJvvEeOHAr4A8-keww" nombreNodo="R3"/>
+  </conexiones>
+</grafo:Grafo>

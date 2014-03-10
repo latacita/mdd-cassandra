@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Red -->
+      <package
+            uri="http://red/1.0"
+            class="red.RedPackage"
+            genModel="model/Red.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Grafo -->
+      <package
+            uri="http://grafo/1.0"
+            class="grafo.GrafoPackage"
+            genModel="model/Grafo.genmodel"/>
+   </extension>
+
+</plugin>

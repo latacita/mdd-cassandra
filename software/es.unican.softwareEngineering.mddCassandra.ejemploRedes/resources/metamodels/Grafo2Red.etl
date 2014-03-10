@@ -1,0 +1,35 @@
+pre {
+	"Running ETL".println();
+	var Red : new Red!Red;
+	Red.nameRed="Red1";
+	var iPC:new Integer=1;
+	var iRouter:new Integer=1;
+}
+
+rule Arista2Cable 
+	transform a : Grafo!Arista
+	to r : Red!Cable {	
+	r.nameCable = a.nombreArista;
+	if (a.parent.isDefined()) {
+		r.parent=Red;
+		for (nodoArista in a.children) {
+			if(nodoArista.color=TColor#R){
+				var PC : new Red!PC;
+				PC.nameNodo="PC"+iPC;
+				r.children.add(PC);
+				iPC=iPC+1;	
+			}
+			else{
+				var Router : new Red!Router;
+				Router.nameNodo="Router"+iRouter;
+				r.children.add(Router);
+				iRouter=iRouter+1;
+			}
+		}
+	}	
+	
+
+}
+
+
+

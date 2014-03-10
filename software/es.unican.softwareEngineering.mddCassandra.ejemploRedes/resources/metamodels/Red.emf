@@ -1,0 +1,29 @@
+@namespace(uri="http://red/1.0", prefix="red")
+package red;
+
+
+class Red {
+  val Cable[*] conexiones;
+  attr String nameRed;
+}
+
+class Cable {
+  attr String nameCable;
+  val Nodo[*]#parent children;
+  ref Red#children parent;
+}
+
+class Nodo {
+  attr String nameNodo;
+  ref Cable#children parent;
+}
+
+class PC extends Nodo {
+}
+
+class Router extends Nodo {
+}
+
+
+
+

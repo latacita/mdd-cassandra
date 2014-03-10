@@ -1,0 +1,25 @@
+@namespace(uri="http://grafo/1.0", prefix="grafo")
+package grafo;
+
+class Grafo {
+  val Arista[*]#parent conexiones;
+  attr String nombreGrafo;
+}
+
+class Arista {
+  attr String nombreArista;
+  val Nodo[*]#parent children;
+  ref Grafo#conexiones parent;
+}
+
+class Nodo {
+  attr TColor color;
+  attr String nombreNodo;
+  ref Arista#children parent;
+}
+
+enum TColor {
+  R = 0;
+  A = 1;
+}
+

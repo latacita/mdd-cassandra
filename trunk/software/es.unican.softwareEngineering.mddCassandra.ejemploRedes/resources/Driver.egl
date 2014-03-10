@@ -1,0 +1,5 @@
+[%
+	var t: Template := TemplateFactory.load('Red.egl');
+	
+	t.store('Red.html',true);
+%]

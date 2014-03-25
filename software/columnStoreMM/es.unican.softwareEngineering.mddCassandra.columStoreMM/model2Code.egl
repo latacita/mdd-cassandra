@@ -1,0 +1,59 @@
+[%
+	var keyspace: KeySpace := KeySpace.allInstances().at(0);
+	var s: String;
+	var prk:String;
+%]
+
+CASSANDRA CQL
+CREATE KEYSPACE [%=keyspace.name%]
+WITH replication = {'class':'[%=keyspace.replicaPlacementStrategy%]', 'replication_factor':[%=keyspace.replicationFactor%]};
+
+CASSANDRA CLI
+CREATE KEYSPACE [%=keyspace.name%]
+WITH placement_strategy='org.apache.cassandra.locator.[%=keyspace.replicaPlacementStrategy%]'
+and strategy_options= [{replication_factor:[%=keyspace.replicationFactor%]}];
+
+USE [%=keyspace.name%];
+
+CQL
+
+[% for (cf in keyspace.columnFamilies){%]
+CREATE TABLE [%=cf.name%](
+	[% for (cols in cf.columns){
+		s=cols.name.toString();
+		for (c in cols.type){ 
+			if (c.isTypeOf(PrimitiveType)) 
+				s=s+" "+c.kind.toString();
+				
+			if (c.isTypeOf(CollectionType)){ 
+				if(c.kind.toString()=="map")
+					s=s+" "+c.kind.toString()+"<timestamp,"+c.baseType.kind.toString()+">";  
+ 				else  
+					s=s+" "+c.kind.toString()+"<"+c.baseType.kind.toString()+">"; 
+			}
+		} 
+	   s=s+",";%]
+       [%=s%]
+       [%}%]
+       PRIMARY KEY([% for (pk in cf.primaryKey) {
+       					prk=pk.name;
+       					if (hasMore)
+							prk=prk+","; 
+					}
+					%][%=prk%][%prk="";%])
+);
+
+[%}%]
+
+CASSANDRA CLI
+[% for (cf in keyspace.columnFamilies){%]
+CREATE COLUMN FAMILY [%=cf.name%]
+WITH comparator = UTF8Type
+AND key_validation_class=UTF8Type
+AND column_metadata = [
+[% for (cols in cf.columns){%]
+{column_name: [%=cols.name%], validation_class: UTF8Type}
+[%}%]
+];
+
+[%}%]

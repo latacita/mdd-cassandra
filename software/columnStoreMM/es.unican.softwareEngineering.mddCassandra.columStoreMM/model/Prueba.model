@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_T3mToK7dEeO3N5WC1M07_Q" name="Prueba" replicationFactor="1">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_XmrNcK7dEeO3N5WC1M07_Q" keyspace="_T3mToK7dEeO3N5WC1M07_Q" name="A" primaryKey="_aADfoK7dEeO3N5WC1M07_Q">
+    <columns xmi:id="_aADfoK7dEeO3N5WC1M07_Q" name="A1">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_kGWA0K-mEeOOTOe6al4CvA" kind="float"/>
+    </columns>
+    <columns xmi:id="_nnelQK-mEeOOTOe6al4CvA" name="A2">
+      <type xsi:type="nosql:CollectionType" xmi:id="_nLDVoLBvEeOMC8bJ3TMWbw" baseType="_kGWA0K-mEeOOTOe6al4CvA" kind="map"/>
+    </columns>
+    <columns xmi:id="_FZfOsLBmEeOMC8bJ3TMWbw" name="A3">
+      <type xsi:type="nosql:CollectionType" xmi:id="_eQwwoLBuEeOMC8bJ3TMWbw" baseType="_kGWA0K-mEeOOTOe6al4CvA" kind="list"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_8IlMULEbEeOBp7e-5NMlWA" keyspace="_T3mToK7dEeO3N5WC1M07_Q" name="B" primaryKey="_aADfoK7dEeO3N5WC1M07_Q _90vMILEbEeOBp7e-5NMlWA">
+    <columns xmi:id="_90vMILEbEeOBp7e-5NMlWA" name="B1">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BpxkALEcEeOBp7e-5NMlWA"/>
+    </columns>
+    <columns xsi:type="nosql:StandardColumn" xmi:id="_-Vd6oLEbEeOBp7e-5NMlWA" name="B2" timestamp="0007-08-07T00:00:00.000+0100">
+      <type xsi:type="nosql:CollectionType" xmi:id="_COhP0LEcEeOBp7e-5NMlWA" baseType="_BpxkALEcEeOBp7e-5NMlWA"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_Zu6YALEcEeOBp7e-5NMlWA" keyspace="_T3mToK7dEeO3N5WC1M07_Q" name="C">
+    <columns xmi:id="_b_q5sLEcEeOBp7e-5NMlWA" name="C1">
+      <type xsi:type="nosql:CollectionType" xmi:id="_kb3p8LEcEeOBp7e-5NMlWA" baseType="_kGWA0K-mEeOOTOe6al4CvA"/>
+    </columns>
+    <columns xsi:type="nosql:StandardColumn" xmi:id="_cldHULEcEeOBp7e-5NMlWA" name="C2">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_hIwTYLEcEeOBp7e-5NMlWA" kind="uuid"/>
+    </columns>
+  </columnFamilies>
+</nosql:KeySpace>

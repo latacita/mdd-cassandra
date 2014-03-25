@@ -1,0 +1,5 @@
+[%
+	var t: Template := TemplateFactory.load('model2Code.egl');
+	
+	t.store('cassandra.txt',true);
+%]

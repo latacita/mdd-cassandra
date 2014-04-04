@@ -1,0 +1,16 @@
+<project default="run-tests">
+
+	<target name="run-tests">
+		<epsilon.emf.register file="nosql.ecore"/>
+		<epsilon.eunit src="./model/tests/test2/tests.eunit" failOnErrors="false">
+			<parameter name="basedir" value="${basedir}"/>
+		</epsilon.eunit>
+	</target>
+
+	<target name="driver">
+		<epsilon.egl src="./model/tests/test2/driver.egl">
+			<model ref="Test2"/>
+		</epsilon.egl>
+	</target>
+
+</project>

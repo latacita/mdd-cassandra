@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_eO90sLqREeOyO595OC53bA" name="A" replicationFactor="1">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_e8jTcLqREeOyO595OC53bA" keyspace="_eO90sLqREeOyO595OC53bA" name="C" primaryKey="_hS0AMLqREeOyO595OC53bA">
+    <columns xmi:id="_hS0AMLqREeOyO595OC53bA" name="B">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_iXGHsLqREeOyO595OC53bA" kind="text"/>
+    </columns>
+  </columnFamilies>
+</nosql:KeySpace>

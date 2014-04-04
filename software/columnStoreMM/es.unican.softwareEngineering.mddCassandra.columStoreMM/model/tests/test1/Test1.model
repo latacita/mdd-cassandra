@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_w0mtsLkeEeOdqZT21VVegQ" name="Test1" replicationFactor="1">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_x9EKkLkeEeOdqZT21VVegQ" keyspace="_w0mtsLkeEeOdqZT21VVegQ" name="users" primaryKey="_I4asALkfEeOdqZT21VVegQ">
+    <columns xmi:id="_I4asALkfEeOdqZT21VVegQ" name="idUsers">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_fPwhcLkfEeOdqZT21VVegQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_KHaOsLkfEeOdqZT21VVegQ" name="given">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_gk3TMLkfEeOdqZT21VVegQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_K3njoLkfEeOdqZT21VVegQ" name="surname">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_hqoocLkfEeOdqZT21VVegQ" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_1RNb4LkeEeOdqZT21VVegQ" keyspace="_w0mtsLkeEeOdqZT21VVegQ" name="images" primaryKey="_AuXmQLkgEeOdqZT21VVegQ">
+    <columns xmi:id="_AuXmQLkgEeOdqZT21VVegQ" name="name">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_8BRvkLkgEeOdqZT21VVegQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_CsFQILkgEeOdqZT21VVegQ" name="owner">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_8wJAsLkgEeOdqZT21VVegQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_DQiBALkgEeOdqZT21VVegQ" name="date">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_9fc9wLkgEeOdqZT21VVegQ" kind="timestamp"/>
+    </columns>
+    <columns xmi:id="_Dw90kLkgEeOdqZT21VVegQ" name="tags">
+      <type xsi:type="nosql:CollectionType" xmi:id="_-PWwsLkgEeOdqZT21VVegQ" baseType="_fPwhcLkfEeOdqZT21VVegQ"/>
+    </columns>
+    <columns xmi:id="_Pq1bALkfEeOdqZT21VVegQ" name="favs">
+      <type xsi:type="nosql:CollectionType" xmi:id="_jCkEsLkfEeOdqZT21VVegQ" baseType="_fPwhcLkfEeOdqZT21VVegQ" kind="map"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_10B1ELkeEeOdqZT21VVegQ" keyspace="_w0mtsLkeEeOdqZT21VVegQ" name="plays" primaryKey="_YIbAcLkhEeOdqZT21VVegQ">
+    <columns xmi:id="_YIbAcLkhEeOdqZT21VVegQ" name="idPlays">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_aj5kYLkhEeOdqZT21VVegQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_YeTJ0LkhEeOdqZT21VVegQ" name="game">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_m2msILkhEeOdqZT21VVegQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_YvGl8LkhEeOdqZT21VVegQ" name="players">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_nWlzwLkhEeOdqZT21VVegQ" kind="int"/>
+    </columns>
+    <columns xmi:id="_ZZ85wLkhEeOdqZT21VVegQ" name="scores">
+      <type xsi:type="nosql:CollectionType" xmi:id="_oXTp4LkhEeOdqZT21VVegQ" baseType="_nWlzwLkhEeOdqZT21VVegQ" kind="list"/>
+    </columns>
+  </columnFamilies>
+</nosql:KeySpace>

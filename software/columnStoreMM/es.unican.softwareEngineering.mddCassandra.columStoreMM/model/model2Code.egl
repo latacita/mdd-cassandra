@@ -4,18 +4,11 @@
 	var prk:String;
 %]
 
-CASSANDRA CQL
 CREATE KEYSPACE [%=keyspace.name%]
 WITH replication = {'class':'[%=keyspace.replicaPlacementStrategy%]', 'replication_factor':[%=keyspace.replicationFactor%]};
 
-CASSANDRA CLI
-CREATE KEYSPACE [%=keyspace.name%]
-WITH placement_strategy='org.apache.cassandra.locator.[%=keyspace.replicaPlacementStrategy%]'
-and strategy_options= [{replication_factor:[%=keyspace.replicationFactor%]}];
-
 USE [%=keyspace.name%];
 
-CQL
 
 [% for (cf in keyspace.columnFamilies){%]
 CREATE TABLE [%=cf.name%](
@@ -27,7 +20,7 @@ CREATE TABLE [%=cf.name%](
 				
 			if (c.isTypeOf(CollectionType)){ 
 				if(c.kind.toString()=="map")
-					s=s+" "+c.kind.toString()+"<timestamp,"+c.baseType.kind.toString()+">";  
+					s=s+" "+c.kind.toString()+"<"+c.baseType.kind.toString()+","+c.baseType.kind.toString()+">";  
  				else  
 					s=s+" "+c.kind.toString()+"<"+c.baseType.kind.toString()+">"; 
 			}
@@ -45,15 +38,3 @@ CREATE TABLE [%=cf.name%](
 
 [%}%]
 
-CASSANDRA CLI
-[% for (cf in keyspace.columnFamilies){%]
-CREATE COLUMN FAMILY [%=cf.name%]
-WITH comparator = UTF8Type
-AND key_validation_class=UTF8Type
-AND column_metadata = [
-[% for (cols in cf.columns){%]
-{column_name: [%=cols.name%], validation_class: UTF8Type}
-[%}%]
-];
-
-[%}%]

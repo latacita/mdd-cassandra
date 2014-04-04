@@ -23,9 +23,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StandardColumn" eSuperTypes="#//Column">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PrimitiveTypeType" instanceTypeName="Types">
     <eLiterals name="ascii" literal="EEnumLiteral0"/>
     <eLiterals name="bigint" value="1"/>

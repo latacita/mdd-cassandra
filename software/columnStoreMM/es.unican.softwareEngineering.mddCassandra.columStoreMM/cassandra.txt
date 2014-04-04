@@ -1,3 +1,0 @@
-
-CREATE KEYSPACE Prueba
-           WITH replication = {'class': 'OldNetworkTopologyStrategy', 'replication_factor' : 1};

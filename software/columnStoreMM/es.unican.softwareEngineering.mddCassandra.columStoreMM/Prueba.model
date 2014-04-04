@@ -15,16 +15,5 @@
     <columns xmi:id="_90vMILEbEeOBp7e-5NMlWA" name="B1">
       <type xsi:type="nosql:PrimitiveType" xmi:id="_BpxkALEcEeOBp7e-5NMlWA"/>
     </columns>
-    <columns xsi:type="nosql:StandardColumn" xmi:id="_-Vd6oLEbEeOBp7e-5NMlWA" name="B2" timestamp="0007-08-07T00:00:00.000+0100">
-      <type xsi:type="nosql:CollectionType" xmi:id="_COhP0LEcEeOBp7e-5NMlWA" baseType="_BpxkALEcEeOBp7e-5NMlWA"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_Zu6YALEcEeOBp7e-5NMlWA" keyspace="_T3mToK7dEeO3N5WC1M07_Q" name="C">
-    <columns xmi:id="_b_q5sLEcEeOBp7e-5NMlWA" name="C1">
-      <type xsi:type="nosql:CollectionType" xmi:id="_kb3p8LEcEeOBp7e-5NMlWA" baseType="_kGWA0K-mEeOOTOe6al4CvA"/>
-    </columns>
-    <columns xsi:type="nosql:StandardColumn" xmi:id="_cldHULEcEeOBp7e-5NMlWA" name="C2">
-      <type xsi:type="nosql:PrimitiveType" xmi:id="_hIwTYLEcEeOBp7e-5NMlWA" kind="uuid"/>
-    </columns>
   </columnFamilies>
 </nosql:KeySpace>

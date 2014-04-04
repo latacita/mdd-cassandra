@@ -1,0 +1,13 @@
+
+CREATE KEYSPACE A
+WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
+
+USE A;
+
+
+CREATE TABLE C(
+       B text,
+       PRIMARY KEY(B)
+);
+
+

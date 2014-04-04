@@ -1,0 +1,39 @@
+var EXPECTED_PATH  = basedir + "/model/tests/test3/transformationExpected.txt";
+var GENERATED_PATH = basedir + "/model/tests/test3/transformationGenerated.txt";
+
+var EXPECTED_MODEL = '
+@Spec {
+	metamodel "http://nosql/1.0" {
+		nsUri: "http://nosql/1.0"
+	}
+}
+
+package  {
+	KeySpace "A" {
+		name: "A"
+		replicationFactor: 1
+		columnFamilies: StaticColumnFamily "C" {
+			keyspace: KeySpace "A"
+			name: "C"
+			primaryKey: Column "B"
+			columns: Column "B" {
+				name: "B"
+				type: PrimitiveType "PrimitiveType1" {
+					kind: text
+				}
+			}
+		}
+	}
+}
+
+';
+
+@model
+operation loadModels() {
+  loadHutn("Test3", EXPECTED_MODEL);
+}
+@test
+operation expectedModelGeneratesExpectedFile() {
+  runTarget("driver");
+  assertEqualFiles(EXPECTED_PATH, GENERATED_PATH);
+}

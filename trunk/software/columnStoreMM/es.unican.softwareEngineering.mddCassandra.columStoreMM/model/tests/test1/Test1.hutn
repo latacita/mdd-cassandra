@@ -1,0 +1,90 @@
+@Spec {
+	metamodel "http://nosql/1.0" {
+		nsUri: "http://nosql/1.0"
+	}
+}
+
+package  {
+	KeySpace "Test1" {
+		name: "Test1"
+		replicationFactor: 1
+		columnFamilies: StaticColumnFamily "users" {
+			keyspace: KeySpace "Test1"
+			name: "users"
+			primaryKey: Column "idUsers"
+			columns: Column "idUsers" {
+				name: "idUsers"
+				type: PrimitiveType "PrimitiveType1" {
+					kind: text
+				}
+			}, Column "given" {
+				name: "given"
+				type: PrimitiveType "PrimitiveType2" {
+					kind: text
+				}
+			}, Column "surname" {
+				name: "surname"
+				type: PrimitiveType "PrimitiveType3" {
+					kind: text
+				}
+			}
+		}, StaticColumnFamily "images" {
+			keyspace: KeySpace "Test1"
+			name: "images"
+			primaryKey: Column "name"
+			columns: Column "name" {
+				name: "name"
+				type: PrimitiveType "PrimitiveType4" {
+					kind: text
+				}
+			}, Column "owner" {
+				name: "owner"
+				type: PrimitiveType "PrimitiveType5" {
+					kind: text
+				}
+			}, Column "date" {
+				name: "date"
+				type: PrimitiveType "PrimitiveType6" {
+					kind: timestamp
+				}
+			}, Column "tags" {
+				name: "tags"
+				type: CollectionType "CollectionType1" {
+					baseType: PrimitiveType "PrimitiveType1"
+				}
+			}, Column "favs" {
+				name: "favs"
+				type: CollectionType "CollectionType2" {
+					baseType: PrimitiveType "PrimitiveType1"
+					kind: map
+				}
+			}
+		}, StaticColumnFamily "plays" {
+			keyspace: KeySpace "Test1"
+			name: "plays"
+			primaryKey: Column "idPlays"
+			columns: Column "idPlays" {
+				name: "idPlays"
+				type: PrimitiveType "PrimitiveType7" {
+					kind: text
+				}
+			}, Column "game" {
+				name: "game"
+				type: PrimitiveType "PrimitiveType8" {
+					kind: text
+				}
+			}, Column "players" {
+				name: "players"
+				type: PrimitiveType "PrimitiveType9" {
+					kind: int
+				}
+			}, Column "scores" {
+				name: "scores"
+				type: CollectionType "CollectionType3" {
+					baseType: PrimitiveType "PrimitiveType9"
+					kind: list
+				}
+			}
+		}
+	}
+}

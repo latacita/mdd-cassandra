@@ -1,0 +1,16 @@
+<project default="run-tests">
+
+	<target name="run-tests">
+		<epsilon.emf.register file="nosql.ecore"/>
+		<epsilon.eunit src="./model/tests/testTwitter/tests.eunit" failOnErrors="false">
+			<parameter name="basedir" value="${basedir}"/>
+		</epsilon.eunit>
+	</target>
+
+	<target name="driver">
+		<epsilon.egl src="./model/tests/testTwitter/driver.egl">
+			<model ref="twitter"/>
+		</epsilon.egl>
+	</target>
+
+</project>

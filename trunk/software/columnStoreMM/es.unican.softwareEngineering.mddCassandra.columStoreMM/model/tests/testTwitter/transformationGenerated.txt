@@ -1,0 +1,24 @@
+
+CREATE KEYSPACE twitter
+WITH replication = {'class':'SimpleStrategy', 'replication_factor':2};
+
+USE twitter;
+
+
+CREATE TABLE Tweet(
+       UUID text,
+       usernameTw text,
+       body text,
+       PRIMARY KEY(UUID)
+);
+
+CREATE TABLE User(
+       username text,
+       password text,
+       followers set<text>,
+       followings set<text>,
+       tweets_written list<text>,
+       PRIMARY KEY(username)
+);
+
+

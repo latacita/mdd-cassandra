@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_YHfMILj8EeOdqZT21VVegQ" name="twitter" replicationFactor="2">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_S-HpILj9EeOdqZT21VVegQ" keyspace="_YHfMILj8EeOdqZT21VVegQ" name="Tweet" primaryKey="_8IuDELkaEeOdqZT21VVegQ">
+    <columns xmi:id="_8IuDELkaEeOdqZT21VVegQ" name="UUID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfWJgLkbEeOdqZT21VVegQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_82GGcLkaEeOdqZT21VVegQ" name="usernameTw">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_B7UT0LkbEeOdqZT21VVegQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_9R7G0LkaEeOdqZT21VVegQ" name="body">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_ChGhcLkbEeOdqZT21VVegQ" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_TSgkwLj9EeOdqZT21VVegQ" keyspace="_YHfMILj8EeOdqZT21VVegQ" name="User" primaryKey="_og_fQLj-EeOdqZT21VVegQ">
+    <columns xmi:id="_og_fQLj-EeOdqZT21VVegQ" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_pLiRELj-EeOdqZT21VVegQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_pzHOcLj-EeOdqZT21VVegQ" name="password">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_qNJfELj-EeOdqZT21VVegQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_bBSvMLkaEeOdqZT21VVegQ" name="followers">
+      <type xsi:type="nosql:CollectionType" xmi:id="_e-EGwLkaEeOdqZT21VVegQ" baseType="_BfWJgLkbEeOdqZT21VVegQ"/>
+    </columns>
+    <columns xmi:id="_xZ_PgLkaEeOdqZT21VVegQ" name="followings">
+      <type xsi:type="nosql:CollectionType" xmi:id="_yLrLILkaEeOdqZT21VVegQ" baseType="_B7UT0LkbEeOdqZT21VVegQ"/>
+    </columns>
+    <columns xmi:id="_yeysQLwLEeOns-opZZppfQ" name="tweets_written">
+      <type xsi:type="nosql:CollectionType" xmi:id="_zJi5cLwLEeOns-opZZppfQ" baseType="_BfWJgLkbEeOdqZT21VVegQ" kind="list"/>
+    </columns>
+  </columnFamilies>
+</nosql:KeySpace>

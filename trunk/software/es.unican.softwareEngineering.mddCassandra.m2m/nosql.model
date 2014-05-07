@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" name="Test" replicationFactor="1">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="User" primaryKey="//@columnFamilies.0/@columns.0">
+    <columns name="username">
+      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    </columns>
+    <columns name="password">
+      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    </columns>
+    <columns name="email">
+      <type xsi:type="nosql:CollectionType" keyType="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Tweet" primaryKey="//@columnFamilies.1/@columns.0">
+    <columns name="Tweet_ID">
+      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+    </columns>
+    <columns name="body">
+      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    </columns>
+    <columns name="time">
+      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    </columns>
+    <columns name="user_username">
+      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="FollowingRelationship" primaryKey="//@columnFamilies.2/@columns.0">
+    <columns name="FollowingRelationship_ID">
+      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+    </columns>
+    <columns name="timestamp">
+      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    </columns>
+    <columns name="float">
+      <type xsi:type="nosql:PrimitiveType" kind="float"/>
+    </columns>
+    <columns name="double">
+      <type xsi:type="nosql:PrimitiveType" kind="double"/>
+    </columns>
+    <columns name="char">
+      <type xsi:type="nosql:PrimitiveType" kind="varchar"/>
+    </columns>
+    <columns name="bool">
+      <type xsi:type="nosql:PrimitiveType" kind="boolean"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" keyspace="/" name="User_userline" primaryKey="//@columnFamilies.3/@columns.0 //@columnFamilies.3/@columns.1" partitionKey="//@columnFamilies.3/@columns.0">
+    <columns name="User_username">
+      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    </columns>
+    <columns name="Tweet_ID">
+      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" keyspace="/" name="User_timeline" primaryKey="//@columnFamilies.4/@columns.0 //@columnFamilies.4/@columns.1" partitionKey="//@columnFamilies.4/@columns.0">
+    <columns name="User_username">
+      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    </columns>
+    <columns name="Tweet_ID">
+      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" keyspace="/" name="FollowingRelationship_following" primaryKey="//@columnFamilies.5/@columns.0 //@columnFamilies.5/@columns.1" partitionKey="//@columnFamilies.5/@columns.0">
+    <columns name="FollowingRelationship_FollowingRelationship_ID">
+      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+    </columns>
+    <columns name="username">
+      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" keyspace="/" name="FollowingRelationship_followers" primaryKey="//@columnFamilies.6/@columns.0 //@columnFamilies.6/@columns.1" partitionKey="//@columnFamilies.6/@columns.0">
+    <columns name="FollowingRelationship_FollowingRelationship_ID">
+      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+    </columns>
+    <columns name="username">
+      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    </columns>
+  </columnFamilies>
+</nosql:KeySpace>

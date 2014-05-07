@@ -49,18 +49,18 @@ package  {
 			}, Column "followers" {
 				name: "followers"
 				type: CollectionType "CollectionType1" {
-					baseType: PrimitiveType "PrimitiveType1"
+					keyType: text
 				}
 			}, Column "followings" {
 				name: "followings"
 				type: CollectionType "CollectionType2" {
-					baseType: PrimitiveType "PrimitiveType2"
+					keyType: text
 				}
 			}, Column "tweets_written" {
 				name: "tweets_written"
 				type: CollectionType "CollectionType3" {
-					baseType: PrimitiveType "PrimitiveType1"
 					kind: list
+					keyType: text
 				}
 			}
 		}

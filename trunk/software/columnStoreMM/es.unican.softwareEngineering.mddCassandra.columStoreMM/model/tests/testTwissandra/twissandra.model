@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_h4mewL0LEeORQaylHnIAyg" name="twissandra" replicationFactor="1">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_Ue3xYL23EeOiGZ9dEsO_JA" keyspace="_h4mewL0LEeORQaylHnIAyg" name="users" primaryKey="_0TgyQL24EeOiGZ9dEsO_JA">
+    <columns xmi:id="_0TgyQL24EeOiGZ9dEsO_JA" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_1_d9wL24EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+    <columns xmi:id="_0lvKsL24EeOiGZ9dEsO_JA" name="password">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_2Q3PwL24EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_UvFXoL23EeOiGZ9dEsO_JA" keyspace="_h4mewL0LEeORQaylHnIAyg" name="following" primaryKey="_8H1qML24EeOiGZ9dEsO_JA _7Ox7QL24EeOiGZ9dEsO_JA">
+    <columns xmi:id="_7Ox7QL24EeOiGZ9dEsO_JA" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_ZixeML25EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+    <columns xmi:id="_8H1qML24EeOiGZ9dEsO_JA" name="followed">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_Z1XqEL25EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_VKpSQL23EeOiGZ9dEsO_JA" keyspace="_h4mewL0LEeORQaylHnIAyg" name="followers" primaryKey="_XYTKsL25EeOiGZ9dEsO_JA _XFaq8L25EeOiGZ9dEsO_JA">
+    <columns xmi:id="_XFaq8L25EeOiGZ9dEsO_JA" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_aIidsL25EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+    <columns xmi:id="_XYTKsL25EeOiGZ9dEsO_JA" name="following">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_afng8L25EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_Vcw9AL23EeOiGZ9dEsO_JA" keyspace="_h4mewL0LEeORQaylHnIAyg" name="tweets" primaryKey="_r1BtkL25EeOiGZ9dEsO_JA">
+    <columns xmi:id="_r1BtkL25EeOiGZ9dEsO_JA" name="tweetid">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_uhQqUL25EeOiGZ9dEsO_JA" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_sIMhML25EeOiGZ9dEsO_JA" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_ycdUkL25EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+    <columns xmi:id="_shRvkL25EeOiGZ9dEsO_JA" name="body">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_01C8kL25EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_VtW9wL23EeOiGZ9dEsO_JA" keyspace="_h4mewL0LEeORQaylHnIAyg" name="userline" primaryKey="_4FI0UL25EeOiGZ9dEsO_JA _4U-AEL25EeOiGZ9dEsO_JA">
+    <columns xmi:id="_4FI0UL25EeOiGZ9dEsO_JA" name="tweetid">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_6vFSEL25EeOiGZ9dEsO_JA" kind="timeuuid"/>
+    </columns>
+    <columns xmi:id="_4U-AEL25EeOiGZ9dEsO_JA" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_8z1YEL25EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+    <columns xmi:id="_41xnEL25EeOiGZ9dEsO_JA" name="body">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BKsDkL26EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_WYRjAL23EeOiGZ9dEsO_JA" keyspace="_h4mewL0LEeORQaylHnIAyg" name="timeline" primaryKey="_JY1JsL26EeOiGZ9dEsO_JA _JpVD0L26EeOiGZ9dEsO_JA">
+    <columns xmi:id="_JY1JsL26EeOiGZ9dEsO_JA" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_yIvR4L26EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+    <columns xmi:id="_JpVD0L26EeOiGZ9dEsO_JA" name="tweetid">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_yakowL26EeOiGZ9dEsO_JA" kind="timeuuid"/>
+    </columns>
+    <columns xmi:id="_J-mJML26EeOiGZ9dEsO_JA" name="posted_by">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_y5L3YL26EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+    <columns xmi:id="_KQPS0L26EeOiGZ9dEsO_JA" name="body">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_zQEtYL26EeOiGZ9dEsO_JA" kind="text"/>
+    </columns>
+  </columnFamilies>
+</nosql:KeySpace>

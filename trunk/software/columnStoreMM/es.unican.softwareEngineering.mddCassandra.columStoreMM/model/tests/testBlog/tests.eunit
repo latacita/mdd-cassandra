@@ -1,0 +1,121 @@
+var EXPECTED_PATH  = basedir + "/model/tests/testBlog/transformationExpected.txt";
+var GENERATED_PATH = basedir + "/model/tests/testBlog/transformationGenerated.txt";
+
+var EXPECTED_MODEL = '
+@Spec {
+	metamodel "http://nosql/1.0" {
+		nsUri: "http://nosql/1.0"
+	}
+}
+
+package  {
+	KeySpace "blog" {
+		name: "blog"
+		replicationFactor: 1
+		columnFamilies: StaticColumnFamily "users" {
+			keyspace: KeySpace "blog"
+			name: "users"
+			primaryKey: Column "idUser"
+			columns: Column "idUser" {
+				name: "idUser"
+				type: PrimitiveType "PrimitiveType1" {
+					kind: text
+				}
+			}, Column "name" {
+				name: "name"
+				type: PrimitiveType "PrimitiveType2" {
+					kind: text
+				}
+			}, Column "state" {
+				name: "state"
+				type: PrimitiveType "PrimitiveType3" {
+					kind: text
+				}
+			}
+		}, StaticColumnFamily "blog_entries" {
+			keyspace: KeySpace "blog"
+			name: "blog_entries"
+			primaryKey: Column "idBlog_entries"
+			columns: Column "idBlog_entries" {
+				name: "idBlog_entries"
+				type: PrimitiveType "PrimitiveType4" {
+					kind: uuid
+				}
+			}, Column "body" {
+				name: "body"
+				type: PrimitiveType "PrimitiveType5" {
+					kind: text
+				}
+			}, Column "user" {
+				name: "user"
+				type: PrimitiveType "PrimitiveType6" {
+					kind: text
+				}
+			}, Column "category" {
+				name: "category"
+				type: PrimitiveType "PrimitiveType7" {
+					kind: text
+				}
+			}
+		}, StaticColumnFamily "subscribes_to" {
+			keyspace: KeySpace "blog"
+			name: "subscribes_to"
+			primaryKey: Column "idUser_subscribes_to"
+			columns: Column "idUser_subscribes_to" {
+				name: "idUser_subscribes_to"
+				type: PrimitiveType "PrimitiveType8" {
+					kind: text
+				}
+			}, Column "c_subscribes_to" {
+				name: "c_subscribes_to"
+				type: CollectionType "CollectionType1" {
+					kind: list
+					keyType: text
+				}
+			}
+		}, StaticColumnFamily "subscribers_of" {
+			keyspace: KeySpace "blog"
+			name: "subscribers_of"
+			primaryKey: Column "idUser_subscribers_of"
+			columns: Column "idUser_subscribers_of" {
+				name: "idUser_subscribers_of"
+				type: PrimitiveType "PrimitiveType9" {
+					kind: text
+				}
+			}, Column "subscribers" {
+				name: "subscribers"
+				type: CollectionType "CollectionType2" {
+					kind: list
+					keyType: text
+				}
+			}
+		}, StaticColumnFamily "time_ordered_blogs_by_user" {
+			keyspace: KeySpace "blog"
+			name: "time_ordered_blogs_by_user"
+			primaryKey: Column "idUser_time_ordered"
+			columns: Column "idUser_time_ordered" {
+				name: "idUser_time_ordered"
+				type: PrimitiveType "PrimitiveType10" {
+					kind: text
+				}
+			}, Column "name_timestamp" {
+				name: "name_timestamp"
+				type: MapType "MapType1" {
+					keyType: text
+					baseType: timeuuid
+				}
+			}
+		}
+	}
+}
+';
+
+@model
+operation loadModels() {
+  loadHutn("blog", EXPECTED_MODEL);
+}
+@test
+operation expectedModelGeneratesExpectedFile() {
+  runTarget("driver");
+  assertEqualFiles(EXPECTED_PATH, GENERATED_PATH);
+}

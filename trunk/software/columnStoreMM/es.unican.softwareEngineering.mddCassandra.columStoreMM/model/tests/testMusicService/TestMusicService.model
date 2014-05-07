@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_h4mewL0LEeORQaylHnIAyg" name="MusicService" replicationFactor="1">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_l5Re4L0LEeORQaylHnIAyg" keyspace="_h4mewL0LEeORQaylHnIAyg" name="songs" primaryKey="_rUWngL0LEeORQaylHnIAyg">
+    <columns xmi:id="_rUWngL0LEeORQaylHnIAyg" name="idSong">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_3wVAAL0LEeORQaylHnIAyg" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_rnzvAL0LEeORQaylHnIAyg" name="songs_title">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_3a-bEL0LEeORQaylHnIAyg" kind="text"/>
+    </columns>
+    <columns xmi:id="_tC-sgL0LEeORQaylHnIAyg" name="album">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_3FJVAL0LEeORQaylHnIAyg" kind="text"/>
+    </columns>
+    <columns xmi:id="_tVicIL0LEeORQaylHnIAyg" name="artist">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_12aRAL0LEeORQaylHnIAyg" kind="text"/>
+    </columns>
+    <columns xmi:id="_tnd5oL0LEeORQaylHnIAyg" name="data">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_4GYIgL0LEeORQaylHnIAyg" kind="blob"/>
+    </columns>
+    <columns xmi:id="_Y3baoMFoEeOn1s5sz_fJBA" name="artist">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_cRzPwMFoEeOn1s5sz_fJBA" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_mZ3qgL0LEeORQaylHnIAyg" keyspace="_h4mewL0LEeORQaylHnIAyg" name="playlists" primaryKey="_AQsekL0MEeORQaylHnIAyg _Af3jAL0MEeORQaylHnIAyg">
+    <columns xmi:id="_AQsekL0MEeORQaylHnIAyg" name="idPlaylist">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_Qd0NcL0MEeORQaylHnIAyg" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_Af3jAL0MEeORQaylHnIAyg" name="song_order">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_QuSSYL0MEeORQaylHnIAyg" kind="int"/>
+    </columns>
+    <columns xmi:id="_AwlfkL0MEeORQaylHnIAyg" name="song_id">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_RAmKYL0MEeORQaylHnIAyg" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_BDkF8L0MEeORQaylHnIAyg" name="title">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_RVW5cL0MEeORQaylHnIAyg" kind="text"/>
+    </columns>
+    <columns xmi:id="_BU5tkL0MEeORQaylHnIAyg" name="album">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_RrF44L0MEeORQaylHnIAyg" kind="text"/>
+    </columns>
+    <columns xmi:id="_BlEQgL0MEeORQaylHnIAyg" name="artist">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_R-VlAL0MEeORQaylHnIAyg" kind="text"/>
+    </columns>
+  </columnFamilies>
+</nosql:KeySpace>

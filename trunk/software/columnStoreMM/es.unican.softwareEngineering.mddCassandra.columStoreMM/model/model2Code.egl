@@ -2,38 +2,53 @@
 	var keyspace: KeySpace := KeySpace.allInstances().at(0);
 	var s: String;
 	var prk:String;
+	var crk:String;
+	
 %]
-
+DROP KEYSPACE [%=keyspace.name%]; 
 CREATE KEYSPACE [%=keyspace.name%]
 WITH replication = {'class':'[%=keyspace.replicaPlacementStrategy%]', 'replication_factor':[%=keyspace.replicationFactor%]};
 
 USE [%=keyspace.name%];
 
 
-[% for (cf in keyspace.columnFamilies){%]
+[% for (cf in keyspace.columnFamilies){ prk="";%]
 CREATE TABLE [%=cf.name%](
-	[% for (cols in cf.columns){
+	[% for (cols in cf.columns){ //vamos añadiendo las columnas
 		s=cols.name.toString();
 		for (c in cols.type){ 
-			if (c.isTypeOf(PrimitiveType)) 
+			if (c.isTypeOf(PrimitiveType))  //definicion del tipo primitivo
 				s=s+" "+c.kind.toString();
 				
-			if (c.isTypeOf(CollectionType)){ 
-				if(c.kind.toString()=="map")
-					s=s+" "+c.kind.toString()+"<"+c.baseType.kind.toString()+","+c.baseType.kind.toString()+">";  
- 				else  
-					s=s+" "+c.kind.toString()+"<"+c.baseType.kind.toString()+">"; 
-			}
+			if (c.isTypeOf(MapType)) //definicion del tipo map
+				s=s+" Map"+"<"+c.keyType.toString()+","+c.baseType.toString()+">";  
+ 			if(c.isTypeOf(CollectionType)) //definicion del tipo set o list
+				s=s+" "+c.kind.toString()+"<"+c.keyType.toString()+">"; 
+			
 		} 
-	   s=s+",";%]
+	    s=s+",";%]
        [%=s%]
        [%}%]
        PRIMARY KEY([% for (pk in cf.primaryKey) {
-       					prk=pk.name;
+       					prk=prk+pk.name;
        					if (hasMore)
 							prk=prk+","; 
 					}
-					%][%=prk%][%prk="";%])
+					if (cf.isTypeOf(DynamicColumnFamily))
+						prk="("+prk; //en caso de que sea una dinamica se introduce un parentesis inicial para 
+									 //diferenciar la partition key de la clustering ((partition),clustering...)
+					%][%=prk%][%prk="";%])[%
+					crk="";
+					if (cf.isTypeOf(DynamicColumnFamily)){ //proceso parecido que con las estaticas cuidado con parentesis y comas
+						 crk=","; //despues de definir las partition separamos de las clustering
+	
+						 for (ck in cf.clusteringKey) {
+	   					 crk=crk+ck.name;
+	   					 if (hasMore)
+							crk=crk+","; 
+						 }
+						 crk=crk+")";		
+					}  %][%=crk%]
 );
 
 [%}%]

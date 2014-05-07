@@ -2,13 +2,13 @@
 
 	<target name="run-tests">
 		<epsilon.emf.register file="nosql.ecore"/>
-		<epsilon.eunit src="./model/tests/test3/tests.eunit" failOnErrors="false">
+		<epsilon.eunit src="./model/tests/testMusicService/tests.eunit" failOnErrors="false">
 			<parameter name="basedir" value="${basedir}"/>
 		</epsilon.eunit>
 	</target>
 
 	<target name="driver">
-		<epsilon.egl src="./model/tests/test3/driver.egl">
+		<epsilon.egl src="./model/tests/testMusicService/driver.egl">
 			<model ref="Test3"/>
 		</epsilon.egl>
 	</target>

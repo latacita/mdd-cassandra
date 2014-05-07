@@ -1,13 +1,37 @@
-
+DROP KEYSPACE A; 
 CREATE KEYSPACE A
 WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
 
 USE A;
 
 
+CREATE TABLE B(
+       BA text,
+       PRIMARY KEY(BA)
+);
+
 CREATE TABLE C(
-       B text,
-       PRIMARY KEY(B)
+       CA text,
+       CB int,
+       CC text,
+       CD text,
+       CE int,
+       PRIMARY KEY((CA,CB),CC,CD)
+);
+
+CREATE TABLE D(
+       DA uuid,
+       DB int,
+       PRIMARY KEY(DA)
+);
+
+CREATE TABLE E(
+       EA set<int>,
+       EB Map<text,int>,
+       EC double,
+       ED set<int>,
+       EE text,
+       PRIMARY KEY((EC),EE)
 );
 
 

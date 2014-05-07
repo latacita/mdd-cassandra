@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_YHfMILj8EeOdqZT21VVegQ" name="blog" replicationFactor="1">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_rpb0wL0NEeORQaylHnIAyg" keyspace="_YHfMILj8EeOdqZT21VVegQ" name="users" primaryKey="_fJgUsL9PEeO9zvVYa-XeYA">
+    <columns xmi:id="_fJgUsL9PEeO9zvVYa-XeYA" name="idUser">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_taoQ8L9PEeO9zvVYa-XeYA" kind="text"/>
+    </columns>
+    <columns xmi:id="_fu79AL9PEeO9zvVYa-XeYA" name="name">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_txjjML9PEeO9zvVYa-XeYA" kind="text"/>
+    </columns>
+    <columns xmi:id="_gOZgML9PEeO9zvVYa-XeYA" name="state">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_uS-OML9PEeO9zvVYa-XeYA" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_sDzckL0NEeORQaylHnIAyg" keyspace="_YHfMILj8EeOdqZT21VVegQ" name="blog_entries" primaryKey="_y3PDkL9PEeO9zvVYa-XeYA">
+    <columns xmi:id="_y3PDkL9PEeO9zvVYa-XeYA" name="idBlog_entries">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_-fsUcL9PEeO9zvVYa-XeYA" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_zQIEsL9PEeO9zvVYa-XeYA" name="body">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_-6rAQL9PEeO9zvVYa-XeYA" kind="text"/>
+    </columns>
+    <columns xmi:id="_zmmrAL9PEeO9zvVYa-XeYA" name="user">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="__az44L9PEeO9zvVYa-XeYA" kind="text"/>
+    </columns>
+    <columns xmi:id="_9eJX4L9PEeO9zvVYa-XeYA" name="category">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="__wt3cL9PEeO9zvVYa-XeYA" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_sVELsL0NEeORQaylHnIAyg" keyspace="_YHfMILj8EeOdqZT21VVegQ" name="subscribes_to" primaryKey="_epzrgL9QEeO9zvVYa-XeYA">
+    <columns xmi:id="_epzrgL9QEeO9zvVYa-XeYA" name="idUser_subscribes_to">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_jE7zAL9QEeO9zvVYa-XeYA" kind="text"/>
+    </columns>
+    <columns xmi:id="_fA4HsL9QEeO9zvVYa-XeYA" name="c_subscribes_to">
+      <type xsi:type="nosql:CollectionType" xmi:id="_lt6DkL9UEeO9zvVYa-XeYA" kind="list" keyType="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_xP2qsL0NEeORQaylHnIAyg" keyspace="_YHfMILj8EeOdqZT21VVegQ" name="subscribers_of" primaryKey="_hIZN0L9QEeO9zvVYa-XeYA">
+    <columns xmi:id="_hIZN0L9QEeO9zvVYa-XeYA" name="idUser_subscribers_of">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_s6j0UL9QEeO9zvVYa-XeYA" kind="text"/>
+    </columns>
+    <columns xmi:id="_h3GG4L9QEeO9zvVYa-XeYA" name="subscribers">
+      <type xsi:type="nosql:CollectionType" xmi:id="_oqctML9UEeO9zvVYa-XeYA" kind="list" keyType="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_xjmtIL0NEeORQaylHnIAyg" keyspace="_YHfMILj8EeOdqZT21VVegQ" name="time_ordered_blogs_by_user" primaryKey="_f_DAIL9QEeO9zvVYa-XeYA">
+    <columns xmi:id="_f_DAIL9QEeO9zvVYa-XeYA" name="idUser_time_ordered">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vn0r0L9QEeO9zvVYa-XeYA" kind="text"/>
+    </columns>
+    <columns xmi:id="_gwhgYL9QEeO9zvVYa-XeYA" name="name_timestamp">
+      <type xsi:type="nosql:MapType" xmi:id="_mAEEAMGYEeOqcK0F57DDAA" keyType="text" baseType="timeuuid"/>
+    </columns>
+  </columnFamilies>
+</nosql:KeySpace>

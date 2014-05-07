@@ -1,0 +1,37 @@
+
+CREATE KEYSPACE A
+WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
+
+USE A;
+
+
+CREATE TABLE t1(
+       at1 uuid,
+       bt1 set<text>,
+       ct1 list<decimal>,
+       PRIMARY KEY(at1)
+);
+
+CREATE TABLE t2(
+       at2 set<timestamp>,
+       bt2 text,
+       ct2 text,
+       PRIMARY KEY(ct2,bt2)
+);
+
+CREATE TABLE t3(
+       at3 int,
+       bt3 set<boolean>,
+       ct3 int,
+       PRIMARY KEY(ct3)
+);
+
+CREATE TABLE t4(
+       at4 blob,
+       bt4 uuid,
+       ct4 varint,
+       dt4 timestamp,
+       PRIMARY KEY(bt4,dt4)
+);
+
+

@@ -5,15 +5,15 @@
       <type xsi:type="nosql:PrimitiveType" xmi:id="_kGWA0K-mEeOOTOe6al4CvA" kind="float"/>
     </columns>
     <columns xmi:id="_nnelQK-mEeOOTOe6al4CvA" name="A2">
-      <type xsi:type="nosql:CollectionType" xmi:id="_nLDVoLBvEeOMC8bJ3TMWbw" baseType="_kGWA0K-mEeOOTOe6al4CvA" kind="map"/>
+      <type xsi:type="nosql:Map" xmi:id="_oPhXcMGTEeOqcK0F57DDAA" keyType="uuid" baseType="counter"/>
     </columns>
     <columns xmi:id="_FZfOsLBmEeOMC8bJ3TMWbw" name="A3">
-      <type xsi:type="nosql:CollectionType" xmi:id="_eQwwoLBuEeOMC8bJ3TMWbw" baseType="_kGWA0K-mEeOOTOe6al4CvA" kind="list"/>
+      <type xsi:type="nosql:CollectionType" xmi:id="_eQwwoLBuEeOMC8bJ3TMWbw" keyType="blob"/>
     </columns>
   </columnFamilies>
   <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_8IlMULEbEeOBp7e-5NMlWA" keyspace="_T3mToK7dEeO3N5WC1M07_Q" name="B" primaryKey="_aADfoK7dEeO3N5WC1M07_Q _90vMILEbEeOBp7e-5NMlWA">
     <columns xmi:id="_90vMILEbEeOBp7e-5NMlWA" name="B1">
-      <type xsi:type="nosql:PrimitiveType" xmi:id="_BpxkALEcEeOBp7e-5NMlWA"/>
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_lsKp4MGTEeOqcK0F57DDAA" kind="decimal"/>
     </columns>
   </columnFamilies>
 </nosql:KeySpace>

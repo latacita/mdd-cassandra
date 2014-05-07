@@ -50,13 +50,12 @@ package  {
 			}, Column "tags" {
 				name: "tags"
 				type: CollectionType "CollectionType1" {
-					baseType: PrimitiveType "PrimitiveType1"
+					keyType: text
 				}
 			}, Column "favs" {
 				name: "favs"
 				type: CollectionType "CollectionType2" {
-					baseType: PrimitiveType "PrimitiveType1"
-					kind: map
+					keyType: text
 				}
 			}
 		}, StaticColumnFamily "plays" {
@@ -81,8 +80,14 @@ package  {
 			}, Column "scores" {
 				name: "scores"
 				type: CollectionType "CollectionType3" {
-					baseType: PrimitiveType "PrimitiveType9"
 					kind: list
+					keyType: text
+				}
+			}, Column "dateUser" {
+				name: "dateUser"
+				type: MapType "MapType1" {
+					keyType: uuid
+					baseType: timeuuid
 				}
 			}
 		}

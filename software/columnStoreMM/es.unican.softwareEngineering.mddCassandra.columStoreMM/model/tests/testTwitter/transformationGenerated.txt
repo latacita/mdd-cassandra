@@ -1,4 +1,4 @@
-
+DROP KEYSPACE twitter; 
 CREATE KEYSPACE twitter
 WITH replication = {'class':'SimpleStrategy', 'replication_factor':2};
 

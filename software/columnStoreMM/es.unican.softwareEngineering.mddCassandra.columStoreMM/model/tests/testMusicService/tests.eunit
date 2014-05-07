@@ -1,5 +1,5 @@
-var EXPECTED_PATH  = basedir + "/model/tests/test3/transformationExpected.txt";
-var GENERATED_PATH = basedir + "/model/tests/test3/transformationGenerated.txt";
+var EXPECTED_PATH  = basedir + "/model/tests/testMusicService/transformationExpected.txt";
+var GENERATED_PATH = basedir + "/model/tests/testMusicService/transformationGenerated.txt";
 
 var EXPECTED_MODEL = '
 @Spec {
@@ -30,7 +30,7 @@ package  {
 
 @model
 operation loadModels() {
-  loadHutn("Test3", EXPECTED_MODEL);
+  loadHutn("testMusicService", EXPECTED_MODEL);
 }
 @test
 operation expectedModelGeneratesExpectedFile() {

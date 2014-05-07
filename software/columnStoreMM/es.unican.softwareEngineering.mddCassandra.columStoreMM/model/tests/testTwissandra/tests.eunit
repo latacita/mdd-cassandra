@@ -1,3 +1,7 @@
+var EXPECTED_PATH  = basedir + "/model/tests/testTwissandra/transformationExpected.txt";
+var GENERATED_PATH = basedir + "/model/tests/testTwissandra/transformationGenerated.txt";
+
+var EXPECTED_MODEL = '
 @Spec {
 	metamodel "http://nosql/1.0" {
 		nsUri: "http://nosql/1.0"
@@ -61,4 +65,15 @@ package  {
 			}
 		}
 	}
+}
+';
+
+@model
+operation loadModels() {
+  loadHutn("twitter", EXPECTED_MODEL);
+}
+@test
+operation expectedModelGeneratesExpectedFile() {
+  runTarget("driver");
+  assertEqualFiles(EXPECTED_PATH, GENERATED_PATH);
 }

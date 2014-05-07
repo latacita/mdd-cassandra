@@ -1,0 +1,6 @@
+[%
+	var t: Template := TemplateFactory.load('../../model2Code.egl');
+	
+	t.store('transformationGenerated.txt',true);
+
+%]

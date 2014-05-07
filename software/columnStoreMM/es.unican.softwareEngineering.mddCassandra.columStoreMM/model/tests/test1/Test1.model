@@ -22,10 +22,10 @@
       <type xsi:type="nosql:PrimitiveType" xmi:id="_9fc9wLkgEeOdqZT21VVegQ" kind="timestamp"/>
     </columns>
     <columns xmi:id="_Dw90kLkgEeOdqZT21VVegQ" name="tags">
-      <type xsi:type="nosql:CollectionType" xmi:id="_-PWwsLkgEeOdqZT21VVegQ" baseType="_fPwhcLkfEeOdqZT21VVegQ"/>
+      <type xsi:type="nosql:CollectionType" xmi:id="_l-y1gMGUEeOqcK0F57DDAA" keyType="text"/>
     </columns>
     <columns xmi:id="_Pq1bALkfEeOdqZT21VVegQ" name="favs">
-      <type xsi:type="nosql:CollectionType" xmi:id="_jCkEsLkfEeOdqZT21VVegQ" baseType="_fPwhcLkfEeOdqZT21VVegQ" kind="map"/>
+      <type xsi:type="nosql:CollectionType" xmi:id="_jCkEsLkfEeOdqZT21VVegQ" keyType="text"/>
     </columns>
   </columnFamilies>
   <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_10B1ELkeEeOdqZT21VVegQ" keyspace="_w0mtsLkeEeOdqZT21VVegQ" name="plays" primaryKey="_YIbAcLkhEeOdqZT21VVegQ">
@@ -39,7 +39,10 @@
       <type xsi:type="nosql:PrimitiveType" xmi:id="_nWlzwLkhEeOdqZT21VVegQ" kind="int"/>
     </columns>
     <columns xmi:id="_ZZ85wLkhEeOdqZT21VVegQ" name="scores">
-      <type xsi:type="nosql:CollectionType" xmi:id="_oXTp4LkhEeOdqZT21VVegQ" baseType="_nWlzwLkhEeOdqZT21VVegQ" kind="list"/>
+      <type xsi:type="nosql:CollectionType" xmi:id="_oXTp4LkhEeOdqZT21VVegQ" kind="list" keyType="text"/>
+    </columns>
+    <columns xmi:id="_3lnQUMGWEeOqcK0F57DDAA" name="dateUser">
+      <type xsi:type="nosql:MapType" xmi:id="_6JQ40MGWEeOqcK0F57DDAA" keyType="uuid" baseType="timeuuid"/>
     </columns>
   </columnFamilies>
 </nosql:KeySpace>

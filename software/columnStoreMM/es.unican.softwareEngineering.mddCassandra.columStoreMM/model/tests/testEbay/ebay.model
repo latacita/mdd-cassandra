@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_h4mewL0LEeORQaylHnIAyg" name="ebay" replicationFactor="1">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_nAo-EL2kEeOiGZ9dEsO_JA" keyspace="_h4mewL0LEeORQaylHnIAyg" name="User" primaryKey="_91_lML2kEeOiGZ9dEsO_JA">
+    <columns xmi:id="_91_lML2kEeOiGZ9dEsO_JA" name="userid">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_31kPkMDgEeOCCug6-Ew4cA" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_-V070L2kEeOiGZ9dEsO_JA" name="name">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_7ejIcMDgEeOCCug6-Ew4cA" kind="text"/>
+    </columns>
+    <columns xmi:id="_-rGoQL2kEeOiGZ9dEsO_JA" name="email">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_703WsMDgEeOCCug6-Ew4cA" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_nPOMoL2kEeOiGZ9dEsO_JA" keyspace="_h4mewL0LEeORQaylHnIAyg" name="Item">
+    <columns xmi:id="_--JgEL2kEeOiGZ9dEsO_JA" name="itemid_family_item">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_E_esIMDhEeOCCug6-Ew4cA" kind="uuid"/>
+    </columns>
+    <columns xmi:id="__NBpkL2kEeOiGZ9dEsO_JA" name="title">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_FWihQMDhEeOCCug6-Ew4cA" kind="text"/>
+    </columns>
+    <columns xmi:id="__iwB8L2kEeOiGZ9dEsO_JA" name="desc">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_FxUYwMDhEeOCCug6-Ew4cA" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_nd8lIL2kEeOiGZ9dEsO_JA" keyspace="_h4mewL0LEeORQaylHnIAyg" name="User_by_item">
+    <columns xmi:id="__2O-oL2kEeOiGZ9dEsO_JA" name="itemid_family_user">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_uALCUMDhEeOCCug6-Ew4cA" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_AKeJQL2lEeOiGZ9dEsO_JA" name="userid_timestamp">
+      <type xsi:type="nosql:CollectionType" xmi:id="_wKPGIMDhEeOCCug6-Ew4cA"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_oPfW0L2kEeOiGZ9dEsO_JA" keyspace="_h4mewL0LEeORQaylHnIAyg" name="Item_by_user">
+    <columns xmi:id="_A1dnAL2lEeOiGZ9dEsO_JA" name="userid_family">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_LwtzoL2lEeOiGZ9dEsO_JA" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_BKSngL2lEeOiGZ9dEsO_JA" name="itemid_timestamp">
+      <type xsi:type="nosql:CollectionType" xmi:id="_MQ-oEL2lEeOiGZ9dEsO_JA"/>
+    </columns>
+  </columnFamilies>
+</nosql:KeySpace>

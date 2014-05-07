@@ -12,20 +12,97 @@ package  {
 	KeySpace "A" {
 		name: "A"
 		replicationFactor: 1
-		columnFamilies: StaticColumnFamily "C" {
+		columnFamilies: StaticColumnFamily "B" {
+			keyspace: KeySpace "A"
+			name: "B"
+			primaryKey: Column "BA"
+			columns: Column "BA" {
+				name: "BA"
+				type: PrimitiveType "PrimitiveType1" {
+					kind: text
+				}
+			}
+		}, DynamicColumnFamily "C" {
 			keyspace: KeySpace "A"
 			name: "C"
-			primaryKey: Column "B"
-			columns: Column "B" {
-				name: "B"
-				type: PrimitiveType "PrimitiveType1" {
+			primaryKey: Column "CA", Column "CB"
+			clusteringKey: Column "CC", Column "CD"
+			columns: Column "CA" {
+				name: "CA"
+				type: PrimitiveType "PrimitiveType2" {
+					kind: text
+				}
+			}, Column "CB" {
+				name: "CB"
+				type: PrimitiveType "PrimitiveType3" {
+					kind: int
+				}
+			}, Column "CC" {
+				name: "CC"
+				type: PrimitiveType "PrimitiveType4" {
+					kind: text
+				}
+			}, Column "CD" {
+				name: "CD"
+				type: PrimitiveType "PrimitiveType5" {
+					kind: text
+				}
+			}, Column "CE" {
+				name: "CE"
+				type: PrimitiveType "PrimitiveType6" {
+					kind: int
+				}
+			}
+		}, StaticColumnFamily "D" {
+			keyspace: KeySpace "A"
+			name: "D"
+			primaryKey: Column "DA"
+			columns: Column "DA" {
+				name: "DA"
+				type: PrimitiveType "PrimitiveType7" {
+					kind: uuid
+				}
+			}, Column "DB" {
+				name: "DB"
+				type: PrimitiveType "PrimitiveType8" {
+					kind: int
+				}
+			}
+		}, DynamicColumnFamily "E" {
+			keyspace: KeySpace "A"
+			name: "E"
+			primaryKey: Column "EC"
+			clusteringKey: Column "EE"
+			columns: Column "EA" {
+				name: "EA"
+				type: CollectionType "CollectionType1" {
+					keyType: int
+				}
+			}, Column "EB" {
+				name: "EB"
+				type: MapType "MapType1" {
+					keyType: text
+					baseType: int
+				}
+			}, Column "EC" {
+				name: "EC"
+				type: PrimitiveType "PrimitiveType9" {
+					kind: double
+				}
+			}, Column "ED" {
+				name: "ED"
+				type: CollectionType "CollectionType2" {
+					keyType: int
+				}
+			}, Column "EE" {
+				name: "EE"
+				type: PrimitiveType "PrimitiveType10" {
 					kind: text
 				}
 			}
 		}
 	}
 }
-
 ';
 
 @model

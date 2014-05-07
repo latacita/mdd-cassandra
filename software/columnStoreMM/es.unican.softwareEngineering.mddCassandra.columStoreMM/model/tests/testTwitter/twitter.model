@@ -19,13 +19,13 @@
       <type xsi:type="nosql:PrimitiveType" xmi:id="_qNJfELj-EeOdqZT21VVegQ" kind="text"/>
     </columns>
     <columns xmi:id="_bBSvMLkaEeOdqZT21VVegQ" name="followers">
-      <type xsi:type="nosql:CollectionType" xmi:id="_e-EGwLkaEeOdqZT21VVegQ" baseType="_BfWJgLkbEeOdqZT21VVegQ"/>
+      <type xsi:type="nosql:CollectionType" xmi:id="_e-EGwLkaEeOdqZT21VVegQ" keyType="text"/>
     </columns>
     <columns xmi:id="_xZ_PgLkaEeOdqZT21VVegQ" name="followings">
-      <type xsi:type="nosql:CollectionType" xmi:id="_yLrLILkaEeOdqZT21VVegQ" baseType="_B7UT0LkbEeOdqZT21VVegQ"/>
+      <type xsi:type="nosql:CollectionType" xmi:id="_yLrLILkaEeOdqZT21VVegQ" keyType="text"/>
     </columns>
     <columns xmi:id="_yeysQLwLEeOns-opZZppfQ" name="tweets_written">
-      <type xsi:type="nosql:CollectionType" xmi:id="_zJi5cLwLEeOns-opZZppfQ" baseType="_BfWJgLkbEeOdqZT21VVegQ" kind="list"/>
+      <type xsi:type="nosql:CollectionType" xmi:id="_pg54EMGZEeOqcK0F57DDAA" kind="list" keyType="text"/>
     </columns>
   </columnFamilies>
 </nosql:KeySpace>

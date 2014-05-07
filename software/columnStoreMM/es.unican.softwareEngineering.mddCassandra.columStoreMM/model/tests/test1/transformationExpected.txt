@@ -1,4 +1,4 @@
-
+DROP KEYSPACE Test1; 
 CREATE KEYSPACE Test1
 WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
 
@@ -17,7 +17,7 @@ CREATE TABLE images(
        owner text,
        date timestamp,
        tags set<text>,
-       favs map<text,text>,
+       favs set<text>,
        PRIMARY KEY(name)
 );
 
@@ -25,7 +25,8 @@ CREATE TABLE plays(
        idPlays text,
        game text,
        players int,
-       scores list<int>,
+       scores list<text>,
+       dateUser Map<uuid,timeuuid>,
        PRIMARY KEY(idPlays)
 );
 

@@ -1,0 +1,78 @@
+@Spec {
+	metamodel "http://nosql/1.0" {
+		nsUri: "http://nosql/1.0"
+	}
+}
+
+package  {
+	KeySpace "MusicService" {
+		name: "MusicService"
+		replicationFactor: 1
+		columnFamilies: StaticColumnFamily "songs" {
+			keyspace: KeySpace "MusicService"
+			name: "songs"
+			primaryKey: Column "idSong"
+			columns: Column "idSong" {
+				name: "idSong"
+				type: PrimitiveType "PrimitiveType1" {
+					kind: uuid
+				}
+			}, Column "titlev2" {
+				name: "titlev2"
+				type: PrimitiveType "PrimitiveType2" {
+					kind: text
+				}
+			}, Column "album" {
+				name: "album"
+				type: PrimitiveType "PrimitiveType3" {
+					kind: text
+				}
+			}, Column "artist" {
+				name: "artist"
+				type: PrimitiveType "PrimitiveType4" {
+					kind: text
+				}
+			}, Column "data" {
+				name: "data"
+				type: PrimitiveType "PrimitiveType5" {
+					kind: blob
+				}
+			}
+		}, StaticColumnFamily "playlists" {
+			keyspace: KeySpace "MusicService"
+			name: "playlists"
+			primaryKey: Column "idPlaylist", Column "song_order"
+			columns: Column "idPlaylist" {
+				name: "idPlaylist"
+				type: PrimitiveType "PrimitiveType6" {
+					kind: uuid
+				}
+			}, Column "song_order" {
+				name: "song_order"
+				type: PrimitiveType "PrimitiveType7" {
+					kind: int
+				}
+			}, Column "song_id" {
+				name: "song_id"
+				type: PrimitiveType "PrimitiveType8" {
+					kind: uuid
+				}
+			}, Column "title" {
+				name: "title"
+				type: PrimitiveType "PrimitiveType9" {
+					kind: text
+				}
+			}, Column "album" {
+				name: "album"
+				type: PrimitiveType "PrimitiveType10" {
+					kind: text
+				}
+			}, Column "artist" {
+				name: "artist"
+				type: PrimitiveType "PrimitiveType11" {
+					kind: text
+				}
+			}
+		}
+	}
+}

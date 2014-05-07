@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="ASCII"?>
 <nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_eO90sLqREeOyO595OC53bA" name="A" replicationFactor="1">
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_e8jTcLqREeOyO595OC53bA" keyspace="_eO90sLqREeOyO595OC53bA" name="C" primaryKey="_hS0AMLqREeOyO595OC53bA">
-    <columns xmi:id="_hS0AMLqREeOyO595OC53bA" name="B">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_e8jTcLqREeOyO595OC53bA" keyspace="_eO90sLqREeOyO595OC53bA" name="B" primaryKey="_hS0AMLqREeOyO595OC53bA">
+    <columns xmi:id="_hS0AMLqREeOyO595OC53bA" name="BA">
       <type xsi:type="nosql:PrimitiveType" xmi:id="_iXGHsLqREeOyO595OC53bA" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_RXkJIMfyEeOU3dEbu5JwzQ" keyspace="_eO90sLqREeOyO595OC53bA" name="C" primaryKey="_TYQOgMfyEeOU3dEbu5JwzQ _mImvIMfyEeOU3dEbu5JwzQ" clusteringKey="_ybxJ4MfyEeOU3dEbu5JwzQ _zzGJMMfyEeOU3dEbu5JwzQ">
+    <columns xmi:id="_TYQOgMfyEeOU3dEbu5JwzQ" name="CA">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_uZ8TMMfyEeOU3dEbu5JwzQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_mImvIMfyEeOU3dEbu5JwzQ" name="CB">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_uwtNYMfyEeOU3dEbu5JwzQ" kind="int"/>
+    </columns>
+    <columns xmi:id="_ybxJ4MfyEeOU3dEbu5JwzQ" name="CC">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_84b9EMfyEeOU3dEbu5JwzQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_zzGJMMfyEeOU3dEbu5JwzQ" name="CD">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_9QZKEMfyEeOU3dEbu5JwzQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_0R-dkMfyEeOU3dEbu5JwzQ" name="CE">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_9tjnMMfyEeOU3dEbu5JwzQ" kind="int"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_RyM2sMfyEeOU3dEbu5JwzQ" keyspace="_eO90sLqREeOyO595OC53bA" name="D" primaryKey="_T-o5EMfyEeOU3dEbu5JwzQ">
+    <columns xmi:id="_T-o5EMfyEeOU3dEbu5JwzQ" name="DA">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_Ml8XwMfzEeOU3dEbu5JwzQ" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_UloAkMfyEeOU3dEbu5JwzQ" name="DB">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_xHHrIMfyEeOU3dEbu5JwzQ" kind="int"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_SQ16gMfyEeOU3dEbu5JwzQ" keyspace="_eO90sLqREeOyO595OC53bA" name="E" primaryKey="_WRtH4MfyEeOU3dEbu5JwzQ" clusteringKey="_hn88gMf0EeOU3dEbu5JwzQ">
+    <columns xmi:id="_U9uXgMfyEeOU3dEbu5JwzQ" name="EA">
+      <type xsi:type="nosql:CollectionType" xmi:id="_TtGLMMf0EeOU3dEbu5JwzQ" keyType="int"/>
+    </columns>
+    <columns xmi:id="_VW3QQMfyEeOU3dEbu5JwzQ" name="EB">
+      <type xsi:type="nosql:MapType" xmi:id="_UQpkMMf0EeOU3dEbu5JwzQ" keyType="text" baseType="int"/>
+    </columns>
+    <columns xmi:id="_WRtH4MfyEeOU3dEbu5JwzQ" name="EC">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_UxiDsMf0EeOU3dEbu5JwzQ" kind="double"/>
+    </columns>
+    <columns xmi:id="_a2a-UMf0EeOU3dEbu5JwzQ" name="ED">
+      <type xsi:type="nosql:CollectionType" xmi:id="_cLhJAMf0EeOU3dEbu5JwzQ" keyType="int"/>
+    </columns>
+    <columns xmi:id="_hn88gMf0EeOU3dEbu5JwzQ" name="EE">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vzIV4MgBEeOU3dEbu5JwzQ" kind="text"/>
     </columns>
   </columnFamilies>
 </nosql:KeySpace>

@@ -35,13 +35,13 @@
     <columns name="float">
       <type xsi:type="nosql:PrimitiveType" kind="float"/>
     </columns>
-    <columns name="double">
+    <columns name="PruebaDouble">
       <type xsi:type="nosql:PrimitiveType" kind="double"/>
     </columns>
-    <columns name="char">
+    <columns name="Pruebachar">
       <type xsi:type="nosql:PrimitiveType" kind="varchar"/>
     </columns>
-    <columns name="bool">
+    <columns name="PruebaBool">
       <type xsi:type="nosql:PrimitiveType" kind="boolean"/>
     </columns>
   </columnFamilies>

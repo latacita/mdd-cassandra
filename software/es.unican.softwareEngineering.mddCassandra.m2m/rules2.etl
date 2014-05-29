@@ -12,7 +12,7 @@ rule Class2ColumnFamilyWithID
 	to cfamily : nosql!StaticColumnFamily {	
 	guard:  uml.ownedAttribute.exists(p|p.isID)
 	
-	//asignamos la keyspace correspondiente a la column family
+	//asignamos el keyspace correspondiente a la column family
 	cfamily.keyspace=kspace;
 	cfamily.name = uml.name;
 	kspace.columnFamilies.add(cfamily);
@@ -24,7 +24,7 @@ rule Class2ColumnFamilyWithoutID
 	to cfamily : nosql!StaticColumnFamily {	
 	guard: not uml.ownedAttribute.exists(p|p.isID)
 	
-	//asignamos la keyspace correspondiente a la column family
+	//asignamos el keyspace correspondiente a la column family
 	cfamily.keyspace=kspace;
 	cfamily.name = uml.name;
 	kspace.columnFamilies.add(cfamily);
@@ -49,6 +49,7 @@ rule Attribute2Column
 	to column : nosql!Column {
 	guard: ((""+attribute.qualifiedName).contains("Data::") and attribute.type.isKindOf(UML!PrimitiveType))
 	
+	//filtramos para evitar añadir columnas ajenas al modelo de datos
 	for(cfamily in kspace.columnFamilies){	
 		if(attribute.qualifiedName=="Data::"+cfamily.name+"::"+attribute.name){
 			if(attribute.upper=1){ //5.5 Attribute with primitive type transformation->Attributes with upper bound = 1
@@ -182,7 +183,7 @@ operation umlType2modelType(base : String) : String {
 		type="boolean";
 	else if(base=="char")
 		type="varchar";
-	else //revisar
+	else //revisar por si faltan mas
 		type="text";
 	return type;
 }

@@ -68,16 +68,15 @@ Comment:.
       <ownedAttribute xmi:id="_17_0_6_6c101f3_1399288701870_635436_1545" name="float" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_17_0_6_6c101f3_1399288705517_377420_1547" name="double" visibility="private">
+      <ownedAttribute xmi:id="_17_0_6_6c101f3_1399288705517_377420_1547" name="PruebaDouble" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_17_0_6_6c101f3_1399288709465_762603_1549" name="char" visibility="private">
+      <ownedAttribute xmi:id="_17_0_6_6c101f3_1399288709465_762603_1549" name="Pruebachar" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_17_0_6_6c101f3_1399288791848_115822_1551" name="bool" visibility="private">
+      <ownedAttribute xmi:id="_17_0_6_6c101f3_1399288791848_115822_1551" name="PruebaBool" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
-      <ownedAttribute xmi:id="_17_0_6_6c101f3_1399288793129_134932_1553" name="unnamed1" visibility="private"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_17_0_6_6c101f3_1398271237672_756699_2058" name="" memberEnd="_17_0_6_6c101f3_1398271237672_89139_2059 _17_0_6_6c101f3_1398271237672_79462_2060"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_17_0_6_6c101f3_1398271262944_38669_2099" name="" memberEnd="_17_0_6_6c101f3_1398271262944_769003_2100 _17_0_6_6c101f3_1398271262944_30514_2101"/>

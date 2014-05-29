@@ -5,7 +5,7 @@
       <type xsi:type="nosql:PrimitiveType" xmi:id="_iXGHsLqREeOyO595OC53bA" kind="text"/>
     </columns>
   </columnFamilies>
-  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_RXkJIMfyEeOU3dEbu5JwzQ" keyspace="_eO90sLqREeOyO595OC53bA" name="C" primaryKey="_TYQOgMfyEeOU3dEbu5JwzQ _mImvIMfyEeOU3dEbu5JwzQ" clusteringKey="_ybxJ4MfyEeOU3dEbu5JwzQ _zzGJMMfyEeOU3dEbu5JwzQ">
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_RXkJIMfyEeOU3dEbu5JwzQ" keyspace="_eO90sLqREeOyO595OC53bA" name="C" primaryKey="_TYQOgMfyEeOU3dEbu5JwzQ _mImvIMfyEeOU3dEbu5JwzQ" partitionKey="_TYQOgMfyEeOU3dEbu5JwzQ">
     <columns xmi:id="_TYQOgMfyEeOU3dEbu5JwzQ" name="CA">
       <type xsi:type="nosql:PrimitiveType" xmi:id="_uZ8TMMfyEeOU3dEbu5JwzQ" kind="text"/>
     </columns>
@@ -30,7 +30,7 @@
       <type xsi:type="nosql:PrimitiveType" xmi:id="_xHHrIMfyEeOU3dEbu5JwzQ" kind="int"/>
     </columns>
   </columnFamilies>
-  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_SQ16gMfyEeOU3dEbu5JwzQ" keyspace="_eO90sLqREeOyO595OC53bA" name="E" primaryKey="_WRtH4MfyEeOU3dEbu5JwzQ" clusteringKey="_hn88gMf0EeOU3dEbu5JwzQ">
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_SQ16gMfyEeOU3dEbu5JwzQ" keyspace="_eO90sLqREeOyO595OC53bA" name="E" primaryKey="_WRtH4MfyEeOU3dEbu5JwzQ" partitionKey="_hn88gMf0EeOU3dEbu5JwzQ">
     <columns xmi:id="_U9uXgMfyEeOU3dEbu5JwzQ" name="EA">
       <type xsi:type="nosql:CollectionType" xmi:id="_TtGLMMf0EeOU3dEbu5JwzQ" keyType="int"/>
     </columns>

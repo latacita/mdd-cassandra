@@ -1,0 +1,115 @@
+var EXPECTED_PATH  = basedir + "/model/tests/test3/transformationExpected.txt";
+var GENERATED_PATH = basedir + "/model/tests/test3/transformationGenerated.txt";
+
+var EXPECTED_MODEL = '
+@Spec {
+	metamodel "http://nosql/1.0" {
+		nsUri: "http://nosql/1.0"
+	}
+}
+
+package  {
+	KeySpace "A" {
+		name: "A"
+		replicationFactor: 1
+		columnFamilies: StaticColumnFamily "t1" {
+			keyspace: KeySpace "A"
+			name: "t1"
+			primaryKey: Column "at1"
+			columns: Column "at1" {
+				name: "at1"
+				type: PrimitiveType "PrimitiveType1" {
+					kind: uuid
+				}
+			}, Column "bt1" {
+				name: "bt1"
+				type: CollectionType "CollectionType1" {
+					keyType: text
+				}
+			}, Column "ct1" {
+				name: "ct1"
+				type: CollectionType "CollectionType2" {
+					kind: list
+					keyType: decimal
+				}
+			}
+		}, StaticColumnFamily "t2" {
+			keyspace: KeySpace "A"
+			name: "t2"
+			primaryKey: Column "ct2", Column "bt2"
+			columns: Column "at2" {
+				name: "at2"
+				type: CollectionType "CollectionType3" {
+					keyType: timestamp
+				}
+			}, Column "bt2" {
+				name: "bt2"
+				type: PrimitiveType "PrimitiveType2" {
+					kind: text
+				}
+			}, Column "ct2" {
+				name: "ct2"
+				type: PrimitiveType "PrimitiveType3" {
+					kind: text
+				}
+			}
+		}, StaticColumnFamily "t3" {
+			keyspace: KeySpace "A"
+			name: "t3"
+			primaryKey: Column "ct3"
+			columns: Column "at3" {
+				name: "at3"
+				type: PrimitiveType "PrimitiveType4" {
+					kind: int
+				}
+			}, Column "bt3" {
+				name: "bt3"
+				type: CollectionType "CollectionType4" {
+					keyType: boolean
+				}
+			}, Column "ct3" {
+				name: "ct3"
+				type: PrimitiveType "PrimitiveType5" {
+					kind: int
+				}
+			}
+		}, StaticColumnFamily "t4" {
+			keyspace: KeySpace "A"
+			name: "t4"
+			primaryKey: Column "bt4", Column "dt4"
+			columns: Column "at4" {
+				name: "at4"
+				type: PrimitiveType "PrimitiveType6" {
+					kind: blob
+				}
+			}, Column "bt4" {
+				name: "bt4"
+				type: PrimitiveType "PrimitiveType7" {
+					kind: uuid
+				}
+			}, Column "ct4" {
+				name: "ct4"
+				type: PrimitiveType "PrimitiveType8" {
+					kind: varint
+				}
+			}, Column "dt4" {
+				name: "dt4"
+				type: PrimitiveType "PrimitiveType9" {
+					kind: timestamp
+				}
+			}
+		}
+	}
+}
+
+';
+
+@model
+operation loadModels() {
+  loadHutn("Test3", EXPECTED_MODEL);
+}
+@test
+operation expectedModelGeneratesExpectedFile() {
+  runTarget("driver");
+  assertEqualFiles(EXPECTED_PATH, GENERATED_PATH);
+}

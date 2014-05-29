@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_vdKKsOdiEeO9u9GTmXn2Wg" name="Test" replicationFactor="1">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_vdKKsediEeO9u9GTmXn2Wg" keyspace="_vdKKsOdiEeO9u9GTmXn2Wg" name="User" primaryKey="_vdKKsudiEeO9u9GTmXn2Wg">
+    <columns xmi:id="_vdKKsudiEeO9u9GTmXn2Wg" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdKKs-diEeO9u9GTmXn2Wg" kind="text"/>
+    </columns>
+    <columns xmi:id="_vdKKtOdiEeO9u9GTmXn2Wg" name="password">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdKKtediEeO9u9GTmXn2Wg" kind="text"/>
+    </columns>
+    <columns xmi:id="_vdLY0OdiEeO9u9GTmXn2Wg" name="email">
+      <type xsi:type="nosql:CollectionType" xmi:id="_vdLY0ediEeO9u9GTmXn2Wg" keyType="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_vdLY0udiEeO9u9GTmXn2Wg" keyspace="_vdKKsOdiEeO9u9GTmXn2Wg" name="Tweet" primaryKey="_vdLY0-diEeO9u9GTmXn2Wg">
+    <columns xmi:id="_vdLY0-diEeO9u9GTmXn2Wg" name="Tweet_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdLY1OdiEeO9u9GTmXn2Wg" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_vdLY1ediEeO9u9GTmXn2Wg" name="body">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdLY1udiEeO9u9GTmXn2Wg" kind="text"/>
+    </columns>
+    <columns xmi:id="_vdLY1-diEeO9u9GTmXn2Wg" name="time">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdLY2OdiEeO9u9GTmXn2Wg" kind="text"/>
+    </columns>
+    <columns xmi:id="_vdLY2ediEeO9u9GTmXn2Wg" name="user_username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdLY2udiEeO9u9GTmXn2Wg" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_vdNOAOdiEeO9u9GTmXn2Wg" keyspace="_vdKKsOdiEeO9u9GTmXn2Wg" name="FollowingRelationship" primaryKey="_vdNOAediEeO9u9GTmXn2Wg">
+    <columns xmi:id="_vdNOAediEeO9u9GTmXn2Wg" name="FollowingRelationship_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdNOAudiEeO9u9GTmXn2Wg" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_vdNOA-diEeO9u9GTmXn2Wg" name="timestamp">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdNOBOdiEeO9u9GTmXn2Wg" kind="text"/>
+    </columns>
+    <columns xmi:id="_vdNOBediEeO9u9GTmXn2Wg" name="float">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdNOBudiEeO9u9GTmXn2Wg" kind="float"/>
+    </columns>
+    <columns xmi:id="_vdNOB-diEeO9u9GTmXn2Wg" name="PruebaDouble">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdNOCOdiEeO9u9GTmXn2Wg" kind="double"/>
+    </columns>
+    <columns xmi:id="_vdNOCediEeO9u9GTmXn2Wg" name="Pruebachar">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdNOCudiEeO9u9GTmXn2Wg" kind="varchar"/>
+    </columns>
+    <columns xmi:id="_vdNOC-diEeO9u9GTmXn2Wg" name="PruebaBool">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdOcIOdiEeO9u9GTmXn2Wg" kind="boolean"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_vdOcIediEeO9u9GTmXn2Wg" keyspace="_vdKKsOdiEeO9u9GTmXn2Wg" name="User_userline" primaryKey="_vdOcIudiEeO9u9GTmXn2Wg _vdOcJOdiEeO9u9GTmXn2Wg" partitionKey="_vdOcIudiEeO9u9GTmXn2Wg">
+    <columns xmi:id="_vdOcIudiEeO9u9GTmXn2Wg" name="User_username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdOcI-diEeO9u9GTmXn2Wg" kind="text"/>
+    </columns>
+    <columns xmi:id="_vdOcJOdiEeO9u9GTmXn2Wg" name="Tweet_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdOcJediEeO9u9GTmXn2Wg" kind="uuid"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_vdOcJudiEeO9u9GTmXn2Wg" keyspace="_vdKKsOdiEeO9u9GTmXn2Wg" name="User_timeline" primaryKey="_vdOcJ-diEeO9u9GTmXn2Wg _vdOcKediEeO9u9GTmXn2Wg" partitionKey="_vdOcJ-diEeO9u9GTmXn2Wg">
+    <columns xmi:id="_vdOcJ-diEeO9u9GTmXn2Wg" name="User_username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdOcKOdiEeO9u9GTmXn2Wg" kind="text"/>
+    </columns>
+    <columns xmi:id="_vdOcKediEeO9u9GTmXn2Wg" name="Tweet_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdOcKudiEeO9u9GTmXn2Wg" kind="uuid"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_vdQRUOdiEeO9u9GTmXn2Wg" keyspace="_vdKKsOdiEeO9u9GTmXn2Wg" name="FollowingRelationship_following" primaryKey="_vdQRUediEeO9u9GTmXn2Wg _vdQRU-diEeO9u9GTmXn2Wg" partitionKey="_vdQRUediEeO9u9GTmXn2Wg">
+    <columns xmi:id="_vdQRUediEeO9u9GTmXn2Wg" name="FollowingRelationship_FollowingRelationship_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdQRUudiEeO9u9GTmXn2Wg" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_vdQRU-diEeO9u9GTmXn2Wg" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdQRVOdiEeO9u9GTmXn2Wg" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_vdQRVediEeO9u9GTmXn2Wg" keyspace="_vdKKsOdiEeO9u9GTmXn2Wg" name="FollowingRelationship_followers" primaryKey="_vdQRVudiEeO9u9GTmXn2Wg _vdQRWOdiEeO9u9GTmXn2Wg" partitionKey="_vdQRVudiEeO9u9GTmXn2Wg">
+    <columns xmi:id="_vdQRVudiEeO9u9GTmXn2Wg" name="FollowingRelationship_FollowingRelationship_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdQRV-diEeO9u9GTmXn2Wg" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_vdQRWOdiEeO9u9GTmXn2Wg" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_vdQRWediEeO9u9GTmXn2Wg" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_wH_3cOdiEeO9u9GTmXn2Wg" keyspace="_vdKKsOdiEeO9u9GTmXn2Wg" name="a" primaryKey="_yUXBUOdiEeO9u9GTmXn2Wg _zCU6kOdiEeO9u9GTmXn2Wg _zZ9XcOdiEeO9u9GTmXn2Wg _zy2YkOdiEeO9u9GTmXn2Wg _3VrmIOdiEeO9u9GTmXn2Wg" partitionKey="_yUXBUOdiEeO9u9GTmXn2Wg _zZ9XcOdiEeO9u9GTmXn2Wg">
+    <columns xmi:id="_yUXBUOdiEeO9u9GTmXn2Wg" name="nombre">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_44JecOdiEeO9u9GTmXn2Wg" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_zCU6kOdiEeO9u9GTmXn2Wg" name="edad">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_5STq4OdiEeO9u9GTmXn2Wg" kind="int"/>
+    </columns>
+    <columns xmi:id="_zZ9XcOdiEeO9u9GTmXn2Wg" name="pais">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_5zRp8OdiEeO9u9GTmXn2Wg" kind="varchar"/>
+    </columns>
+    <columns xmi:id="_zy2YkOdiEeO9u9GTmXn2Wg" name="genero">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_6JZq8OdiEeO9u9GTmXn2Wg" kind="varchar"/>
+    </columns>
+    <columns xmi:id="_3VrmIOdiEeO9u9GTmXn2Wg" name="otros">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_6nfVIOdiEeO9u9GTmXn2Wg" kind="varchar"/>
+    </columns>
+  </columnFamilies>
+</nosql:KeySpace>

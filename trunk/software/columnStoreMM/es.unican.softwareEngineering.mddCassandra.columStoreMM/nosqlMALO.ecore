@@ -47,7 +47,7 @@
     <eLiterals name="NetworkTopologyStrategy" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DynamicColumnFamily" eSuperTypes="#//ColumnFamily">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="partitionKey" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clusteringKey" lowerBound="1"
         upperBound="-1" eType="#//Column"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaticColumnFamily" eSuperTypes="#//ColumnFamily"/>

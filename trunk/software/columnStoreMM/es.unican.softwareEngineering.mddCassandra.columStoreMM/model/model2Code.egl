@@ -1,7 +1,7 @@
 [%
 	var keyspace: KeySpace := KeySpace.allInstances().at(0);
 	var s: String;
-	var prk:String;
+	var tableKey:String;
 	var crk:String;
 	
 %]
@@ -12,16 +12,18 @@ WITH replication = {'class':'[%=keyspace.replicaPlacementStrategy%]', 'replicati
 USE [%=keyspace.name%];
 
 
-[% for (cf in keyspace.columnFamilies){ prk="";%]
+[% for (cf in keyspace.columnFamilies){ tableKey="";%]
 CREATE TABLE [%=cf.name%](
-	[% for (cols in cf.columns){ //vamos añadiendo las columnas
+	[% for (cols in cf.columns){ //este for define cada grupo de columnas
 		s=cols.name.toString();
 		for (c in cols.type){ 
+		
 			if (c.isTypeOf(PrimitiveType))  //definicion del tipo primitivo
 				s=s+" "+c.kind.toString();
 				
 			if (c.isTypeOf(MapType)) //definicion del tipo map
 				s=s+" Map"+"<"+c.keyType.toString()+","+c.baseType.toString()+">";  
+				
  			if(c.isTypeOf(CollectionType)) //definicion del tipo set o list
 				s=s+" "+c.kind.toString()+"<"+c.keyType.toString()+">"; 
 			
@@ -29,26 +31,31 @@ CREATE TABLE [%=cf.name%](
 	    s=s+",";%]
        [%=s%]
        [%}%]
-       PRIMARY KEY([% for (pk in cf.primaryKey) {
-       					prk=prk+pk.name;
-       					if (hasMore)
-							prk=prk+","; 
-					}
-					if (cf.isTypeOf(DynamicColumnFamily))
-						prk="("+prk; //en caso de que sea una dinamica se introduce un parentesis inicial para 
-									 //diferenciar la partition key de la clustering ((partition),clustering...)
-					%][%=prk%][%prk="";%])[%
-					crk="";
-					if (cf.isTypeOf(DynamicColumnFamily)){ //proceso parecido que con las estaticas cuidado con parentesis y comas
-						 crk=","; //despues de definir las partition separamos de las clustering
-	
-						 for (ck in cf.clusteringKey) {
-	   					 crk=crk+ck.name;
-	   					 if (hasMore)
-							crk=crk+","; 
+       PRIMARY KEY([%if (cf.isTypeOf(DynamicColumnFamily)){ //en caso de ser dinamic column family primero almacenamos la partition key
+       					tableKey="("; //abrimos el parentesis de la partition key
+       					var clusteringKeys:List;
+						for (ck in cf.partitionKey) {
+		   					 tableKey=tableKey+ck.name;
+		   					 clusteringKeys.add(ck.name);
+		   					 if (hasMore)
+								tableKey=tableKey+","; 
 						 }
-						 crk=crk+")";		
-					}  %][%=crk%]
+						 tableKey=tableKey+")"; //cerramos el parentesis de la partition key
+						 //guardamos el resto de las columnKey cuidado no incluir las partition dentro
+						 for (pk in cf.primaryKey) {
+						    if(not clusteringKeys.includes(pk.name))
+						    	tableKey=tableKey+","+pk.name;
+						}	
+					}
+					else{ //column family estatica simplemente se añaden las primaryKey de forma estandar
+						for (pk in cf.primaryKey) {
+			   				tableKey=tableKey+pk.name;
+			   				if (hasMore)
+								tableKey=tableKey+","; 
+						}	
+					}
+     
+					%][%=tableKey%][%tableKey="";%])
 );
 
 [%}%]

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_eO90sLqREeOyO595OC53bA" name="A" replicationFactor="1">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_5lD6QL5OEeOLNariJFlTWg" keyspace="_eO90sLqREeOyO595OC53bA" name="t1" primaryKey="_N2vY0L5REeOLNariJFlTWg">
+    <columns xmi:id="_N2vY0L5REeOLNariJFlTWg" name="at1">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_Oq1vQL5REeOLNariJFlTWg" kind="uuid"/>
+    </columns>
+    <columns xmi:id="__E2jwL5OEeOLNariJFlTWg" name="bt1">
+      <type xsi:type="nosql:CollectionType" xmi:id="_RNC4ML5PEeOLNariJFlTWg" keyType="text"/>
+    </columns>
+    <columns xmi:id="_AAH5ML5PEeOLNariJFlTWg" name="ct1">
+      <type xsi:type="nosql:CollectionType" xmi:id="_RiQTML5PEeOLNariJFlTWg" kind="list" keyType="decimal"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_540jwL5OEeOLNariJFlTWg" keyspace="_eO90sLqREeOyO595OC53bA" name="t2" primaryKey="_AQOxwL5PEeOLNariJFlTWg __WPOsL5OEeOLNariJFlTWg">
+    <columns xmi:id="_-k9iwL5OEeOLNariJFlTWg" name="at2">
+      <type xsi:type="nosql:CollectionType" xmi:id="_ScE3IL5PEeOLNariJFlTWg" keyType="timestamp"/>
+    </columns>
+    <columns xmi:id="__WPOsL5OEeOLNariJFlTWg" name="bt2">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_SvsWsL5PEeOLNariJFlTWg" kind="text"/>
+    </columns>
+    <columns xmi:id="_AQOxwL5PEeOLNariJFlTWg" name="ct2">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_TDNIkL5PEeOLNariJFlTWg" kind="text"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_6OeqsL5OEeOLNariJFlTWg" keyspace="_eO90sLqREeOyO595OC53bA" name="t3" primaryKey="_An8uML5PEeOLNariJFlTWg">
+    <columns xmi:id="_-0cwQL5OEeOLNariJFlTWg" name="at3">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_cKyYIL5PEeOLNariJFlTWg" kind="int"/>
+    </columns>
+    <columns xmi:id="__rmasL5OEeOLNariJFlTWg" name="bt3">
+      <type xsi:type="nosql:CollectionType" xmi:id="_Cw8q4MGYEeOqcK0F57DDAA" keyType="boolean"/>
+    </columns>
+    <columns xmi:id="_An8uML5PEeOLNariJFlTWg" name="ct3">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_fN9OML5PEeOLNariJFlTWg" kind="int"/>
+    </columns>
+  </columnFamilies>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_oqWQIL5PEeOLNariJFlTWg" keyspace="_eO90sLqREeOyO595OC53bA" name="t4" primaryKey="_qCnDkL5PEeOLNariJFlTWg _qiWTkL5PEeOLNariJFlTWg">
+    <columns xmi:id="_pwh1EL5PEeOLNariJFlTWg" name="at4">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_svLXgL5PEeOLNariJFlTWg" kind="blob"/>
+    </columns>
+    <columns xmi:id="_qCnDkL5PEeOLNariJFlTWg" name="bt4">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_tCackL5PEeOLNariJFlTWg" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_qQtxAL5PEeOLNariJFlTWg" name="ct4">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_tUH3oL5PEeOLNariJFlTWg" kind="varint"/>
+    </columns>
+    <columns xmi:id="_qiWTkL5PEeOLNariJFlTWg" name="dt4">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_t3S2IL5PEeOLNariJFlTWg" kind="timestamp"/>
+    </columns>
+  </columnFamilies>
+</nosql:KeySpace>

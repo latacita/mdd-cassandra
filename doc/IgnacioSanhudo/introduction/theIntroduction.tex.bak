@@ -1,0 +1,30 @@
+%%==================================================================%%
+%% Author : Sañudo Olmedo, Ignacio                                  %%
+%%          Sánchez Barreiro, Pablo                                 %%
+%% Version: 2.2, 18/06/2013                                         %%                                                                                    %%                                                                  %%
+%% Memoria del Proyecto Fin de Carrera                              %%
+%% Introducción                                                     %%
+%%==================================================================%%
+
+El principal objetivo de este proyecto es la implementación de un generador de código Cassandra-CQL (Cassandra Query Language) a partir de modelos UML, para ello se utilizaran una serie de técnicas orientadas al desarrollo software dirigido por modelos, estas reglas han sido definidas por los profesores Pablo Sánchez Barreiro y Carlos Blanco Bueno de la Universidad de Cantabria.
+
+Uno de los aspectos  más valorados por las empresas dedicadas al desarrollo software hoy en día es la reducción de costes y tiempo en los proyectos de desarrollo software. Orientado a otro ámbito este problema también se planteo Henry Ford cuando propuso el paradigma basado en cadena de montaje a principios del siglo XX (1908). Henry Ford propuso una serie de técnicas y estándares para la automatización de fabricación de sus vehículos,  este método lo puso en marcha con el conocido modelo Ford T. Con esto dio comienzo a la era de la producción industrial en serie.
+
+Años más tarde el término conocido como crisis del software fue concebido por Friedrich Ludwig Bauer [1] en la cumbre de la OTAN en el año 1968, en esta cumbre se debatieron cuales eran los problemas que se iban detectando en los proyectos de desarrollo software, entre ellos podemos encontrar los siguientes: Proyectos que no cumplen los presupuestos, ineficiencia del software, software que no cumple los requisitos, código difícil de mantener y componentes no reutilizables.
+
+El paradigma planteado por Henry Ford basado en la cadena de montaje puede ser aplicado al campo del desarrollo software por lo tanto el objetivo planteado para subsanar ciertos problemas citados anteriormente en este área fue tratar de trasladar el concepto de la cadena de montaje al desarrollo software, esto es automatizar los procesos de producción para obtener líneas de productos software y poder reutilizar componentes software que ya fueron desarrollados ya que el paradigma tradicional se basa en rediseñar componentes usados con anterioridad.
+
+A raíz de este concepto surge el  denominado "Desarrollo Dirigido por Modelos" (MDD). MDD se puede definir como  un enfoque de la Ingeniería del software y de la Ingeniería dirigida por modelos (MDE) que utiliza el modelo para crear un producto. ¿Y que es un modelo?. Un modelo se puede entender como la descripción o representación de un sistema en un lenguaje bien definido.
+Para entender lo que representa un modelo dentro de la Ingeniería dirigida por modelos (MDE) hay que saber previamente lo que es un metamodelo. Un metamodelo es un modelo usado para especificar un lenguaje, básicamente describe las características del lenguaje. Por lo tanto un modelo se puede entender como la instancia de un metamodelo. Estos conceptos son ampliados en siguientes secciones.
+
+El resultado de la utilización de MDD es traducido en reducción de costes debido a que el recurso humano requerido es menor,  aumento de la productividad  y reutilización de componentes además se puede aumentar el nivel de abstracción a la hora de realizar el diseño de un software.
+
+En las siguientes secciones se desarrollan los siguientes aspectos: El apartado 1.2 expande información sobre la Ingeniería dirigida por modelos y el Desarrollo Dirigido por Modelos, este apartado es vital para entender todo lo relacionado con la memoria presente. El apartado 1.3 presenta la motivación y objetivos del proyecto. Finalmente el apartado 1.4 describe la estructura que tendrá el documento presente.
+
+
+
+
+
+
+
+

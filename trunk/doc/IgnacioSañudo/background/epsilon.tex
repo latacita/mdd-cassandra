@@ -1,148 +1,162 @@
 %%==================================================================%%
-%% Author : Abascal Fernández, Patricia                             %%
+%% Author : Sañudo Olmedo, Ignacio                                  %%
 %%          Sánchez Barreiro, Pablo                                 %%
-%% Version: 1.2, 18/06/2013                                         %%
+%% Version: 1.1, 18/06/2013                                         %%
 %%                                                                  %%
 %% Memoria del Proyecto Fin de Carrera                              %%
-%% Background/Generación de Código con Epsilon                      %%
+%% Background/Epsilon                                               %%
 %===================================================================%%
 
-Epsilon~\cite{kolovos:2008} es una \emph{suite} de lenguajes y herramientas para el desarrollo software dirigido por modelos. En este sentido, Epsilon ofreces lenguajes para la transformación de modelo a modelo, modelo a texto, navegación a través de modelos o generación de editores textuales y/o gráficos para modelos, entre otras características. Epsilon se distribuye actualmente como un plug-in para Eclipse. El presente proyecto se ha centrado en la generación de código, para lo cual se han utilizado los lenguajes \emph{Epsilon Generation Language} (EGL)~\cite{dimitrios:2012}, que es el lenguaje de generación de código proporcionado por Epsilon; y \emph{Epsilon Object Language} (EOL)~\cite{dimitrios:2012}, que es el lenguaje básico para la manipulación y navegación a través de modelos proporcionado por Epsilon. Describimos estos lenguajes en las siguiente subsecciones.
+Epsilon es una familia de lenguajes y herramientas para el desarrollo de software dirigido por modelos, entre estas podemos encontrar: la transformación de modelos, validación de modelos, generación de código entre otras funcionalidades. Epsilon es distribuido a través de la plataforma de modelado de lenguajes de Eclipse.
 
-\subsection{Epsilon Object Language(EOL)}
+Como se comentaba anteriormente Epsilon proporciona multitud de lenguajes y herramientas para trabajar con modelos. Los lenguajes utilizados en este proyecto son EOL (Epsilon Object Language), ETL (Epsilon Transformation Language) y EGL (Epsilon Generation Language) también ha sido utilizado EUnit como herramienta para validar el código escrito por el generador de código Cassandra-CQL. Estos lenguajes y herramientas son descritos a continuación.
 
-El principal objetivo de EOL es proporcionar un lenguaje para la manipulación a nivel de código para la gestión de modelos. EOL proporciona facilidades para cargar un modelo, navegar a través de sus elementos o leer los valores de sus elementos, entre otras cracterísticas.
+\subsection{Epsilon Object Language}
+[2.1] capitulo EOL
+EOL (Epsilon Object Language) es un lenguaje de programación imperativo utilizado para crear, consultar y modificar los modelos EMF. Según [libro epislon] se puede considerar el lenguaje como una mezcla de Javascript y OCL, que combina lo mejor de ambos lenguajes. Como tal, proporciona todas las características habituales imperativas que se encuentran en Javascript (por ejemplo, la secuencia de la declaración, las variables, bucles for y while, etc) y todas las características interesantes de OCL como las operaciones sobre las colecciones (por ejemplo Sequence{1..5}.select (x | x> 3)).
 
-La Figura~\ref{back:code:eol} muestra un ejemplo del funcionamiento de EOL. EOL no es un lenguaje orientado a objetos en el sentido de que no permite definir clases. Sin embargo, EOL permite gestionar objetos de tipos o clases externamente definidos, normalmente dentro del metamodelo o gramática que define un lenguaje de modelado.
-
-%%=======================================================================================================%%
-%% [DONE]                                                                                                %%
-%% NOTA(Pablo): Este ejemplo resulta demasiado sencillo. Prueba a hacer una función, por ejemplo, que    %%
-%%              devuelva true si una clase UML tiene más de un padre, es decir, está afectada por la     %%
-%%              herencia múltiple                                                                        %%
-%%              La descripción es buena, haz la nueva de ese estilo                                      %%
-%%=======================================================================================================%%
-
-En la Figura~\ref{back:code:eol} línea 4, en este caso los objetos son de tipo Class. La línea 1 de la
- Figura~\ref{back:code:eol} presenta un ejemplo de llamada a operaciones EOL, donde el elemento \imp{clase}, de tipo Class, llama a la operación hasParent() y devuelve, tal como se aprecia en la línea 9, el valor de \emph{hasParent} que será true o false dependiendo de si la clase a analizar presenta herencia, si es clase hija de otra clase, o no. Dicho contenido se imprime por pantalla tal como se aprecia en la línea 2 mediante la instrucción \emph{println()}).
-
-\begin{figure}[!tb]
-\begin{center}
-\begin{footnotesize}
-\begin{verbatim}
-1 var bol = clase.hasParent();
-2 bol.println();
-3
-4 operation Class hasParent (): Boolean{
-5   var hasParent= false;
-6   if (not self.generalization.isEmpty()){
-7       hasParent=true;
-8   }
-9   return hasParent;
-10 }	
-\end{verbatim}
-\end{footnotesize}
-\end{center}
-\caption{Ejemplo de operación EOL}
-\label{back:code:eol}
-\end{figure}
-
-De esta forma, EOL permite definir funciones auxiliares para la manipulación o gestión de modelos. Estas funciones pueden ser utilizadas desde otros lenguajes de la suite Epsilon. En nuestro caso, estas funciones auxiliares se invocan desde el lenguaje
-de transformación modelo a texto EGL, el cual se describe a continuación.
-
-\subsection{Epsilon Generation Language(EGL)}
-
-EGL es un lenguaje de transformación modelo a texto (\emph{model-to-text-transformation}). EGL puede ser tulizad para transformar modelos en diversos tipos de artefactos de carácter textual, incluyendo código (por ejemplo, Java), informes (por ejemplo, en HTML), imágenes (por ejemplo, gráficos SVG), especificaciones formales (por ejemplo, en el lenguaje Z), o incluso aplicaciones completas generadas con múltiples lenguajes (por ejemplo, HTML, Javascript, CSS, Java y SQL). En nuestro caso, utilizaremos EGL para la generación de código C\# desde modelos UML.
-
-EGL es un generador de código basado en plantillas. Dichas plantillas son similares a las utilizadas en la generación de páginas web dinámicas, al estilo de sistemas como JSP (\emph{Java Server Pages})~\cite{eric:2010} o PHP (\emph{PHP Hypertext Preprocessor})~\cite{mehdi:2013}.
-
-Las Figuras~\ref{back:code:generacionClases}, \ref{back:fig:epsilonEGL} y~\ref{back:code:resultadogeneracionClases} muestran un ejemplo sencillo del funcionamiento de EGL. La Figura~\ref{back:code:generacionClases} contiene una sencilla plantilla que genera un listado de las clases que contiene un modelo UML. El texto situado dentro de los caracteres de escape \texttt{[\%} y \texttt{\%]} aparecer tal cual en la salida producida por la plantilla. El código situado entre dichos caracteres de escape es código EGL que gobierna el proceso de generación de código.
-
-Por ejemplo, las líneas 1 y 3 declaran un bucle que recorre todas las clases contenidas en el modelo de entrada. En cada iteración, se procesa la línea 2, que genera automáticamente el texto fuera de los caracteres de escape (``El modelo contiene la clase: ''). A continuación, se añade a la salida, por medio del operador \emph{=}, el nombre de la clase \emph{c}, que corresponda con la iteración realizada.
-
-La Figura~\ref{back:code:resultadogeneracionClases} muestra el resultado que produciría la plantilla de la Figura~\ref{back:code:generacionClases} para el modelo mostrado en la Figura~\ref{back:code:resultadogeneracionClases}.
-
-\begin{figure}[!tb]
-\begin{center}
-\begin{footnotesize}
-\begin{verbatim}
-1 [% for (c in Class.all) { %]
-2 El modelo contiene la clase: [%=c.name%]
-3 [% } %]
-\end{verbatim}
-\end{footnotesize}
-\end{center}
-\caption{Generación del nombre de cada Class contenida en un modelo de entrada}
-\label{back:code:generacionClases}
-\end{figure}
 
 \begin{figure}[!tb]
   \centering
-	\includegraphics[width=.45\linewidth]{background/images/epsilonEGL} \\
-  \caption{Ejemplo de modelo de entrada para generación de código con EGL}
-  \label{back:fig:epsilonEGL}
+  \includegraphics[width=.8\linewidth]{background/images/ejCasa.eps} \\
+  \caption{Ejemplo metamodelo casa}
+  \label{back:fig:ejMetamodeloCasa}
 \end{figure}
+
+
+Para entender mejor el funcionamiento de EOL se expone el siguiente ejemplo. Se ha definido el  metamodelo mostrado en la figura~\ref{back:fig:ejMetamodeloCasa} el cual consiste en la representación de una casa y las personas que viven en ella. Las personas tienen un nombre y un atributo booleano que representa si una persona está viva o no. Existe una relación de agregación para reflejar que la casa contiene personas.
+
+Una vez creado el metamodelo podemos crear una instancia de ese metamodelo. Un ejemplo de cómo funciona EOL puede ser el siguiente: deseamos saber que personas habitan en la casa y están vivas. La sintaxis sería de la siguiente manera (figura~\ref{back:code:codigoEOL}).
 
 \begin{figure}[!tb]
 \begin{center}
 \begin{footnotesize}
 \begin{verbatim}
-1 El modelo contiene la clase: Persona
-2 El modelo contiene la clase: Alumno
-3 El modelo contiene la clase: Profesor
+--------------------------------------------------------
+for (person in Person.all){
+  if (person.alive == true) {
+    person.name.println();
+  }
+}
+
+//Podemos realizar lo mismo de la siguiente manera:
+
+Person.all.select(r|r.alive==true).name.println();
+
+--------------------------------------------------------
 \end{verbatim}
 \end{footnotesize}
 \end{center}
-\caption{Resultado de la generación del nombre de cada Class contenida en un modelo de entrada}
-\label{back:code:resultadogeneracionClases}
+\caption{Ejemplo código EOL}
+\label{back:code:codigoEOL}
 \end{figure}
 
-Obviamente, EGL no sólo nos permite realizar estas sencillas operaciones. Por ejemplo, se pueden encapsular porciones reutilizables de código EGL en entidades bien definidos denominados \emph{templates}. Un \emph{template} tiene una funcionalidad similares a la de una \emph{función} o \emph{procedimiento} de un lenguaje de programación convencional.
 
-La Figura~\ref{back:code:generacionOperacion} muestra un ejemplo de template que sirve para generar la cabecera de una clase Java. La cabecera del template (línea 2) especifica que el template de aplica a objetos del tipo \emph{Class}, no precisando de ningún parámetro de entrada. La clase a la cual se aplica el template es un parámetro implícito de entrada a esta operación, a la cual se puede acceder a través del operador \emph{self}. Utilizando este operador, la línea 4 genera la cabecera de una calse java, de acuerdo a la visibilidad \emph{self.visibility} y nombre \emph{self.name} de la clase sobre la cual se invoca esta operación. Siendo $c$ un objeto de tipo \emph{Class}, invocar este template sería tan fácil como escribir \emph{c.getHeader()}.
+Como vemos la sintaxis es muy similar a cualquier lenguaje orientado a objetos, podemos manipular y consultar los objetos del modelo, sin embargo EOL no nos permite la definición de clases.
 
-\begin{figure}[tb!]
+
+\subsection{Epsilon Transformation Language}
+
+[2.1] capitulo etl
+ETL (Epsilon Transformation Language) es un lenguaje de transformación modelo a modelo basado en reglas. ETL proporciona las características estándar de un lenguaje de transformación, también nos permite manipular los modelos de entrada y salida así como su código fuente.
+ETL tiene su propia sintaxis sin embargo utiliza el lenguaje EOL como base.
+
+
+Recordando el ejemplo de la Red de computadores y el Grafo detallado en el capitulo anterior (sección 1.2). Deseamos realizar la transformación de un modelo de tipo grafo a un modelo de tipo red para ello utilizaremos ETL. En primer lugar hemos de contar con un modelo de un Grafo para poder realizar la transformación a un modelo de tipo Red.
+La figura~\ref{back:code:codigoETL} muestra el código que realiza el proceso de transformación de un Grafo a una Red.
+
+\begin{figure}[!tb]
 \begin{center}
 \begin{footnotesize}
 \begin{verbatim}
-1 [% @template
-2 operation Class getHeader() { %]
-3 [%=self.visibility] class [%=self.name%] {}
-4 [% } %]
+
+pre {
+    "Running ETL".println();
+    var Red : new Red!Red;
+    Red.nameRed="Red1";
+    var iPC:new Integer=1;
+    var iRouter:new Integer=1;
+}
+
+rule Arista2Cable
+transform a : Grafo!Arista
+to r : Red!Cable {	
+    r.nameCable = a.nombreArista;
+    if (a.parent.isDefined()) {
+        r.parent=Red;
+        for (nodoArista in a.children) {
+            if(nodoArista.color=TColor#R){
+                var PC : new Red!PC;
+                PC.nameNodo="PC"+iPC;
+                r.children.add(PC);
+                iPC=iPC+1;	
+            }
+            else{
+                var Router : new Red!Router;
+                Router.nameNodo="Router"+iRouter;
+                r.children.add(Router);
+                iRouter=iRouter+1;
+            }
+        }
+    }	
+}
+
 \end{verbatim}
 \end{footnotesize}
 \end{center}
-\caption{Ejemplo de template en EGL}
-\label{back:code:generacionOperacion}
+\caption{Ejemplo código ETL}
+\label{back:code:codigoETL}
 \end{figure}
 
+La sección de código inicial define algunas variables previa ejecución de las reglas. En ella se inicializan variables que se utilizaran posteriormente.
+En este código encontramos solo una regla. Esta regla transforma aristas del grafo a cables de la red. La primera instrucción copia el nombre de la arista al cable. A continuación la primera condicional cuestiona si esa arista tiene un padre definido en caso afirmativo asigna el cable a la red. A continuación por cada nodo se crea o bien un PC o un router dependiendo del color del nodo que se esté analizando (rojo-PC, azul-Router). En siguiente lugar se asigna el nodo creado al cable correspondiente y finalmente se añade a la red. Este proceso se repite por cada arista del grafo. Una vez ejecutado este código dado un modelo de entrada de tipo Grafo obtenemos un modelo de tipo Red que cumple las reglas definidas en el metamodelo.
 
-%%=====================================================================================================%%
-%% NOTA(Pablo): Esto es interesante, pero se hace ya pesado, así que yo lo quitaría                    %%
-%%=====================================================================================================%%
 
-%Un \emph{template} proporciona tres utilidades básicas al desarrollador EGL:
+\subsection{Epsilon Generation Language}
 
-%\begin{enumerate}
-%	\item Un \emph{template} permite modularizar y reutilizar el código utilizado en un proceso de transformación modelo a texto.
-%    \item Un \emph{template} permite al usuario definir de forma fácil el destino del texto generado.  En la Figura~\ref{back:code:template} (línea 3) muestra un ejemplo de invocación de un template, cuyo destino es un fichero de texto denonimado \emph{output.txt}
-%     \item Y por último, proporciona un conjunto de operaciones que se usan para controlar el destino del texto generado. En la Figura~\ref{back:code:template} (línea 3) se muestra cómo se elige el fichero destino para almacenar el texto generado con la plantilla \emph{ClassNames.egl}.
-% \end{enumerate}
+[2.1 capitulo egl]  [2.4]
+Epsilon Generation Language (EGL) es un lenguaje utilizado para la generación de código basado en la transformación de modelos (Model to Text-M2T).
+EGL puede ser utilizado para transformar los modelos en varios tipos de lenguajes, por ejemplo código ejecutable Java, código HTML o incluso aplicaciones completas que comprenden el código en varios lenguajes (por ejemplo, HTML, Javascript y CSS).
 
-% \begin{figure}[tb!]
-% \begin{center}
-% \begin{footnotesize}
-% \begin{verbatim}
-% 1 [%
-% 2 var t : Template = TemplateFactory.load("ClassNames.egl");
-% 3 t.generate("Output.txt");
-% 4 %]
-% \end{verbatim}
-% \end{footnotesize}
-% \end{center}
-% \caption{Almacenar el nombre de cada Class en disco}
-% \label{back:code:template}
-% \end{figure}
+Cada plantilla de EGL contiene varias secciones. Cada sección puede ser estática o bien dinámica.
+Una sección estática contiene texto que aparecerá en la salida generada por la plantilla. Una sección dinámica comienza con la secuencia '[\%' y termina con la secuencia '\%]'. La sección dinámica contiene el lenguaje (EOL, Epsilon Object Language).
 
-Con este apartado, termina el proceso de formación y aprendizaje de los fundamentos, técnicas, lenguajes y herramientas necesarios para la realización del proyecto. Una vez adquirido este bagaje, se procedió a la definición de la planificación del proyecto.
+La figura~\ref{back:code:codigoEGL} muestra como se realiza la generación de código HTML utilizando para ello el modelo generado de una red a partir de un grafo (ver sección anterior).
 
+\begin{figure}[!tb]
+\begin{center}
+\begin{footnotesize}
+\begin{verbatim}
+--------------------------------------------------------
+[%
+    var red: Red := Red.allInstances().at(0);
+%]
+
+<html>
+    <head>
+        <title> Red </title>
+    </head>
+    <body>
+        <h1>Conexiones</h1>				
+        <table  border="1">
+            <col style="width: 200px" />
+            <col style="width: 100px" span="3" />
+            [% for (conexiones in red.conexiones){%]
+            <tr>
+                <th scope="row">[%=conexiones.nameCable%]</th>
+                [% for (nodos in conexiones.children){%]
+                    <td>[%=nodos.nameNodo%]</td>
+                [%	}%]
+            </tr>
+            [%	}%]
+        </table>
+    </body>
+</html>
+
+--------------------------------------------------------
+\end{verbatim}
+\end{footnotesize}
+\end{center}
+\caption{Ejemplo código EGL}
+\label{back:code:codigoEGL}
+\end{figure}

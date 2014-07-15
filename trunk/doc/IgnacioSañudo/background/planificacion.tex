@@ -1,41 +1,26 @@
 %%==================================================================%%
-%% Author : Abascal Fernández, Patricia                             %%
+%% Author : Sañudo Olmedo, Ignacio                                  %%
 %%          Sánchez Barreiro, Pablo                                 %%
 %% Version: 1.2, 18/06/2013                                         %%
 %%                                                                  %%
 %% Memoria del Proyecto Fin de Carrera                              %%
-%% Background/Generación de Código con Epsilon                      %%
+%% Background/Planificacion                                         %%
 %===================================================================%%
 
-Como se ha comentado con anterioridad, el objetivo de este Proyecto Fin de Carrera era el desarrollar una serie de generadores de código que permitan automatizar la aplicación del \emph{Slicer Pattern}. Este patrón se utiliza para la desarrollo de  líneas de producto software, en las cuales se distinguen claramente, tal como se ha comentado dos fases: \emph{Ingeniería del Dominio}, e \emph{Ingeniería de Aplicaciones} (ver Figura~\ref{back:fig:domainAplicEng}).
+Como se ha comentado en el presente documento, el objetivo de este proyecto de fin de carrera es la implementación de un generador de código Cassandra a partir de modelos UML. El proceso de desarrollo así como el de aprendizaje que se ha seguido para la realización del proyecto queda reflejado en la figura [figuraProceso].
 
-Por tanto, el proceso de desarrollo del presente proyecto queda gobernado por dichas fases. La Figura~\ref{fig:planning} muestra dicho proceso de desarrollo.
+La primera tarea como es evidente consistió en adquirir los conocimientos necesarios para el desarrollo del proyecto, en primer lugar todo lo relacionado con el proceso de modelado de un lenguaje y transformación de lenguajes [kleppe]. También fueron necesarios conocimientos sobre la Ingeniería y el Desarrollo Dirigido por Modelos, también sintaxis y arquitectura
+de Cassandra.
 
-\begin{figure}[!tb]
-    \includegraphics[width=.95\linewidth]{background/images/planning.eps}
-    \caption{Proceso de desarrollo del Proyecto Fin de Carrera}
-    \label{fig:planning}
-\end{figure}
+A continuación se comenzó a trabajar con la herramienta Epsilon, sus lenguajes EOL, EGL, ETL y EUnit como herramienta para las pruebas de los modelos y código generados.  Así como con lenguaje para la definición de lenguajes de modelado EMF.
 
-Obviamente, la primera tarea (Figura~\ref{fig:planning}, \emph{T1A}), nada desdeñable, fue la de adquirir los conocimientos teóricos necesarios para la realización de todas las tareas posteriores. Ello implicaba adquirir los conocimientos relacionados con las \emph{Líneas de Producto Software}~\citep{pohl:2010, kakola:2006} en general; y con el diseño orientado a modelos~\citep{kastner:2008}, las clases parciales~\citep{sanchez:2010} y el \emph{Slicer Pattern}~\cite{perez:2011} en particular.
+Para conocer cómo funcionaban estos lenguajes se desarrollaron una serie de casos prácticos para familiarizarse con los métodos de transformación así como con la herramienta y creación de casos de prueba.
 
-Dado que el proyecto se debía implementar con una herramienta para el desarrollo software dirigido por modelos, denominado \emph{Epsilon}~\cite{kolovos:2008}, el siguiente paso (Figura~\ref{fig:planning}, \emph{T1B}) fue familiarizarse con dicha herramienta.
+Una vez conocido estos conceptos se estudiaron las reglas de transformación de un modelo UML a un modelo Cassandra, estas reglas fueron propuestas por [pabloCassandra].
 
-Para ello fue necesario adquirir ciertos conocimientos sobre EMF (\emph{Eclipse Modelling Framework})~\cite{steinberg:2008}, el lenguaje para la definición de lenguajes de modelado que constituye el corazón de Epsilon; así como con así como con EOL (\emph{Epsilon Object Language})~\citep{dimitrios:2012}, lenguaje que constituye la espina dorsal de Epsilon, y que es utilizado por la amplia mayoría de sus lenguajes y herramientas. A continuación, se debió adquirir destreza con el lenguajes a utilizar para la generación de código, EGL (\emph{Epsilon Generation Language})~\citep{dimitrios:2012}.
+Tras estas tareas de adquisición de conocimientos se empezó a trabajar en el generador de código Cassandra empezando por la transformación de modelos UML a modelos Cassandra. Una vez finalizada la transformación se comenzó a trabajar en el generador de código Cassandra. Tras realizar dicha tarea se realizaron una serie de casos de prueba para verificar si el resultado del generador de código era el esperado utilizando la herramienta EUnit.
 
-Además, por exigencias de los usuarios finales de este producto, el código generado debía ser editable como un proyecto de Visual Studio 2010, por lo que a continuación se procedió a familiarizarse con la utilización de dicha herramienta. Para ello, se implementó una línea de productos software sencilla utilizando las técnicas aprendidas hasta este punto, como el \emph{Slicer Pattern}.
+Una vez desarrollado el generador de código se realizaron distintos casos de prueba sobre Cassandra para probar el correcto funcionamiento del generador de código.
 
-Tras esta tarea inicial de adquisición de conocimientos previos, el resto del proyecto se estructura  de acuerdo a las dos fases de una línea de productos software.
 
-La primera tarea tras la fase inicial de documentación fue la fase dedicada a la implementación de los generadores de código para la fase de \emph{Ingeniería del Dominio} (Figura~\ref{fig:planning}, \emph{T2}). Dichos
-generadores de código necesarios debían, a partir de un modelo UML 2.0 orientado a características, generar un proyecto Visual Studio, en el lenguaje C\# ,y que estuviera implementado acorde a las clases parciales C\# y el \emph{Slicer Pattern}. Para ello deberían generarse las clases parciales correspondientes a las cada características, así como los esqueletos las versiones sucias de los métodos. Dichos esqueletos, al igual que en la metodología original TENTE, deben ser completados a mano.
-
-Para comprobar el correcto funcionamiento de estos generadores de código, se desarrollaron una serie de pruebas unitarias que se implementaron en \emph{EUnit}~\citep{dimitrios:2012}, el lenguaje para la definición de pruebas unitarias de la suite \emph{Epsilon}.
-
-A continuación, la siguiente fase consistiría en el desarrollo de los generadores de código para la fase de \emph{Ingeniería de Aplicaciones} (Figura~\ref{fig:planning}, \emph{T3}), para lo que se siguió un procedimiento similar al de la fase anterior. La función de estos generadores de código era la de crear las clases parciales destinadas a componer las versiones sucias de cada método, para lo cual se debían generar las versiones limpias de cada métodos, así como el código para que dichas versiones limpias delegasen en las versiones sucias que correspondiese.
-
-Llegados a este punto, teníamos los generadores de código solicitados, por lo que sólo restaba proceder a su empaquetado y despliegue (Figura~\ref{fig:planning}, \emph{T4}). Este despliegue implicaba su integración dentro de la arquitectura de plugins de Eclipse.
-
-Para ello primero se creó un plug-in para el entorno de desarrollo de Eclipse, de forma que éste tuviese elementos gráficos y la lógica necesaria para invocar a los generadores de código creados. A continuación, tanto los generadores de código cómo el plug-in creados debían empaquetarse y distribuirse de acuerdo a las políticas de desarrollo de plug-ins para Eclipse.
-
-Tras dicha integración, se procedió a realizar una serie de pruebas de aceptación, destinadas a comprobar que el trabajo realizado satisfacía las necesidades de los usuarios finales que iban a utilizar el producto creado.
+Pruebas integración

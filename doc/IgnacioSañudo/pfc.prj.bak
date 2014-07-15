@@ -4,67 +4,49 @@
 0
 1
 pfc.tex
-44
+41
 4
 3
 
-config\pfc_options.tex
-TeX
-1060858 0 23 31 21 3 198 207 812 776 0 1 56 204 -1 -1 0 0 2 0 0 2 1 0 3 21  0 0 0
 pfc.tex
 TeX
-135278587 1 -1 84 -1 111 0 0 614 569 0 1 352 17 -1 -1 0 0 70 -1 -1 70 1 0 111 -1  0 -1 0
-background\background.tex
-TeX:UNIX
-1159163 0 -1 83 -1 110 88 92 702 642 0 1 352 -198 -1 -1 0 0 70 -1 -1 70 1 0 110 -1  0 -1 0
-background\epsilon.tex
-TeX
-269496315 0 -1 5469 -1 5471 154 161 768 711 0 1 256 -204 -1 -1 0 0 70 -1 -1 70 1 0 5471 -1  0 -1 0
-background\planificacion.tex
-TeX
-1060859 0 -1 578 -1 2552 50 50 890 356 0 1 40 442 -1 -1 0 0 70 -1 -1 70 1 0 2552 -1  0 0 0
-introduction\antecedentes.tex
-TeX
-17838075 1 -1 7256 -1 6327 75 75 917 381 0 1 40 17 -1 -1 0 0 70 -1 -1 70 1 0 6327 -1  0 -1 0
-introduction\objetivos.tex
-TeX
-1060859 0 -1 1629 -1 1665 0 0 844 287 0 1 808 204 -1 -1 0 0 70 -1 -1 70 1 0 1665 -1  0 0 0
-background\cassandra.tex
-TeX
-269496315 0 -1 2446 -1 2116 25 25 865 331 0 1 40 204 -1 -1 0 0 70 -1 -1 70 1 0 2116 -1  0 -1 0
-background\EMF.tex
-TeX
-269496315 0 -1 144 -1 720 125 125 965 431 0 1 40 136 -1 -1 0 0 70 -1 -1 70 1 0 720 -1  0 0 0
-introduction\roadmap.tex
-TeX
-1060859 0 -1 1264 -1 1264 220 230 834 780 0 1 544 255 -1 -1 0 0 70 -1 -1 70 1 0 1264 -1  0 0 0
-:\Users\Nacho\Dropbox\QUINTO\PFC\IgnacioSañudo\background\slicer.tex
-TeX
-269496315 1 -1 4479 -1 3180 100 100 941 406 0 1 40 408 -1 -1 0 0 -1 -1 -1 -1 1 0 3180 -1  0 -1 0
-introduction\theIntroduction.tex
-TeX
-286273531 1 -1 106 -1 84 25 25 846 331 0 1 136 -544 -1 -1 0 0 4159 -1 -1 4159 1 0 84 -1  0 0 0
-background\sumario.tex
-TeX:UNIX
-1159163 0 -1 969 -1 969 242 253 856 784 0 1 672 204 -1 -1 0 0 70 -1 -1 70 1 0 969 -1  0 0 0
+135278587 4 -1 1884 -1 1885 0 0 614 569 0 1 408 -699 -1 -1 0 0 70 -1 -1 70 1 0 1885 -1  0 -1 0
 background\casoEstudio.tex
 TeX
-1060859 0 -1 84 -1 140 125 125 973 431 0 1 584 17 -1 -1 0 0 70 -1 -1 70 1 0 140 -1  0 0 0
-introduction\introduction.tex
+1060859 0 -1 3400 -1 3225 125 125 973 431 0 1 48 765 -1 -1 0 0 70 -1 -1 70 1 0 3225 -1  0 -1 0
+background\spl.tex
 TeX
-1060859 0 -1 1173 -1 1181 198 207 812 757 0 1 232 53 -1 -1 0 0 70 -1 -1 70 1 0 1181 -1  0 -1 0
-config\chapters.tex
-TeX:UNIX
-1159163 0 -1 0 -1 0 75 75 923 381 0 1 40 0 -1 -1 0 0 64 -1 -1 64 1 0 0 -1  0 0 0
+1060859 1 -1 3074 -1 2828 0 0 614 531 0 1 40 170 -1 -1 0 0 70 -1 -1 70 1 0 2828 -1  0 -1 0
+introduction\antecedentes.tex
+TeX
+286273531 0 -1 7071 -1 10093 75 75 917 381 0 1 168 255 -1 -1 0 0 -1 -1 -1 -1 1 0 10093 -1  0 -1 0
+introduction\theIntroduction.tex
+TeX
+286273531 0 -1 3716 -1 1617 25 25 846 331 0 1 40 -266 -1 -1 0 0 4159 -1 -1 4159 1 0 1617 -1  0 0 0
 :\Users\Nacho\Dropbox\QUINTO\docPFC\PatriciaAbascal\introduction\theIntroduction.tex
 TeX
 1060859 0 -1 0 -1 1942 100 100 942 406 0 1 40 -1241 -1 -1 0 0 -1 -1 -1 -1 1 0 1942 -1  0 0 0
+introduction\objetivos.tex
+TeX
+269496315 0 -1 1629 -1 1665 0 0 844 287 0 1 808 272 -1 -1 0 0 70 -1 -1 70 1 0 1665 -1  0 0 0
+introduction\roadmap.tex
+TeX
+1060859 0 -1 1264 -1 1264 220 230 834 780 0 1 544 255 -1 -1 0 0 70 -1 -1 70 1 0 1264 -1  0 0 0
+introduction\introduction.tex
+TeX
+269496315 0 -1 1173 -1 1181 198 207 812 757 0 1 232 119 -1 -1 0 0 70 -1 -1 70 1 0 1181 -1  0 -1 0
+background\background.tex
+TeX:UNIX
+1159163 0 -1 0 -1 1309 88 92 702 642 0 1 112 221 -1 -1 0 0 70 -1 -1 70 1 0 1309 -1  0 -1 0
 references\references.bib
 BibTeX
 1049586 1 20 7 20 18 44 46 1416 463 0 1 176 136 -1 -1 0 0 43 0 0 43 1 0 18 20  0 -1 0
 :\Users\Nacho\AppData\Roaming\WinEdt Team\WinEdt 8\ConfigEx\Dictionaries.ini
 DATA:INI:EDT
 1049594 0 0 1 271 5 125 125 967 412 1 1 120 55 -1 -1 0 0 83 0 0 83 1 0 5 271  0 -1 0
+config\chapters.tex
+TeX:UNIX
+269594619 0 -1 0 -1 0 75 75 923 381 0 1 40 0 -1 -1 0 0 64 -1 -1 64 1 0 0 -1  0 0 0
 config\headers.tex
 TeX:UNIX
 269594619 0 -1 0 -1 0 50 50 898 356 0 1 40 0 -1 -1 0 0 90 -1 -1 90 1 0 0 -1  0 0 0
@@ -80,6 +62,12 @@ TeX
 config\rename.tex
 TeX:UNIX
 1159163 0 -1 0 -1 0 242 253 856 822 0 1 40 0 -1 -1 0 0 1 -1 -1 1 1 0 0 -1  0 0 0
+config\pfc_options.tex
+TeX
+1060858 0 23 31 21 3 198 207 812 776 0 1 56 204 -1 -1 0 0 2 0 0 2 1 0 3 21  0 0 0
+background\epsilon.tex
+TeX
+1060859 0 -1 0 -1 0 154 161 768 711 0 1 40 0 -1 -1 0 0 70 -1 -1 70 1 0 0 -1  0 -1 0
 background\slicer.tex
 TeX
 1060859 0 -1 9358 -1 9347 132 138 746 688 0 1 600 391 -1 -1 0 0 70 -1 -1 70 1 0 9347 -1  0 -1 0
@@ -128,6 +116,9 @@ TeX:UNIX
 background\tente.tex
 TeX
 1060859 0 -1 0 -1 0 110 115 724 665 0 -1 25 0 -1 -1 0 0 70 -1 -1 70 1 0 0 -1  0 0 0
+background\sumario.tex
+TeX:UNIX
+1159163 0 -1 1084 -1 1084 242 253 856 784 0 -1 25 304 -1 -1 0 0 70 -1 -1 70 1 0 1084 -1  0 0 0
 applicationEngineering\sumario.tex
 TeX
 1060859 0 -1 578 -1 988 66 69 680 600 0 -1 355 266 -1 -1 0 0 70 -1 -1 70 1 0 988 -1  0 0 0
@@ -159,9 +150,11 @@ TeX
 *background/background.tex
 >
 *background/casoEstudio.tex
-*background/EMF.tex
+*background/spl.tex
+*background/docUML.tex
+*background/tente.tex
+*background/slicer.tex
 *background/epsilon.tex
-*background/cassandra.tex
 *background/planificacion.tex
 *background/sumario.tex
 <

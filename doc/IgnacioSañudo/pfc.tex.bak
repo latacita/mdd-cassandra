@@ -1,7 +1,7 @@
 %%==================================================================%%
-%% Author : Abascal Fernández, Patricia                             %%
+%% Author : Sañudo Olmedo, Ignacio                                  %%
 %%          Sánchez Barreiro, Pablo                                 %%
-%% Version: 1.0, 14/02/2013                                         %%                                                                                    %%                                                                  %%
+%% Version: 1.0, 14/02/2014                                         %%                                                                                    %%                                                                  %%
 %% Memoria del Proyecto Fin de Carrera                              %%
 %% Archivo raíz                                                     %%
 %%==================================================================%%
@@ -38,7 +38,7 @@
 \newcommand{\myboss}{Pablo Sánchez Barreiro} % name of supervisor
 \newcommand{\thesistitle}{Desarrollo de un Entorno Dirigido por Modelos para la Creación de Esquemas de Bases de Datos en Cassandra a partir de Modelos UML}
 
-\newcommand{\englishtitle}{Development of a model-driven development enviroment for software product lines on the .NET platform}
+\newcommand{\englishtitle}{Development of a Model-Driven Environment for Creating Database Schemas in Cassandra from UML Models}
 												  % work title
 \newcommand{\worktype}{Proyecto Fin de Carrera}   % work type
 \newcommand{\logo}{images/uc.eps}            % logo file (e.g. for the cover)
@@ -86,7 +86,7 @@
 \input{background/background.tex}
 
 % Capítulo 3: M2M
-% \input{domainEngineering/domain.tex}
+\input{M2M/domain.tex}
 
 % Capítulo 4: M2T
 % \input{applicationEngineering/application.tex}

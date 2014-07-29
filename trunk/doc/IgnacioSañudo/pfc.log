@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  16 JUL 2014 01:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  29 JUL 2014 02:45
 entering extended mode
 **C:/Program*Files/Epsilon/workspace/IgnacioSañudo/pfc.tex
 ("C:/Program Files/Epsilon/workspace/IgnacioSañudo/pfc.tex"
@@ -365,6 +365,8 @@ Package minitoc Info: I0033
 (minitoc)             Writing pfc.mtc1.
 Package minitoc Info: I0033
 (minitoc)             Writing pfc.mtc2.
+Package minitoc Info: I0033
+(minitoc)             Writing pfc.mtc3.
 
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.toc"
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
@@ -404,51 +406,46 @@ Cap\'{\i }tulo 1.
 n.tex" [1
 
 
-])
+] [2])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/antecedentes.t
 ex"
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
 File: background/images/MDAMDDMDEMBE.eps Graphic file (type eps)
-
-<background/images/MDAMDDMDEMBE.eps>
+ <background/images/MDAMDDMDEMBE.eps>
 
 Package Fancyhdr Warning: \headheight is too small (15.0pt): 
  Make it at least 25.2842pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
+[3] [4]
 File: background/images/ejALL.eps Graphic file (type eps)
  <background/images/ejALL.eps>
-Overfull \hbox (36.0022pt too wide) in paragraph at lines 45--45
- [][][] 
- []
-
-[4]
-File: background/images/transformacion.eps Graphic file (type eps)
- <background/images/transformacion.eps>
-Overfull \hbox (18.0011pt too wide) in paragraph at lines 67--67
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 36--36
  [][][] 
  []
 
 [5]
+File: background/images/transformacion.eps Graphic file (type eps)
+ <background/images/transformacion.eps>
+Overfull \hbox (18.0011pt too wide) in paragraph at lines 58--58
+ [][][] 
+ []
+
 File: background/images/grafoMetamodelo.eps Graphic file (type eps)
- <background/images/grafoMetamodelo.eps> [6]
+<background/images/grafoMetamodelo.eps> [6]
 File: background/images/metamodeloRed.eps Graphic file (type eps)
 
 <background/images/metamodeloRed.eps>
 File: background/images/ejGeneradorHTML.eps Graphic file (type eps)
  <background/images/ejGeneradorHTML.eps>)
+[7]
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/objetivos.tex"
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/roadmap.tex"))
+) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/roadmap.tex"
+) [8])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/background.tex"
-[8]
+[9] [10
+
+]
 Cap\'{\i }tulo 2.
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc2"
 Overfull \hbox (16.02876pt too wide) in paragraph at lines 1--1
@@ -458,22 +455,60 @@ andra [][]
 
 ) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/casoEstudio.te
 x") ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/EMF.tex"
-[9
-
+[11
 
 ]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/epsilon.tex"
 File: background/images/ejCasa.eps Graphic file (type eps)
- <background/images/ejCasa.eps> [10]
-Underfull \vbox (badness 2253) has occurred while \output is active []
+ <background/images/ejCasa.eps> [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-[12])
+ [13]
+[14])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/cassandra.tex"
-[13] [14])
+[15] [16])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/planificacion.te
-x" [15])
+x" [17] [18])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/sumario.tex"))
-[16]
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/domain.tex" [19]
+[20
+
+]
+Cap\'{\i }tulo 3.
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc3")
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/introduction.tex")
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/metamodeloCassandra.tex
+"
+File: m2m/images/ecoreDiag.eps Graphic file (type eps)
+ <m2m/images/ecoreDiag.eps> [21
+
+]) [22]
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/transformation.tex"
+[23]
+Overfull \hbox (145.56912pt too wide) in paragraph at lines 67--67
+[]    \OT1/cmtt/m/n/9 guard: ((""+attribute.qualifiedName).contains("Data::") a
+nd attribute.type.isKindOf(UML!PrimitiveType))[] 
+ []
+
+
+Overfull \hbox (13.27066pt too wide) in paragraph at lines 67--67
+[]        \OT1/cmtt/m/n/9 if(attribute.qualifiedName=="Data::"+cfamily.name+"::
+"+attribute.name){[] 
+ []
+
+
+Overfull \hbox (88.86978pt too wide) in paragraph at lines 67--67
+[]            \OT1/cmtt/m/n/9 //5.5 Attribute with primitive type transformatio
+n->Attributes with upper bound = 1[] 
+ []
+
+
+Overfull \hbox (88.86978pt too wide) in paragraph at lines 67--67
+[]            \OT1/cmtt/m/n/9 //5.5 Attribute with primitive type transformatio
+n->Attributes with upper bound > 1[] 
+ []
+
+) [24] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/casoEstudio.tex"
+) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/pruebas.tex"))
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the pfc.maf file.
@@ -483,14 +518,18 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the pfc.log file.
 
-[17] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.aux") ) 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+[26] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.aux") ) 
 Here is how much of TeX's memory you used:
- 6613 strings out of 493922
- 96559 string characters out of 3147305
- 181535 words of memory out of 3000000
- 9549 multiletter control sequences out of 15000+200000
+ 6652 strings out of 493922
+ 97947 string characters out of 3147305
+ 185535 words of memory out of 3000000
+ 9563 multiletter control sequences out of 15000+200000
  14549 words of font info for 55 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
- 36i,13n,43p,894b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,13n,43p,1090b,430s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on pfc.dvi (23 pages, 73260 bytes).
+Output written on pfc.dvi (32 pages, 98724 bytes).

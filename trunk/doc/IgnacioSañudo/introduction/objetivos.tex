@@ -1,7 +1,7 @@
 %%==================================================================%%
 %% Author : Sañudo Olmedo, Ignacio                                  %%
 %%          Sánchez Barreiro, Pablo                                 %%
-%% Version: 1.4, 18/06/2013                                         %%                                                                                    %%                                                                  %%
+%% Version: 1.4, 18/06/2014                                         %%                                                                                    %%                                                                  %%
 %% Memoria del Proyecto Fin de Carrera                              %%
 %% Introduccion/Motivación y objetivos                              %%
 %%==================================================================%%
@@ -10,9 +10,7 @@
 
 Como hemos visto a lo largo de la introducción el enfoque que proporciona el Desarrollo Dirigido por Modelos así como la Ingeniería Dirigida por Modelos nos proporciona múltiples ventajas respecto al desarrollo tradicional por lo que la utilización de este enfoque es apropiada para la realización del generador de código así como para las transformaciones entre modelos.
 
-La utilización de modelos UML respecto a modelos escritos en Cassandra a la hora de especificar una base de datos no relacional proporciona una abstracción para aquellos usuarios que no estén muy familiarizados con el modelado de bases de datos no relacionales. Por lo que la utilización de modelos escritos en UML es ventajosa ya que UML es un lenguaje de modelado bien conocido por toda la comunidad de diseñadores.
-
-Como se comenta al inicio del documento, el objetivo de este proyecto de fin de carrera es la implementación de un generador de código que transforme un modelo UML en su correspondiente código ejecutable en Cassandra. Previa implementación del generador de código habrá que transformar el modelo UML a un modelo escrito en Cassandra. Para ello necesitaremos contar con el metamodelo de Cassandra-CQL y el metamodelo de UML. Dicho generador y dicha transformación se desarrollaran utilizando el enfoque y las técnicas que proporcionan el Desarrollo Dirigido por Modelos. Esta implementación será realizada con el framework que proporciona eclipse de modelado llamado EMF.
+El objetivo de este proyecto de fin de carrera es la implementación de un generador de código que transforme un modelo UML en su correspondiente código ejecutable en Cassandra. Para ello, previa implementación del generador de código habrá que transformar el modelo UML a un modelo escrito en Cassandra. Por lo tanto necesitaremos desarrollar un metamodelo que describa el lenguaje de Cassandra y el metamodelo de UML. Dicho generador y dicha transformación se desarrollaran utilizando el enfoque y las técnicas que proporcionan el Desarrollo Dirigido por Modelos. Esta implementación será realizada con el framework que proporciona eclipse de modelado llamado EMF.
 
 Como resultado del proyecto se genera un código escrito en el lenguaje de Cassandra (CQL-Cassandra Query Language) que puede ser ejecutado en cualquier herramienta que soporte dicho lenguaje.
 

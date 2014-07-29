@@ -1,0 +1,107 @@
+%%==================================================================%%
+%% Author : Abascal Fernández, Patricia                             %%
+%% Author : Sánchez Barreiro, Pablo                                 %%
+%% Version: 1.4, 29/04/2013                                         %%
+%%                                                                  %%
+%% Memoria del Proyecto Fin de Carrera                              %%
+%% Domain Engineering/Transformación UML a C#                       %%
+%%==================================================================%%
+
+Como hemos comentado, el primer paso para desarrollar una transformación de modelo a código es: (1) identificar los distintos casos o tipos de entrada con los que nos podemos encontrar; y (2) hallar un equivalente en el lenguaje destino (C\# en nuestro caso). A continuación, mostramos los casos identificados (cómo título de cada subsección), y por cada caso, comentamos las equivalencias propuestas. Ciertas de estas reglas son específicas para líneas de productos software, mientras que otras, como la transformación de las asociaciones, son aplicables a cualquier transformación de UML 2.0 a C\#.
+Cada regla de transformación la ilustramos utilizando el ejemplo de la Figura~\ref{back:fig:smartHome}.
+
+\subsection{Modelo}
+
+Un modelo UML, es decir, el elemento raíz que contiene al resto de los elementos de un modelo UML, se transforma en el \emph{namespace} para el proyecto C\#. Los \emph{namespaces} permiten agrupar entidades tales como paquetes, clases, objetos y funciones bajo el mismo nombre. De esta forma, se pueden tener varios \emph{namespaces} en el mismo proyecto que son independientes entre sí.
+
+Recordar que para que varias clases parciales puedan ser combinadas, éstas deben pertenecer a un mismo \emph{namespace}. Por tanto, se utiliza como nombre de dicho \emph{namespace}, el nombre del modelo UML 2.0 que sirve de entrada a los generadores de código.
+
+Además, al transformar el modelo UML 2.0, se crea un proyecto Visual Studio 2010, inicialmente vacío, con el mismo nombre que el modelo UML 2.0.
+
+Para el caso de la Figura~\ref{back:fig:smartHome}, el nombre del modelo, el cual no aparece en el diagrama, es \emph{SmartHome}. Por tanto, se crearía un proyecto Visual Studio 2010, con \emph{SmartHome} como nombre. Dentro de dicho proyecto, se crearía un \emph{namespace} denominado \emph{SmartHome}.
+
+\subsection{Paquete}
+
+Cada paquete UML 2.0 representa en nuestro caso una familia de clases, la cual encapsula una característica. Por tanto, por cada paquete UML 2.0, se crea una nueva carpeta o directorio, con el mismo nombre que el paquete, en el proyecto Visual Studio 2010 creado al transformar el modelo que contiene dicho paquete. En dicho directorio se colocarán todos los ficheros resultantes de transformar el contenido de dicho paquete.
+
+Por ejemplo, para el caso de la Figura~\ref{back:fig:smartHome}, durante la transformación del paquete \imp{WindowMng}, se crearía una nueva carpeta dentro del proyecto Visual Studio 2010 generado, denominada \imp{WindowMng}. Lo mismo se aplicaría al resto de los paquetes.
+
+\subsection{Tipos primitivos}
+\label{subsec:domain:primitiveType}
+
+Por cada tipo primitivo de UML 2.0, se establece una correspondencia con los tipos primitivos de C\#. Por ejemplo, un \emph{String} de UML 2.0 se transforma en \emph{String} de C\#. Un \emph{boolean} de UML 2.0 se transforma en un \emph{bool} de C\#. Esta correspondencia es bastante directa y no presenta problemas más de allá de tener que renombrar algunos tipos.
+
+\subsection{Clases Enumeradas}
+
+Cada clase enumerada UML 2.0, se transforma en un enumerado de C\#, con el mismo nombre que el enumerado UML 2.0. A continuación, se procesan los literales de la clase enumerado UML 2.0, añadiendo un literal con el mismo nombre al enumerado creado en C\#.
+
+Por ejemplo, la clase enumerada \imp{TempUnits} de la característica \imp{HeaterMng} se transformaría en un enumerado de C\#, con nombre \imp{TempUnits}, perteneciente al \emph{namespace} \imp{HeaterMng}, y con \imp{CELSIUS} y \imp{FARENHEIT} como literales. El Listado~\ref{dom:code:enum} muestra el código resultante de esta transformación.
+
+\begin{lstlisting} [basicstyle=\ttfamily\scriptsize,language=CSharp, captionpos=b,
+                    caption=Código generado para la clase enumerada \imp{TempUnits},
+                    label=dom:code:enum]
+01 namespace SmartHome{
+02    enum TempUnits {
+03        CELSIUS,
+04        FARENHEIT
+05    };
+06 }
+\end{lstlisting}
+
+\subsection{Clase}
+\label{subsec:domain:class}
+
+Por cada clase UML 2.0 encontrada dentro de un paquete, se genera una clase parcial sita en el directorio correspondiente al paquete al cual pertenece. El nombre de la clase parcial es el mismo que el de la clase UML 2.0.
+
+Por ejemplo, para la clase \emph{WindowCtrl}, del paquete \emph{WindowMng}, se crearía una clase parcial pública, denominada \emph{WindowCtrl}, y sita en la carpeta del proyecto \emph{WindowMng}.
+
+A continuación, se procesan los contenidos de dicha clase, tal como se describe a continuación.
+
+\subsection{Atributo}
+\label{subsec:domain:atrib}
+
+Cada atributo de una clase en UML 2.0 se transforma en una propiedad de C\#, perteneciente a clase parcial correspondiente a la clase que posee el atributo en el modelo UML 2.0. Dicha propiedad tendrá siempre visibilidad \emph{protegida} (\emph{protected}), salvo que estuviese declarada como \emph{privada} (\emph{private}) en el modelo UML 2.0, en cuyo caso se mantendrá la visibilidad privada.
+
+Si el atributo era público en el modelo UML, se le generarán métodos de acceso (\emph{getter} y \emph{setter}) a dicha propiedad. Si el atributo fuese de solo lectura o derivado, no se le generaría método de escritura (\emph{setter}).
+
+Si el atributo fuese estático (\emph{static}), se generará como estático en el código C\#, y no se le generarán métodos de acceso.
+
+Si el tipo del atributo es un tipo primitivo y el atributo no es multivaluado, es decir, la cota superior de su multiplicidad es igual a 1, se utiliza como tipo su correspondiente en C\#, de acuerdo las correspondencias comentadas en la Sección~\ref{subsec:domain:primitiveType}. Si el tipo fuese una clase u otro tipo no primitivo, el tipo será el nombre resultante de transformar dicho elemento no primitivo.
+
+Por ejemplo, el atributo \imp{id} de la clase \imp{Actuator}, dentro de la característica \imp{BaseSystem}, se transformaría en una propiedad llamada \imp{id}, de la clase \imp{Actuator}, sita en la carpeta \imp{BaseSystem}, y perteneciente al \emph{namespace} \imp{SmartHome}. Como tipo para dicha propiedad, se utilizaría \imp{Int}.
+
+Para el caso del atributo \imp{units} de la clase \imp{Actuator}, dentro de la característica \imp{HeaterMng}, se utilizaría como tipo \imp{TempUnits}, ya que sería éste el nombre del enumerado resultante de transformar la clase enumerada que sirve como tipo de este atributo.
+
+Si el atributo fuese un atributo un atributo multivaluado, es decir, la cota superior de su multiplicidad es superior a 1, el tipo de la propiedad generada será una colección que use como tipo base el tipo del atributo. Dependiendo de ciertas propiedades del atributo \imp{isOrdered} e \imp{isUnique}, se deberá utilizar un tipo de colección u otro:
+
+\begin{itemize}
+  \item Si el atributo tiene la propiedad \imp{isOrdered=false} e \imp{isUnique=false} estamos ante una colección que admite elementos repetidos y donde la posición es irrelevante. Se trata por tanto de una bolsa, que en C\# se representan por medio de una \imp{ICollection}.
+  \item Si el atributo tiene la propiedad \imp{isOrdered=false} e \imp{isUnique=true}, se trata de un conjunto, ya que no hya repetidos y la posición es irrelevante. Escogemos por tanto el tipo de C\#, \imp{ISet}.
+  \item Si el atributo tiene la propiedad \imp{isOrdered=true} e \imp{isUnique=false} se corresponde se trataría lista (\imp{IList}), ya que son elementos en los que el orden es relevante y admite repeticiones.
+  \item Si el atributo tiene la propiedad \imp{isOrdered=true} e \imp{isUnique=true} estamos ante un caso raro, poco utilizado dentro del mundo del desarrollo software, y para el que no se conocen equivalencias en lenguaje C\#. Se trataría de una lista sin repeticiones. Se utiliza por tanto como colección una lista (\imp{IList}) informando al usuario final, para que tome las medidas que considere adecuadas de cara al control de los duplicados.
+\end{itemize}
+
+\subsection{Extremos de asociación}
+
+Las asociaciones en UML pueden ser de dos tipos:
+
+\begin{figure}[!tb]
+  \centering
+  \includegraphics[width=.55\linewidth]{domainEngineering/images/transfBidirec.eps} \\
+  \caption{Ejemplo de asociación bidireccional}
+  \label{dom:fig:transfBidirec}
+\end{figure}
+
+\begin{description}
+  \item[Unidireccionales] Sólo un extremo de la asociación aparece nombrado, y destacado con una flecha. Dicho extremo actúa como referencia entre clases. Por ejemplo, \imp{indoorTherm} (Figura~\ref{back:fig:smartHome}, paquete \imp{SmartEnergyMng}) representa un referencia de la clase \imp{Gateway} a la clase \imp{ThermometerCtrl}. Dichas referencias pueden referirse a un solo objeto, como el caso de \imp{indoorTherm}, o a una colección de ellos, como el caso ed \imp{actuators} en la característica \imp{BaseSystem}.
+  \item[Bidireccionales] Son los casos donde ambos extremos aparecen nombrados, pero no hay flechas en ninguno de los dos extremos. No se aprecian ejemplos de este tipo nuestro caso de estudio (Figura~\ref{back:fig:smartHome}), por lo que se proporciona un ejemplo adicional (ver Figura~\ref{back:fig:transfBidirec}), el cual describimos a continuación. En este caso, un objeto de tipo \imp{Mujer} posee una referencia \imp{marido} a un objeto de tipo \imp{Hombre}. A su vez, un objeto de tipo \imp{Hombre} posee una referencia \imp{esposa} a un objeto de tipo \imp{Mujer}. Se espera que ambas referencias estén relacionadas. Es decir, si un objeto \imp{m} de tipo \imp{Mujer} tiene una referencia a un objeto \imp{h} de tipo \imp{Hombre}, de acuerdo la restricción de integridad impuesta por las asociaciones bidireccionales, el objeto \imp{h} debe tener como valor para su referencia \imp{esposa} el objeto \imp{m} de tipo \imp{Mujer}. Dicho de forma más fácil de entender, si \imp{h} está casado con \imp{m}, \imp{m} debe de estar casado con \imp{h}.
+\end{description}
+
+En cualquier caso, los extremos de asociación navegables en UML 2.0 representan referencias entre clases. Por tanto, un extremo de asociación tiene el mismo tratamiento que el de un atributo, siendo su tipo es una clase. De esta forma, cada extremo navegable de una asociación entre clases en UML 2.0 se transforma en una propiedad en C\#, siguiendo un tratamiento similar al de los atributos.
+Al igual que en los atributos de las clases, si el extremo de asociación tiene multiplicidad superior igual a 1, se utiliza la clase referenciada como tipo de la propiedad. Si la multiplicidad fuese superior a 1, se utiliza una colección, siguiendo el mismo procedimiento que para los atributos, utilizando la clase referenciada como tipo base.
+
+%%=====================================================================%%
+%% NOTA(Pablo): Comenta aquí que facilidades adicionales se generan    %%
+%%              para las asociaciones bidireccionales                  %%                      %%=====================================================================%%
+
+Además, para el caso de las asociaciones bidireccionales, se genera cierta lógica adicional, la cual está encargada de mantener la restricción de integridad impuesta por la bidireccionalidad.

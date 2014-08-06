@@ -86,10 +86,10 @@
 \input{background/background.tex}
 
 % Capítulo 3: M2M
-\input{M2M/domain.tex}
+\input{m2m/domain.tex}
 
 % Capítulo 4: M2T
-% \input{applicationEngineering/application.tex}
+\input{applicationEngineering/application.tex}
 
 % Capítulo 5: Discusión, Conclusiones y Trabajos Futuros
 % \input{applicationEngineering/application.tex}

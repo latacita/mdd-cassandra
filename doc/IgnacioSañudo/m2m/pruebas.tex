@@ -4,4 +4,19 @@
 %% Version: 2.0, 25/06/2014                                              %%                                                                         %%                                                                       %%
 %% Memoria del Proyecto Fin de Carrera                                   %%
 %% M2M/Pruebas con EUnit                                                 %%   %%=======================================================================%%
+Una vez implementado el generador de código la siguiente tarea consiste en comprobar que el código generado funciona correctamente.
+Para ello creamos, una serie de pruebas unitarias que permitan comprobar que el funcionamiento de los generadores de código es correcto para un conjunto de modelos de entrada.
 
+Estas pruebas unitarias se han implementado en EUnit, el lenguaje de definición de pruebas de la suite Epsilon. EUnit funciona de una manera muy similar a JUnit, pero aplicado a los lenguajes de la suite Epsilon, como EGL. Utilizamos EUnit para comprobar que el funcionamiento del generador de código es correcto, para ello se diseñan una serie de casos de prueba y se crea la salida esperada de cada uno de esos casos de prueba de forma manual.
+A continuación, se ejecuta el caso de prueba creado en EUnit y se comprueba que la salida generada coincide con la esperada, que es la creada manualmente.
+
+
+Para el diseño de los casos de prueba se siguió inicialmente un enfoque
+de caja negra, basado en una adaptacion de la tecnica de clases de equivalencia
+y análisis de valores límite al entorno de los modelos software. Una
+vez ejecutadas estas pruebas, se analizo la cobertura alcanzada, definiendo
+pruebas adicionales, ya de caja blanca, de forma que la cobertura alcanzada
+fuese del 100%.
+El Cuadro 3.1 resume algunos de los casos de prueba ejecutados. Concretamente,
+se muestran los casos de prueba para analizar el comportamiento
+de las plantillas de generacion de codigo para paquetes y clases. 

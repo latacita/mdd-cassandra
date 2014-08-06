@@ -34,14 +34,14 @@ La definición de la sintaxis concreta es el siguiente paso, este paso consiste e
 \begin{figure}[!tb]
   \centering
   \includegraphics[width=1.1\linewidth]{background/images/ejALL.eps} \\
-  \caption{(a) Metamodelo, (b) Sintaxis concreta, (c) Sintaxis grafica}
+  \caption{(a) Meta-modelo, (b) Sintaxis concreta, (c) Sintaxis grafica}
   \label{back:fig:ejALL}
 \end{figure}
 
 Según [10] estos son los pasos que hay que realizar para la creación de un nuevo lenguaje de modelado:
 \begin{enumerate}
-\item En primer lugar hay que establecer cuál va a ser la sintaxis de nuestro lenguaje de modelado. Para ello hay que crear un metamodelo el cual como se comentaba anteriormente establece cuales son las reglas que han de seguir los modelos.  El metamodelo ha de ser construido utilizando un lenguaje de metamodelado, el lenguaje de modelado utilizado en el presente proyecto es ECore [8]. Además de ECore hay otros lenguajes de modelado como puede ser MOF [9].
-\item El siguiente paso consiste en la definición de la sintaxis concreta de nuestro lenguaje de modelado. La creación de un modelo bien definido a partir del metamodelo creado en el paso anterior.
+\item En primer lugar hay que establecer cuál va a ser la sintaxis de nuestro lenguaje de modelado. Para ello hay que crear un meta-modelo el cual como se comentaba anteriormente establece cuales son las reglas que han de seguir los modelos.  El meta-modelo ha de ser construido utilizando un lenguaje de meta-modelado, el lenguaje de modelado utilizado en el presente proyecto es ECore [8]. Además de ECore hay otros lenguajes de modelado como puede ser MOF [9].
+\item El siguiente paso consiste en la definición de la sintaxis concreta de nuestro lenguaje de modelado. La creación de un modelo bien definido a partir del meta-modelo creado en el paso anterior.
 \item La definición de la semántica del lenguaje de modelado es el último paso, por ejemplo crear un generador que transforme los elementos del modelo en elementos de un lenguaje distinto bien definido.
 \end{enumerate}
 
@@ -60,23 +60,23 @@ MDE proporciona las transformaciones de modelos como principal herramienta para 
   \label{back:fig:transformacion}
 \end{figure}
 
-Para explicar todo este proceso se presenta un sencillo ejemplo donde se explican cómo se utilizan brevemente las técnicas de desarrollo dirigido por modelos, Model to Model (M2M) y Model to Text (M2T). Para aplicar M2M nos harán falta dos metamodelos (uno origen y uno destino) y para aplicar M2T se ha diseñado un sencillo generador de código HTML.
+Para explicar todo este proceso se presenta un sencillo ejemplo donde se explican cómo se utilizan brevemente las técnicas de desarrollo dirigido por modelos, Model to Model (M2M) y Model to Text (M2T). Para aplicar M2M nos harán falta dos meta-modelos (uno origen y uno destino) y para aplicar M2T se ha diseñado un sencillo generador de código HTML.
 
-La (Figura~\ref{back:fig:grafoMetamodelo}, etiqueta 4) muestra la representación de la sintaxis abstracta o metamodelo del lenguaje. El metamodelo consiste en un sencillo grafo el cual está compuesto de un número indefinido de nodos los cuales están conectados entre sí mediante aristas. Estos nodos como se ve en la imagen tienen un atributo de tipo "Tcolor" por lo que un Nodo puede ser de color rojo o de color azul. Por lo tanto un modelo bien definido de este metamodelo será un modelo que contenga un grafo con un numero cualquiera de Nodos conectados dos a dos entre sí mediante aristas.
+La (Figura~\ref{back:fig:grafoMetamodelo}, etiqueta 4) muestra la representación de la sintaxis abstracta o meta-modelo del lenguaje. El meta-modelo consiste en un sencillo grafo el cual está compuesto de un número indefinido de nodos los cuales están conectados entre sí mediante aristas. Estos nodos como se ve en la imagen tienen un atributo de tipo "Tcolor" por lo que un Nodo puede ser de color rojo o de color azul. Por lo tanto un modelo bien definido de este meta-modelo será un modelo que contenga un grafo con un numero cualquiera de Nodos conectados dos a dos entre sí mediante aristas.
 
 \begin{figure}[!tb]
   \centering
   \includegraphics[width=.8\linewidth]{background/images/grafoMetamodelo.eps} \\
-  \caption{Metamodelo de un grafo}
+  \caption{Meta-modelo de un grafo}
   \label{back:fig:grafoMetamodelo}
 \end{figure}
 
-A continuación se presenta otro metamodelo como se ve en la (Figura~\ref{back:fig:metamodeloRed}, etiqueta 5). Este metamodelo consiste en la representación de una red de computadores que está compuesta de PC's y Routers estos análogamente al anterior metamodelo están conectados indistintamente entre sí mediante cables. Tanto los nodos como los cables tiene un atributo de tipo "String" para definir el nombre.
+A continuación se presenta otro meta-modelo como se ve en la (Figura~\ref{back:fig:metamodeloRed}, etiqueta 5). Este meta-modelo consiste en la representación de una red de computadores que está compuesta de PC's y Routers estos análogamente al anterior meta-modelo están conectados indistintamente entre sí mediante cables. Tanto los nodos como los cables tiene un atributo de tipo "String" para definir el nombre.
 
 \begin{figure}[!tb]
   \centering
   \includegraphics[width=.8\linewidth]{background/images/metamodeloRed.eps} \\
-  \caption{Metamodelo de una red}
+  \caption{Meta-modelo de una red}
   \label{back:fig:metamodeloRed}
 \end{figure}
 

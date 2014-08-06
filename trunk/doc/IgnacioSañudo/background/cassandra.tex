@@ -21,16 +21,16 @@ Las principales características de NoSQL que difieren de SQL son:
 \item Resuelven problemas de altos volúmenes de información
 \end{enumerate}
 
-En este proyecto de fin de carrera se utiliza Cassandra, Cassandra es una distribución de bases de datos no relaciones (NoSQL). Dentro del mundo de las bases de datos no relaciones Cassandra pertenece a la familia de bases de datos denominada "clave-valor". Las bases de datos clave-valor son aquellas que  asocian los valores a una determinada clave esto permite la recuperación y escritura de información de forma muy rápida y eficiente. Cassandra reúne las  tecnologías de sistemas distribuidos de Amazon Dynamo y el modelo de datos BigTable de Google. Al igual que Dynamo, Cassandra es consistente. Como BigTable, Cassandra proporciona un modelo de datos basado en ColumnFamily siendo considerado el sistema basado en clave-valor más popular.
+En este proyecto de fin de carrera se utiliza Cassandra, Cassandra es una distribución de bases de datos no relaciones (NoSQL). Dentro del mundo de las bases de datos no relaciones Cassandra pertenece a la familia de bases de datos denominada "clave-valor". Las bases de datos clave-valor son aquellas que  asocian los valores a una determinada clave esto permite la recuperación y escritura de información de forma muy rápida y eficiente. Cassandra reúne las  tecnologías de sistemas distribuidos de Amazon Dynamo y el modelo de datos BigTable de Google. Al igual que Dynamo, Cassandra es consistente. Como BigTable, Cassandra proporciona un modelo de datos basado en Column Family siendo considerado el sistema basado en clave-valor más popular.
 
 Las bases de datos basadas en Cassandra son soluciones utilizadas cuando es necesaria escalabilidad y alta disponibilidad sin comprometer el rendimiento. Escalabilidad lineal y tolerancia a fallos o infraestructura en la nube lo convierten en la plataforma perfecta para datos de misión critica. Cassandra proporciona gran estabilidad en cuanto a la replicación de datos a través de múltiples datacenters, consiguiendo una menor latencia para sus usuarios y la tranquilidad de que no existan perdidas de datos ante caídas. Cassandra utiliza un lenguaje llamado CQL (Cassandra Query Language) con una sintaxis muy similar a SQL aunque con menos funcionalidades.
 
-Fue diseñado por Avinash Lakshman (uno de los creadores de Amazon's Dynamo) y Prashant Malik (Ingeniero de Facebook). Cassandra está en producción para Facebook sin embargo aun está en fase de desarrollo.
+Cassandra fue diseñado por Avinash Lakshman (uno de los creadores de Amazon's Dynamo) y Prashant Malik (Ingeniero de Facebook). Cassandra está en producción para Facebook sin embargo aun está en fase de desarrollo.
 
 %https://cassandra.apache.org/ http://www.datastax.com/documentation/cql/3.0/cql/ddl/ddl_intro_c.html
 
 A continuación se explican algunos términos que hay que tener en cuenta cuando se trabaja con Cassandra.
-En Cassandra un KeySpace es el equivalente a una base de datos en los sistemas de bases de datos relacionales. El conocido término de tabla en las bases de datos relacionales tiene su equivalente en Cassandra llamado Column Family. Por lo tanto un KeySpace puede contener varias Column Families y una Column Family a su vez contiene varias columnas.
+En Cassandra un Key Space es el equivalente a una base de datos en los sistemas de bases de datos relacionales. El conocido término de tabla en las bases de datos relacionales tiene su equivalente en Cassandra llamado Column Family. Por lo tanto un KeySpace puede contener varias Column Families y una Column Family a su vez contiene varias columnas.
 Una columna es la unidad de almacenamiento básica, está formada de tres campos: Nombre, un valor y un timestamp. El nombre y el valor se almacena como una matriz de bytes sin procesar y pueden ser de cualquier tamaño. Un ejemplo:
 Nombre de la columna 	\"Username\"
 Nombre de usuario	\"Ignacio\"

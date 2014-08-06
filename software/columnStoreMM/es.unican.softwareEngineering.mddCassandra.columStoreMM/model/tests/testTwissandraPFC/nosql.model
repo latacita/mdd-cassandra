@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_BfJ9oB1zEeSXG-372T2aeQ" name="Test" replicationFactor="1">
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_BfJ9oB1zEeSXG-372T2aeQ" name="twissandra" replicationFactor="1">
   <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_BfJ9oR1zEeSXG-372T2aeQ" keyspace="_BfJ9oB1zEeSXG-372T2aeQ" name="User" primaryKey="_BfJ9oh1zEeSXG-372T2aeQ">
     <columns xmi:id="_BfJ9oh1zEeSXG-372T2aeQ" name="username">
       <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ9ox1zEeSXG-372T2aeQ" kind="text"/>

@@ -5,45 +5,48 @@ WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
 USE twissandra;
 
 
-CREATE TABLE users(
+CREATE TABLE User(
        username text,
        password text,
+       email set<text>,
        PRIMARY KEY(username)
 );
 
-CREATE TABLE following(
-       username text,
-       followed text,
-       PRIMARY KEY(followed,username)
-);
-
-CREATE TABLE followers(
-       username text,
-       following text,
-       PRIMARY KEY(following,username)
-);
-
-CREATE TABLE tweets(
-       tweetid uuid,
-       username text,
+CREATE TABLE Tweet(
+       Tweet_ID uuid,
        body text,
-       PRIMARY KEY(tweetid)
+       time timestamp,
+       user_username text,
+       PRIMARY KEY(Tweet_ID)
 );
 
-CREATE TABLE userline(
-       tweetid timeuuid,
+CREATE TABLE FollowingRelationship(
+       FollowingRelationship_ID uuid,
+       timestamp timestamp,
+       PRIMARY KEY(FollowingRelationship_ID)
+);
+
+CREATE TABLE User_userline(
+       User_username text,
+       Tweet_ID uuid,
+       PRIMARY KEY((User_username),Tweet_ID)
+);
+
+CREATE TABLE User_timeline(
+       User_username text,
+       Tweet_ID uuid,
+       PRIMARY KEY((User_username),Tweet_ID)
+);
+
+CREATE TABLE FollowingRelationship_following(
+       FollowingRelationship_FollowingRelationship_ID uuid,
        username text,
-       body text,
-       PRIMARY KEY(tweetid,username)
+       PRIMARY KEY((FollowingRelationship_FollowingRelationship_ID),username)
 );
 
-CREATE TABLE timeline(
+CREATE TABLE FollowingRelationship_followers(
+       FollowingRelationship_FollowingRelationship_ID uuid,
        username text,
-       tweetid timeuuid,
-       posted_by text,
-       body text,
-       PRIMARY KEY(username,tweetid)
+       PRIMARY KEY((FollowingRelationship_FollowingRelationship_ID),username)
 );
-
-
 

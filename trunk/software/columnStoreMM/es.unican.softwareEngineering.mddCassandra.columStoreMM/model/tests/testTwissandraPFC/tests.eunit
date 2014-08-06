@@ -1,0 +1,79 @@
+var EXPECTED_PATH  = basedir + "/model/tests/testTwissandra/transformationExpected.txt";
+var GENERATED_PATH = basedir + "/model/tests/testTwissandra/transformationGenerated.txt";
+
+var EXPECTED_MODEL = '
+@Spec {
+	metamodel "http://nosql/1.0" {
+		nsUri: "http://nosql/1.0"
+	}
+}
+
+package  {
+	KeySpace "twitter" {
+		name: "twitter"
+		replicationFactor: 2
+		columnFamilies: StaticColumnFamily "Tweet" {
+			keyspace: KeySpace "twitter"
+			name: "Tweet"
+			primaryKey: Column "UUID"
+			columns: Column "UUID" {
+				name: "UUID"
+				type: PrimitiveType "PrimitiveType1" {
+					kind: text
+				}
+			}, Column "usernameTw" {
+				name: "usernameTw"
+				type: PrimitiveType "PrimitiveType2" {
+					kind: text
+				}
+			}, Column "body" {
+				name: "body"
+				type: PrimitiveType "PrimitiveType3" {
+					kind: text
+				}
+			}
+		}, StaticColumnFamily "User" {
+			keyspace: KeySpace "twitter"
+			name: "User"
+			primaryKey: Column "username"
+			columns: Column "username" {
+				name: "username"
+				type: PrimitiveType "PrimitiveType4" {
+					kind: text
+				}
+			}, Column "password" {
+				name: "password"
+				type: PrimitiveType "PrimitiveType5" {
+					kind: text
+				}
+			}, Column "followers" {
+				name: "followers"
+				type: CollectionType "CollectionType1" {
+					keyType: text
+				}
+			}, Column "followings" {
+				name: "followings"
+				type: CollectionType "CollectionType2" {
+					keyType: text
+				}
+			}, Column "tweets_written" {
+				name: "tweets_written"
+				type: CollectionType "CollectionType3" {
+					kind: list
+					keyType: text
+				}
+			}
+		}
+	}
+}
+';
+
+@model
+operation loadModels() {
+  loadHutn("twitter", EXPECTED_MODEL);
+}
+@test
+operation expectedModelGeneratesExpectedFile() {
+  runTarget("driver");
+  assertEqualFiles(EXPECTED_PATH, GENERATED_PATH);
+}

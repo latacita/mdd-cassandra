@@ -1,0 +1,49 @@
+DROP KEYSPACE twissandra; 
+CREATE KEYSPACE twissandra
+WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
+
+USE twissandra;
+
+
+CREATE TABLE users(
+       username text,
+       password text,
+       PRIMARY KEY(username)
+);
+
+CREATE TABLE following(
+       username text,
+       followed text,
+       PRIMARY KEY(followed,username)
+);
+
+CREATE TABLE followers(
+       username text,
+       following text,
+       PRIMARY KEY(following,username)
+);
+
+CREATE TABLE tweets(
+       tweetid uuid,
+       username text,
+       body text,
+       PRIMARY KEY(tweetid)
+);
+
+CREATE TABLE userline(
+       tweetid timeuuid,
+       username text,
+       body text,
+       PRIMARY KEY(tweetid,username)
+);
+
+CREATE TABLE timeline(
+       username text,
+       tweetid timeuuid,
+       posted_by text,
+       body text,
+       PRIMARY KEY(username,tweetid)
+);
+
+
+

@@ -1,258 +1,68 @@
 <?xml version="1.0" encoding="ASCII"?>
-<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" name="Test" replicationFactor="1">
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="User" primaryKey="//@columnFamilies.0/@columns.0">
-    <columns name="username">
-      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+<nosql:KeySpace xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nosql="http://nosql/1.0" xmi:id="_BfJ9oB1zEeSXG-372T2aeQ" name="Test" replicationFactor="1">
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_BfJ9oR1zEeSXG-372T2aeQ" keyspace="_BfJ9oB1zEeSXG-372T2aeQ" name="User" primaryKey="_BfJ9oh1zEeSXG-372T2aeQ">
+    <columns xmi:id="_BfJ9oh1zEeSXG-372T2aeQ" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ9ox1zEeSXG-372T2aeQ" kind="text"/>
     </columns>
-    <columns name="password">
-      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    <columns xmi:id="_BfJ9pB1zEeSXG-372T2aeQ" name="password">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ9pR1zEeSXG-372T2aeQ" kind="text"/>
     </columns>
-    <columns name="email">
-      <type xsi:type="nosql:CollectionType" keyType="text"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Tweet" primaryKey="//@columnFamilies.1/@columns.0">
-    <columns name="Tweet_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-    <columns name="body">
-      <type xsi:type="nosql:PrimitiveType" kind="text"/>
-    </columns>
-    <columns name="time">
-      <type xsi:type="nosql:PrimitiveType" kind="timestamp"/>
-    </columns>
-    <columns name="user_username">
-      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    <columns xmi:id="_BfJ9ph1zEeSXG-372T2aeQ" name="email">
+      <type xsi:type="nosql:CollectionType" xmi:id="_BfJ9px1zEeSXG-372T2aeQ" keyType="text"/>
     </columns>
   </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="FollowingRelationship" primaryKey="//@columnFamilies.2/@columns.0">
-    <columns name="FollowingRelationship_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_BfJ9qB1zEeSXG-372T2aeQ" keyspace="_BfJ9oB1zEeSXG-372T2aeQ" name="Tweet" primaryKey="_BfJ9qR1zEeSXG-372T2aeQ">
+    <columns xmi:id="_BfJ9qR1zEeSXG-372T2aeQ" name="Tweet_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ9qh1zEeSXG-372T2aeQ" kind="uuid"/>
     </columns>
-    <columns name="timestamp">
-      <type xsi:type="nosql:PrimitiveType" kind="timestamp"/>
+    <columns xmi:id="_BfJ9qx1zEeSXG-372T2aeQ" name="body">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ9rB1zEeSXG-372T2aeQ" kind="text"/>
     </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="ProfileUpgradeTable customization" primaryKey="//@columnFamilies.3/@columns.0">
-    <columns name="ProfileUpgradeTable customization_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+    <columns xmi:id="_BfJ9rR1zEeSXG-372T2aeQ" name="time">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ9rh1zEeSXG-372T2aeQ" kind="timestamp"/>
     </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="CustomizationOfderivedPropertySpecification" primaryKey="//@columnFamilies.4/@columns.0">
-    <columns name="CustomizationOfderivedPropertySpecification_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+    <columns xmi:id="_BfJ9rx1zEeSXG-372T2aeQ" name="user_username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ9sB1zEeSXG-372T2aeQ" kind="text"/>
     </columns>
   </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="PropertyGroup" primaryKey="//@columnFamilies.5/@columns.0">
-    <columns name="PropertyGroup_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+  <columnFamilies xsi:type="nosql:StaticColumnFamily" xmi:id="_BfJ9sR1zEeSXG-372T2aeQ" keyspace="_BfJ9oB1zEeSXG-372T2aeQ" name="FollowingRelationship" primaryKey="_BfJ9sh1zEeSXG-372T2aeQ">
+    <columns xmi:id="_BfJ9sh1zEeSXG-372T2aeQ" name="FollowingRelationship_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ9sx1zEeSXG-372T2aeQ" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_BfJ9tB1zEeSXG-372T2aeQ" name="timestamp">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ9tR1zEeSXG-372T2aeQ" kind="timestamp"/>
     </columns>
   </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="CustomizationOfElementsLibraryBranch" primaryKey="//@columnFamilies.6/@columns.0">
-    <columns name="CustomizationOfElementsLibraryBranch_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_BfJ-KB1zEeSXG-372T2aeQ" keyspace="_BfJ9oB1zEeSXG-372T2aeQ" name="User_userline" primaryKey="_BfJ-KR1zEeSXG-372T2aeQ _BfJ-Kx1zEeSXG-372T2aeQ" partitionKey="_BfJ-KR1zEeSXG-372T2aeQ">
+    <columns xmi:id="_BfJ-KR1zEeSXG-372T2aeQ" name="User_username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ-Kh1zEeSXG-372T2aeQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_BfJ-Kx1zEeSXG-372T2aeQ" name="Tweet_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ-LB1zEeSXG-372T2aeQ" kind="uuid"/>
     </columns>
   </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="DiagramTableCustomization" primaryKey="//@columnFamilies.7/@columns.0">
-    <columns name="DiagramTableCustomization_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_BfJ-LR1zEeSXG-372T2aeQ" keyspace="_BfJ9oB1zEeSXG-372T2aeQ" name="User_timeline" primaryKey="_BfJ-Lh1zEeSXG-372T2aeQ _BfJ-MB1zEeSXG-372T2aeQ" partitionKey="_BfJ-Lh1zEeSXG-372T2aeQ">
+    <columns xmi:id="_BfJ-Lh1zEeSXG-372T2aeQ" name="User_username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ-Lx1zEeSXG-372T2aeQ" kind="text"/>
+    </columns>
+    <columns xmi:id="_BfJ-MB1zEeSXG-372T2aeQ" name="Tweet_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ-MR1zEeSXG-372T2aeQ" kind="uuid"/>
     </columns>
   </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="CustomizationOfRelationMap" primaryKey="//@columnFamilies.8/@columns.0">
-    <columns name="CustomizationOfRelationMap_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_BfJ-Mh1zEeSXG-372T2aeQ" keyspace="_BfJ9oB1zEeSXG-372T2aeQ" name="FollowingRelationship_following" primaryKey="_BfJ-Mx1zEeSXG-372T2aeQ _BfJ-NR1zEeSXG-372T2aeQ" partitionKey="_BfJ-Mx1zEeSXG-372T2aeQ">
+    <columns xmi:id="_BfJ-Mx1zEeSXG-372T2aeQ" name="FollowingRelationship_FollowingRelationship_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ-NB1zEeSXG-372T2aeQ" kind="uuid"/>
+    </columns>
+    <columns xmi:id="_BfJ-NR1zEeSXG-372T2aeQ" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ-Nh1zEeSXG-372T2aeQ" kind="text"/>
     </columns>
   </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="CustomizationOfElementsLibrary" primaryKey="//@columnFamilies.9/@columns.0">
-    <columns name="CustomizationOfElementsLibrary_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
+  <columnFamilies xsi:type="nosql:DynamicColumnFamily" xmi:id="_BfJ-Nx1zEeSXG-372T2aeQ" keyspace="_BfJ9oB1zEeSXG-372T2aeQ" name="FollowingRelationship_followers" primaryKey="_BfJ-OB1zEeSXG-372T2aeQ _BfJ-Oh1zEeSXG-372T2aeQ" partitionKey="_BfJ-OB1zEeSXG-372T2aeQ">
+    <columns xmi:id="_BfJ-OB1zEeSXG-372T2aeQ" name="FollowingRelationship_FollowingRelationship_ID">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ-OR1zEeSXG-372T2aeQ" kind="uuid"/>
     </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="CustomizationOfInfo" primaryKey="//@columnFamilies.10/@columns.0">
-    <columns name="CustomizationOfInfo_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="CustomizationOfCustomization" primaryKey="//@columnFamilies.11/@columns.0">
-    <columns name="CustomizationOfCustomization_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="TBag" primaryKey="//@columnFamilies.12/@columns.0">
-    <columns name="TBag_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="TSet" primaryKey="//@columnFamilies.13/@columns.0">
-    <columns name="TSet_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="TCollection" primaryKey="//@columnFamilies.14/@columns.0">
-    <columns name="TCollection_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="TSequence" primaryKey="//@columnFamilies.15/@columns.0">
-    <columns name="TSequence_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="_ValidationRuleCustomization" primaryKey="//@columnFamilies.16/@columns.0">
-    <columns name="_ValidationRuleCustomization_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Participates In Interactions" primaryKey="//@columnFamilies.17/@columns.0">
-    <columns name="Participates In Interactions_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Participates In Activities" primaryKey="//@columnFamilies.18/@columns.0">
-    <columns name="Participates In Activities_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Used Classifiers In Interactions" primaryKey="//@columnFamilies.19/@columns.0">
-    <columns name="Used Classifiers In Interactions_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Described Use Cases" primaryKey="//@columnFamilies.20/@columns.0">
-    <columns name="Described Use Cases_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Describing Behaviors" primaryKey="//@columnFamilies.21/@columns.0">
-    <columns name="Describing Behaviors_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Specific Classifiers" primaryKey="//@columnFamilies.22/@columns.0">
-    <columns name="Specific Classifiers_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="All Specific Classifiers" primaryKey="//@columnFamilies.23/@columns.0">
-    <columns name="All Specific Classifiers_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="All General Classifiers" primaryKey="//@columnFamilies.24/@columns.0">
-    <columns name="All General Classifiers_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Used Classifiers In Activities" primaryKey="//@columnFamilies.25/@columns.0">
-    <columns name="Used Classifiers In Activities_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Use Case Specifying Use Cases " primaryKey="//@columnFamilies.26/@columns.0">
-    <columns name="Use Case Specifying Use Cases _ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Component Specifying Classes" primaryKey="//@columnFamilies.27/@columns.0">
-    <columns name="Component Specifying Classes_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Artifact Manifesting Classifiers" primaryKey="//@columnFamilies.28/@columns.0">
-    <columns name="Artifact Manifesting Classifiers_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Class Specifying Use Cases" primaryKey="//@columnFamilies.29/@columns.0">
-    <columns name="Class Specifying Use Cases_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Element Specifying Elements" primaryKey="//@columnFamilies.30/@columns.0">
-    <columns name="Element Specifying Elements_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Element All Specifying Elements" primaryKey="//@columnFamilies.31/@columns.0">
-    <columns name="Element All Specifying Elements_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Classifier Specifying Components" primaryKey="//@columnFamilies.32/@columns.0">
-    <columns name="Classifier Specifying Components_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Element Realizing Elements" primaryKey="//@columnFamilies.33/@columns.0">
-    <columns name="Element Realizing Elements_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Element All Realizing Elements" primaryKey="//@columnFamilies.34/@columns.0">
-    <columns name="Element All Realizing Elements_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Use Case Realizing Use Cases" primaryKey="//@columnFamilies.35/@columns.0">
-    <columns name="Use Case Realizing Use Cases_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Component Realizing Classifiers" primaryKey="//@columnFamilies.36/@columns.0">
-    <columns name="Component Realizing Classifiers_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Component Manifested by Artifacts" primaryKey="//@columnFamilies.37/@columns.0">
-    <columns name="Component Manifested by Artifacts_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Interface Realizing Classifiers" primaryKey="//@columnFamilies.38/@columns.0">
-    <columns name="Interface Realizing Classifiers_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Class Realizing Components" primaryKey="//@columnFamilies.39/@columns.0">
-    <columns name="Class Realizing Components_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:StaticColumnFamily" keyspace="/" name="Use Case Realizing Classes" primaryKey="//@columnFamilies.40/@columns.0">
-    <columns name="Use Case Realizing Classes_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:DynamicColumnFamily" keyspace="/" name="User_userline" primaryKey="//@columnFamilies.41/@columns.0 //@columnFamilies.41/@columns.1" partitionKey="//@columnFamilies.41/@columns.0">
-    <columns name="User_username">
-      <type xsi:type="nosql:PrimitiveType" kind="text"/>
-    </columns>
-    <columns name="Tweet_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:DynamicColumnFamily" keyspace="/" name="User_timeline" primaryKey="//@columnFamilies.42/@columns.0 //@columnFamilies.42/@columns.1" partitionKey="//@columnFamilies.42/@columns.0">
-    <columns name="User_username">
-      <type xsi:type="nosql:PrimitiveType" kind="text"/>
-    </columns>
-    <columns name="Tweet_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:DynamicColumnFamily" keyspace="/" name="FollowingRelationship_following" primaryKey="//@columnFamilies.43/@columns.0 //@columnFamilies.43/@columns.1" partitionKey="//@columnFamilies.43/@columns.0">
-    <columns name="FollowingRelationship_FollowingRelationship_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-    <columns name="username">
-      <type xsi:type="nosql:PrimitiveType" kind="text"/>
-    </columns>
-  </columnFamilies>
-  <columnFamilies xsi:type="nosql:DynamicColumnFamily" keyspace="/" name="FollowingRelationship_followers" primaryKey="//@columnFamilies.44/@columns.0 //@columnFamilies.44/@columns.1" partitionKey="//@columnFamilies.44/@columns.0">
-    <columns name="FollowingRelationship_FollowingRelationship_ID">
-      <type xsi:type="nosql:PrimitiveType" kind="uuid"/>
-    </columns>
-    <columns name="username">
-      <type xsi:type="nosql:PrimitiveType" kind="text"/>
+    <columns xmi:id="_BfJ-Oh1zEeSXG-372T2aeQ" name="username">
+      <type xsi:type="nosql:PrimitiveType" xmi:id="_BfJ-Ox1zEeSXG-372T2aeQ" kind="text"/>
     </columns>
   </columnFamilies>
 </nosql:KeySpace>

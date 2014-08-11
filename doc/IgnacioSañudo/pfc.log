@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  5 AUG 2014 17:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  11 AUG 2014 14:26
 entering extended mode
 **C:/Program*Files/Epsilon/workspace/IgnacioSañudo/pfc.tex
 ("C:/Program Files/Epsilon/workspace/IgnacioSañudo/pfc.tex"
@@ -334,6 +334,12 @@ TextBlockOrigin set to 0pt x 0pt
 
 LaTeX Warning: Label `m2t:sec:intro' multiply defined.
 
+
+LaTeX Warning: Label `back:fig:modeloTwissandra' multiply defined.
+
+
+LaTeX Warning: Label `back:code:codigoCass' multiply defined.
+
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
 LaTeX Font Info:    ... okay on input line 56.
@@ -373,6 +379,8 @@ Package minitoc Info: I0033
 (minitoc)             Writing pfc.mtc3.
 Package minitoc Info: I0033
 (minitoc)             Writing pfc.mtc4.
+Package minitoc Info: I0033
+(minitoc)             Writing pfc.mtc5.
 
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.toc"
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
@@ -454,45 +462,37 @@ File: background/images/ejGeneradorHTML.eps Graphic file (type eps)
 ]
 Cap\'{\i }tulo 2.
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc2"
-Overfull \hbox (16.02876pt too wide) in paragraph at lines 2--2
+Overfull \hbox (16.02876pt too wide) in paragraph at lines 1--1
  [][][] []\OT1/cmr/bx/n/10 Caso de es-tu-dio: Ge-ne-ra-dor de codi-go CQL-Cass
 andra [][]  
  []
 
-)
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/introduccion.tex
-")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/casoEstudio.tex"
-) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/EMF.tex"
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11
+) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/casoEstudio.te
+x"
+File: m2m/images/twissandra.eps Graphic file (type eps)
+ <m2m/images/twissandra.eps> [11
 
 ])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/epsilon.tex"
-[12]
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/EMF.tex"
+[12]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/epsilon.te
+x"
 File: background/images/ejCasa.eps Graphic file (type eps)
- <background/images/ejCasa.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ <background/images/ejCasa.eps> [13] [14]
+Underfull \vbox (badness 5475) has occurred while \output is active []
 
- [13]
-[14])
+ [15])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/cassandra.tex"
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
 [16] [17])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/planificacion.te
 x" [18])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/sumario.tex"))
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/domain.tex" [19]
-[20
-
-]
+[19] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/domain.tex"
+[20]
 Cap\'{\i }tulo 3.
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc3")
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/introduction.tex")
 [21
+
 
 ]
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/metamodeloCassandra.tex
@@ -526,37 +526,82 @@ n->Attributes with upper bound > 1[]
 
 [25] [26])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/casoEstudio.tex"
-File: m2m/images/twissandra.eps Graphic file (type eps)
-
-<m2m/images/twissandra.eps> [27]
-LaTeX Font Info:    Try loading font information for U+lasy on input line 32.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 15.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-))
-Overfull \hbox (5.82776pt too wide) in paragraph at lines 37--32
-\OT1/cmr/m/n/10.95 "tweet[]id"son de-sig-na-das co-mo pri-mary key, el atri-bu-
-to user[]username"sera la
- []
-
-[28] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/pruebas.tex"))
+) [27])
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/sumario.tex"))
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/application.tex"
-[29] [30
-
-]
+[28]
 Cap\'{\i }tulo 4.
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc4")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/introduccion.tex")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/m2t.tex" [31
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/introduccion.tex"
+[29
 
-]
+
+]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/m2t.tex"
 Overfull \hbox (225.89319pt too wide) in paragraph at lines 44--44
 []\OT1/cmtt/m/n/9 WITH replication = {'class':'[%=keyspace.replicaPlacementStra
 tegy%]', 'replication_factor':[%=keyspace.replicationFactor%]};[] 
  []
 
-) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/m2ttwissandra.tex")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/sumario.tex"))
+) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/m2ttwissandra.tex"
+
+LaTeX Warning: Reference `back:code:modeloTwissandra' on page 30 undefined on i
+nput line 13.
+
+File: m2t/images/modeloTwissandra.eps Graphic file (type eps)
+<m2t/images/modeloTwissandra.eps> [30]
+Underfull \vbox (badness 3118) has occurred while \output is active []
+
+ [31]
+Overfull \hbox (3.82077pt too wide) in paragraph at lines 80--80
+[]       \OT1/cmtt/m/n/9 PRIMARY KEY((FollowingRelationship_FollowingRelationsh
+ip_ID),username)[] 
+ []
+
+
+Overfull \hbox (3.82077pt too wide) in paragraph at lines 80--80
+[]       \OT1/cmtt/m/n/9 PRIMARY KEY((FollowingRelationship_FollowingRelationsh
+ip_ID),username)[] 
+ []
+
+) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/m2ttwissandra.tex"
+
+LaTeX Warning: Reference `back:code:modeloTwissandra' on page 32 undefined on i
+nput line 13.
+
+File: m2t/images/modeloTwissandra.eps Graphic file (type eps)
+<m2t/images/modeloTwissandra.eps>
+Overfull \hbox (3.82077pt too wide) in paragraph at lines 80--80
+[]       \OT1/cmtt/m/n/9 PRIMARY KEY((FollowingRelationship_FollowingRelationsh
+ip_ID),username)[] 
+ []
+
+
+Overfull \hbox (3.82077pt too wide) in paragraph at lines 80--80
+[]       \OT1/cmtt/m/n/9 PRIMARY KEY((FollowingRelationship_FollowingRelationsh
+ip_ID),username)[] 
+ []
+
+) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/despliegue.tex")
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/sumario.tex")
+Underfull \vbox (badness 3930) has occurred while \output is active []
+
+ [32])
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/desc.tex" [33]
+[34] [35] [36]
+Cap\'{\i }tulo 5.
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc5")
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/sumario.tex")
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/experienciaPersonal.t
+ex" [37
+
+
+])
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/trabajosFuturos.tex")
+)
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the pfc.maf file.
@@ -566,18 +611,21 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the pfc.log file.
 
-[32] [33] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.aux")
+[38] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.aux")
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6705 strings out of 493922
- 99609 string characters out of 3147305
- 185535 words of memory out of 3000000
- 9588 multiletter control sequences out of 15000+200000
+ 6732 strings out of 493922
+ 100665 string characters out of 3147305
+ 188535 words of memory out of 3000000
+ 9593 multiletter control sequences out of 15000+200000
  14655 words of font info for 56 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
- 36i,12n,43p,1123b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,12n,43p,1123b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on pfc.dvi (39 pages, 131760 bytes).
+Output written on pfc.dvi (44 pages, 147848 bytes).

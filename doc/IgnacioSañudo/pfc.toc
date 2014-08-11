@@ -5,17 +5,16 @@
 \contentsline {section}{\numberline {1.3}Motivaci\'on y Objetivos}{8}
 \contentsline {section}{\numberline {1.4}Estructura del Documento}{8}
 \contentsline {chapter}{\numberline {2}Antecedentes y Planificaci\'on}{11}
-\contentsline {section}{\numberline {2.1}Introducci\'on}{12}
-\contentsline {section}{\numberline {2.2}Caso de estudio: Generador de c\'odigo CQL-Cassandra}{12}
-\contentsline {section}{\numberline {2.3}EMF}{12}
-\contentsline {section}{\numberline {2.4}Epsilon}{12}
-\contentsline {subsection}{\numberline {2.4.1}Epsilon Object Language}{12}
-\contentsline {subsection}{\numberline {2.4.2}Epsilon Transformation Language}{14}
-\contentsline {subsection}{\numberline {2.4.3}Epsilon Generation Language}{14}
-\contentsline {section}{\numberline {2.5}Cassandra}{16}
-\contentsline {section}{\numberline {2.6}Planificaci\'on}{18}
-\contentsline {section}{\numberline {2.7}Sumario}{19}
-\contentsline {chapter}{\numberline {3}Model to text}{21}
+\contentsline {section}{\numberline {2.1}Caso de estudio: Generador de c\'odigo CQL-Cassandra}{11}
+\contentsline {section}{\numberline {2.2}EMF}{12}
+\contentsline {section}{\numberline {2.3}Epsilon}{13}
+\contentsline {subsection}{\numberline {2.3.1}Epsilon Object Language}{13}
+\contentsline {subsection}{\numberline {2.3.2}Epsilon Transformation Language}{14}
+\contentsline {subsection}{\numberline {2.3.3}Epsilon Generation Language}{16}
+\contentsline {section}{\numberline {2.4}Cassandra}{16}
+\contentsline {section}{\numberline {2.5}Planificaci\'on}{18}
+\contentsline {section}{\numberline {2.6}Sumario}{19}
+\contentsline {chapter}{\numberline {3}Transformaci\'on modelo a modelo}{21}
 \contentsline {section}{\numberline {3.1}Introducci\'on}{21}
 \contentsline {section}{\numberline {3.2}Metamodelo Cassandra}{22}
 \contentsline {section}{\numberline {3.3}Transformaci\'on de Modelo UML a Cassandra}{24}
@@ -24,12 +23,16 @@
 \contentsline {subsection}{\numberline {3.3.3}Transformaci\'on de atributos}{24}
 \contentsline {subsection}{\numberline {3.3.4}Transformaci\'on de asociaciones}{25}
 \contentsline {subsection}{\numberline {3.3.5}Transformaci\'on de tipos primitivos}{26}
-\contentsline {section}{\numberline {3.4}Caso de estudio}{27}
-\contentsline {subsection}{\numberline {3.4.1}Transformaci\'on M2M}{28}
-\contentsline {section}{\numberline {3.5}Pruebas}{29}
-\contentsline {section}{\numberline {3.6}Sumario}{29}
-\contentsline {chapter}{\numberline {4}Ingenier\IeC {\'\i }a de Aplicaci\'on}{31}
-\contentsline {section}{\numberline {4.1}Introducci\'on}{31}
-\contentsline {section}{\numberline {4.2}Generador de c\'odigo}{32}
-\contentsline {section}{\numberline {4.3}Caso de estudio Twissandra}{32}
-\contentsline {section}{\numberline {4.4}Sumario}{32}
+\contentsline {section}{\numberline {3.4}Caso de estudio transformaci\'on modelo a modelo}{27}
+\contentsline {section}{\numberline {3.5}Sumario}{28}
+\contentsline {chapter}{\numberline {4}Transformaci\'on modelo a texto}{29}
+\contentsline {section}{\numberline {4.1}Introducci\'on}{29}
+\contentsline {section}{\numberline {4.2}Generador de c\'odigo}{30}
+\contentsline {section}{\numberline {4.3}Caso de estudio Twissandra}{30}
+\contentsline {section}{\numberline {4.4}Pruebas}{32}
+\contentsline {section}{\numberline {4.5}Despliegue}{32}
+\contentsline {section}{\numberline {4.6}Sumario}{33}
+\contentsline {chapter}{\numberline {5}Sumario y Trabajos Futuros}{37}
+\contentsline {section}{\numberline {5.1}Sumario}{37}
+\contentsline {section}{\numberline {5.2}Experiencia personal}{37}
+\contentsline {section}{\numberline {5.3}Trabajos futuros}{38}

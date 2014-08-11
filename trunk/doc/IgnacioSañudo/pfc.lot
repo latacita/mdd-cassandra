@@ -4,7 +4,9 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Antecedentes y Planificaci\'on}{11}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Model to text}{21}
+\contentsline {xchapter}{Transformaci\'on modelo a modelo}{21}
 \contentsline {table}{\numberline {3.1}{\ignorespaces Equivalencias tipos primitivos UML-Cassandra\relax }}{27}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Ingenier\IeC {\'\i }a de Aplicaci\'on}{31}
+\contentsline {xchapter}{Transformaci\'on modelo a texto}{29}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Sumario y Trabajos Futuros}{37}

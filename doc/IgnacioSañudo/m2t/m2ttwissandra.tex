@@ -1,0 +1,85 @@
+%%==================================================================%%
+%% Author : Sañudo Olmedo, Ignacio                                  %%
+%% Author : Sánchez Barreiro, Pablo                                 %%
+%% Version: 1.5, 15/05/2014                                         %%
+%%                                                                  %%
+%% Memoria del Proyecto Fin de Carrera                              %%
+%% m2t/Caso de estudio                                              %%
+%%==================================================================%%
+
+Una vez definido el funcionamiento del generador de código podemos continuar con el caso de estudio planteado en el segundo capítulo sobre Twissandra. Como se presentó anteriormente el objetivo de este ejemplo es la generación de código CQL a partir de un modelo UML 2.0. Para ello definimos una serie de reglas de transformación entre modelos y obtuvimos un modelo de Cassandra a partir de un modelo UML que representaba una versión simplificada de Twitter llamada Twissandra.
+En esta sección se presenta el resultado de la transformación del modelo de Twissandra a código.
+
+Tras obtener el modelo Cassandra de Twissandra (figura~\ref{back:code:modeloTwissandra}) y tras la definición de las reglas de generación de código se procede a la transformación modelo-código.
+
+\begin{figure}[!tb]
+  \centering
+  \includegraphics[width=.8\linewidth]{m2t/images/modeloTwissandra.eps} \\
+  \caption{Modelo UML Twissandra}
+  \label{back:fig:modeloTwissandra}
+\end{figure}
+
+Por cada column family (sea estática o dinámica) se genera un bloque "CREATE TABLE". Cada columna de la column family es un atributo de la tabla. El problema del generador de código surge a la hora de definir la estructura de la primary key. Como se comentó en secciones anteriores las column family estáticas siguen una definición de claves tradicional, sin embargo las column family dinámicas tienen que tener en cuenta que las claves de partición (partition keys) pueden ser compuestas (aunque en este ejemplo no existen). Por ejemplo el caso de user\_userline las columnas user\_name y tweet\_id son designadas como primary key, user\_username será la clave de partición.
+El código resultante tras ejecutar el generador de código es el siguiente figura~\ref{back:code:codigoCass}
+
+\begin{figure}[!tb]
+\begin{center}
+\begin{footnotesize}
+\begin{verbatim}
+DROP KEYSPACE twissandra;
+CREATE KEYSPACE twissandra
+WITH replication = {'class':'SimpleStrategy', 'replication_factor':1};
+
+USE twissandra;
+
+CREATE TABLE User(
+       username text,
+       password text,
+       email set<text>,
+       PRIMARY KEY(username)
+);
+
+CREATE TABLE Tweet(
+       Tweet_ID uuid,
+       body text,
+       time timestamp,
+       user_username text,
+       PRIMARY KEY(Tweet_ID)
+);
+
+CREATE TABLE FollowingRelationship(
+       FollowingRelationship_ID uuid,
+       timestamp timestamp,
+       PRIMARY KEY(FollowingRelationship_ID)
+);
+
+CREATE TABLE User_userline(
+       User_username text,
+       Tweet_ID uuid,
+       PRIMARY KEY((User_username),Tweet_ID)
+);
+
+CREATE TABLE User_timeline(
+       User_username text,
+       Tweet_ID uuid,
+       PRIMARY KEY((User_username),Tweet_ID)
+);
+
+CREATE TABLE FollowingRelationship_following(
+       FollowingRelationship_FollowingRelationship_ID uuid,
+       username text,
+       PRIMARY KEY((FollowingRelationship_FollowingRelationship_ID),username)
+);
+
+CREATE TABLE FollowingRelationship_followers(
+       FollowingRelationship_FollowingRelationship_ID uuid,
+       username text,
+       PRIMARY KEY((FollowingRelationship_FollowingRelationship_ID),username)
+);
+
+\end{verbatim}
+\end{footnotesize}
+\end{center}
+\caption{Código resultante}
+\label{back:code:codigoCass}
+\end{figure} 

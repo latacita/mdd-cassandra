@@ -1,0 +1,18 @@
+%%==========================================================================%%
+%% Author : Sañudo Olmedo, Ignacio                                          %%
+%% Author : Sánchez Barreiro, Pablo                                         %%
+%% Version: 1.2, 21/04/2014                                                 %%
+%%                                                                          %%
+%% Memoria del Proyecto Fin de Carrera                                      %%
+%% M2M/Caso de estudio                                                      %%
+%%==========================================================================%%
+
+En esta sección se presenta el siguiente caso de estudio. Twissandra es un proyecto creado para aprender como utilizar Cassandra. En esta sección se reproducirán los procesos M2M y M2T en el siguiente capitulo, todo esto bajo el proceso de desarrollo dirigido por modelos. El modelo UML correspondiente a Twissandra es el siguiente (figura~\ref{back:fig:twissandra}.
+
+\begin{figure}[!tb]
+  \centering
+  \includegraphics[width=.8\linewidth]{m2m/images/twissandra2.eps} \\
+  \caption{Modelo UML Twissandra}
+  \label{back:fig:twissandra}
+\end{figure} 
+

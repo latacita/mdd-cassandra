@@ -1,0 +1,49 @@
+%%==================================================================%%
+%% Author : Sañudo Olmedo, Ignacio                                  %%
+%% Author : Sánchez Barreiro, Pablo                                 %%
+%% Version: 1.5, 15/05/2014                                         %%
+%%                                                                  %%
+%% Memoria del Proyecto Fin de Carrera                              %%
+%% m2t/Sumario                                                      %%
+%%==================================================================%%
+Esta sección analiza el proceso de creación del generador de código.
+En la figura~\ref{back:code:m2t} se muestra parte del código del generador de código. Este fragmento de código muestra el lenguaje Epsilon Generation Language (EGL). El fragmento contiene en primer lugar la definición del Key Space. A continuación se muestra parte del código de la creación de una Column Family en CQL. Por cada Column de la Column Family se va definiendo el tipo de dato (primitivo,map,set/list) junto con su nombre. El resto de código se ha omitido por razones de espacio sin embargo se detalla a continuación. Tras la definición de la columna se define la Primary Key. Para la definición de la Primary Key hay que diferenciar entre si la Column Family es dinámica o estática. En caso de ser estática la definición sería la clásica: PRIMARY KEY(ColumnaClave).
+En caso de ser una Column Family dinámica la construcción modelo-código es distinta, la clásica sería la siguiente: PRIMARY KEY(partitioning key, clustering key\_1 ... clustering key\_n)
+Sin embargo hay que tener en cuenta que en la construcción también es posible tener una Partition Key compuesta, es decir, una Partition Key formada por varias columnas, para ello se utilizan paréntesis y así delimitar el conjunto de partición. Quedando la definición de la PRIMARY KEY de la siguiente manera: PRIMARY KEY((partitioning key\_1, ... partitioning key\_n), clustering key\_1 ... clustering key\_n)
+
+\begin{figure}[!tb]
+\begin{center}
+\begin{footnotesize}
+\begin{verbatim}
+--------------------------------------------------------
+DROP KEYSPACE [%=keyspace.name%];
+CREATE KEYSPACE [%=keyspace.name%]
+WITH replication = {'class':'[%=keyspace.replicaPlacementStrategy%]', 'replication_factor':[%=keyspace.replicationFactor%]};
+
+USE [%=keyspace.name%];
+
+[% for (cf in keyspace.columnFamilies){ tableKey="";%]
+CREATE TABLE [%=cf.name%](
+	[% for (cols in cf.columns){ //este for define cada grupo de columnas
+		s=cols.name.toString();
+		for (c in cols.type){
+		
+			if (c.isTypeOf(PrimitiveType))  //definicion del tipo primitivo
+				s=s+" "+c.kind.toString();
+				
+			if (c.isTypeOf(MapType)) //definicion del tipo map
+				s=s+" Map"+"<"+c.keyType.toString()+","+c.baseType.toString()+">";
+				
+ 			if(c.isTypeOf(CollectionType)) //definicion del tipo set o list
+				s=s+" "+c.kind.toString()+"<"+c.keyType.toString()+">";
+			
+		}
+);
+[%}%]
+--------------------------------------------------------
+\end{verbatim}
+\end{footnotesize}
+\end{center}
+\caption{Regla de transformación XX}
+\label{back:code:m2t}
+\end{figure} 

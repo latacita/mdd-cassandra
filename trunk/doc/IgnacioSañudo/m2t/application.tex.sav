@@ -1,0 +1,33 @@
+%%==================================================================%%
+%% Author : Sañudo Olmedo, Ignacio                                  %%
+%% Author : Sánchez Barreiro, Pablo                                 %%
+%% Version: 1.2, 15/05/2014                                         %%
+%%                                                                  %%
+%% Memoria del Proyecto Fin de Carrera                              %%
+%% Capítulo m2t, Archivo raíz                                       %%
+%%==================================================================%%
+
+\chapterheader{Transformación modelo a texto}{Transformación modelo a texto }
+\label{chap:m2t}
+
+El capítulo anterior describió el funcionamiento y desarrollo del primer paso del proceso de transformación dirigido por modelos, 'Model To model' (M2M). En este capítulo se presenta el siguiente paso del proceso de transformación dirigido por modelos, dicho paso consiste en la transformación del modelo a texto, este paso es mas conocido como 'Model To Text' (M2T). En este capitulo se explica como se ha realizado la implementación del generador de código bajo el proceso M2T. Este capítulo describe el funcionamiento y desarrollo de los generadores de código, los cuales tienen como objetivo adaptar la implementación de referencia a las necesidades de cada cliente.
+
+\chaptertoc
+
+\section{Introducción}
+\label{m2t:sec:intro}
+\input{m2t/introduccion.tex}
+
+\section{Generador de código}
+\label{m2t:sec:intro}
+\input{m2t/m2t.tex}
+
+\section{Caso de estudio Twissandra}
+\label{m2t:sec:tw}
+\input{m2t/m2ttwissandra.tex}
+
+\section{Sumario}
+\label{m2t:sec:sumario}
+\input{m2t/sumario.tex}
+
+

@@ -1,0 +1,47 @@
+%%==================================================================%%
+%% Author : Sañudo Olmedo, Ignacio                                  %%
+%% Author : Sánchez Barreiro, Pablo                                 %%
+%% Version: 1.5, 15/05/2014                                         %%
+%%                                                                  %%
+%% Memoria del Proyecto Fin de Carrera                              %%
+%% m2t/Sumario                                                      %%
+%%==================================================================%%
+Esta sección analiza el proceso de creación del generador de código.
+En la figura~\ref{back:code:m2t} se muestra parte del código del generador de código. Este fragmento de código muestra el lenguaje Epsilon Generation Language (EGL). El fragmento contiene en primer lugar la definición del Key Space. A continuación se muestra parte del código de la creación de una Column Family en CQL. Por cada Column de la Column Family se va definiendo el tipo de dato (primitivo,map,set/list). El resto de código se ha omitido por razones de espacio sin embargo se detalla a continuación. Tras la definición del
+
+\begin{figure}[!tb]
+\begin{center}
+\begin{footnotesize}
+\begin{verbatim}
+--------------------------------------------------------
+DROP KEYSPACE [%=keyspace.name%];
+CREATE KEYSPACE [%=keyspace.name%]
+WITH replication = {'class':'[%=keyspace.replicaPlacementStrategy%]', 'replication_factor':[%=keyspace.replicationFactor%]};
+
+USE [%=keyspace.name%];
+
+[% for (cf in keyspace.columnFamilies){ tableKey="";%]
+CREATE TABLE [%=cf.name%](
+	[% for (cols in cf.columns){ //este for define cada grupo de columnas
+		s=cols.name.toString();
+		for (c in cols.type){
+		
+			if (c.isTypeOf(PrimitiveType))  //definicion del tipo primitivo
+				s=s+" "+c.kind.toString();
+				
+			if (c.isTypeOf(MapType)) //definicion del tipo map
+				s=s+" Map"+"<"+c.keyType.toString()+","+c.baseType.toString()+">";
+				
+ 			if(c.isTypeOf(CollectionType)) //definicion del tipo set o list
+				s=s+" "+c.kind.toString()+"<"+c.keyType.toString()+">";
+			
+		}
+);
+[%}%]
+--------------------------------------------------------
+\end{verbatim}
+\end{footnotesize}
+\end{center}
+\caption{Regla de transformación XX}
+\label{back:code:m2t}
+\end{figure} 

@@ -1,0 +1,16 @@
+%%==================================================================%%
+%% Author : Sañudo Olmedo, Ignacio                                  %%
+%% Author : Sánchez Barreiro, Pablo                                 %%
+%% Version: 1.5, 15/05/2014                                         %%
+%%                                                                  %%
+%% Memoria del Proyecto Fin de Carrera                              %%
+%% m2t/Caso de estudio                                              %%
+%%==================================================================%%
+
+Una vez definido el funcionamiento del generador de código podemos continuar con el caso de estudio planteado en el capitulo anterior. Como se presentó en el capitulo anterior el objetivo de este ejemplo es la generación de código CQL a partir de un modelo UML 2.0. Para ello definimos una serie de reglas de transformación entre modelos y obtuvimos un modelo de Cassandra a partir de un modelo UML que representaba una versión simplificada de Twitter llamada Twissandra.
+En esta sección
+
+Foto figura del modelo cassandra
+
+
+foto codigo resultante 

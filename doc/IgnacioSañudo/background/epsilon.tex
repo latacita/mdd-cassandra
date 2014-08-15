@@ -9,11 +9,10 @@
 
 
 Epsilon es una familia de lenguajes y herramientas para el desarrollo de software dirigido por modelos, entre estas podemos encontrar: la transformación de modelos, validación de modelos, generación de código entre otras funcionalidades. Epsilon es distribuido a través de la plataforma de modelado de lenguajes de Eclipse.
-
 Epsilon proporciona multitud de lenguajes y herramientas para trabajar con modelos. Los lenguajes utilizados en este proyecto son EOL (Epsilon Object Language), ETL (Epsilon Transformation Language) y EGL (Epsilon Generation Language) también ha sido utilizado EUnit como herramienta para validar el código escrito por el generador de código Cassandra-CQL. Estos lenguajes y herramientas son descritos a continuación.
 
 \subsection{Epsilon Object Language}
-[2.1] Epsilon Object Language (EOL) es un lenguaje de programación imperativo utilizado para crear, consultar y modificar los modelos EMF. Según [2.1] EOL se puede considerar el lenguaje como una mezcla de Javascript y OCL, que combina lo mejor de ambos lenguajes. Como tal, proporciona todas las características habituales imperativas que se encuentran en Javascript (por ejemplo, la secuencia de la declaración, las variables, bucles for y while, etc) y todas las características interesantes de OCL como las operaciones sobre las colecciones (por ejemplo Sequence{1..5}.select (x | x> 3)).
+[2.1] Epsilon Object Language (EOL) es un lenguaje de programación imperativo utilizado para crear, consultar y modificar los modelos EMF. Según [2.1], EOL se puede considerar un lenguaje mezcla de Javascript y OCL, que combina lo mejor de ambos lenguajes. Como tal, proporciona todas las características habituales imperativas que se encuentran en Javascript (por ejemplo, la secuencia de la declaración, las variables, bucles for y while, etc) y todas las características interesantes de OCL como las operaciones sobre las colecciones (por ejemplo Sequence{1..5}.select (x | x> 3)). 
 
 
 \begin{figure}[!tb]
@@ -24,9 +23,8 @@ Epsilon proporciona multitud de lenguajes y herramientas para trabajar con model
 \end{figure}
 
 
-Para entender mejor el funcionamiento de EOL se expone el siguiente ejemplo. Se ha definido el  metamodelo mostrado en la figura~\ref{back:fig:ejMetamodeloCasa} el cual consiste en la representación de una casa y las personas que viven en ella. Las personas tienen un nombre y un atributo booleano que representa si una persona está viva o no. Existe una relación de agregación para reflejar que la casa contiene personas.
-
-Una vez creado el metamodelo podemos crear un modelo como una instancia de ese metamodelo. Un ejemplo de cómo funciona EOL puede ser el siguiente: deseamos saber que personas habitan en la casa y están vivas. La sintaxis correspondiente sería la siguiente (figura~\ref{back:code:codigoEOL}).
+Para entender mejor el funcionamiento de EOL se expone el siguiente ejemplo. Se ha definido el meta-modelo mostrado en la figura~\ref{back:fig:ejMetamodeloCasa} el cual consiste en la representación de una casa y las personas que viven en ella. Las personas tienen un nombre y un atributo booleano que representa si una persona está viva o no. Existe una relación de agregación para reflejar que la casa contiene personas.
+Una vez creado el meta-modelo podemos crear un modelo como instancia de ese meta-modelo. Un ejemplo de cómo funciona EOL puede ser el siguiente: deseamos saber que personas habitan en la casa y están vivas. La sintaxis correspondiente sería la siguiente (figura~\ref{back:code:codigoEOL}).
 
 \begin{figure}[!tb]
 \begin{center}
@@ -56,13 +54,10 @@ Como vemos la sintaxis es muy similar a cualquier lenguaje orientado a objetos, 
 
 
 \subsection{Epsilon Transformation Language}
+[2.1] Epsilon Transformation Language (ETL) es un lenguaje de transformación modelo a modelo basado en reglas (Model to Model-M2M). ETL proporciona las características estándar de un lenguaje de transformación, también nos permite manipular los modelos de entrada y salida así como su código fuente. ETL tiene su propia sintaxis sin embargo utiliza el lenguaje EOL como base.
 
 
-[2.1] Epsilon Transformation Language (ETL) es un lenguaje de transformación modelo a modelo basado en reglas (Model to Model-M2M). ETL proporciona las características estándar de un lenguaje de transformación, también nos permite manipular los modelos de entrada y salida así como su código fuente.
-ETL tiene su propia sintaxis sin embargo utiliza el lenguaje EOL como base.
-
-
-Recordando el ejemplo de la Red de computadores y el Grafo detallado en el capitulo anterior (sección 1.2). Deseamos realizar la transformación de un modelo de tipo grafo a un modelo de tipo red para ello utilizaremos ETL. En primer lugar necesitamos el modelo del grafo para poder realizar la transformación a un modelo de tipo Red.
+Recordando el ejemplo de la Red de computadores y el Grafo detallado en el capitulo anterior (sección 1.2). Deseamos realizar la transformación de un modelo de tipo grafo a un modelo de tipo red para ello definiremos una serie de reglas de transformación utilizando para ello ETL. En primer lugar necesitamos definir el modelo del grafo para poder realizar la transformación a un modelo de tipo Red.
 La figura~\ref{back:code:codigoETL} muestra el código que realiza el proceso de transformación de un Grafo a una Red.
 
 \begin{figure}[!tb]
@@ -115,7 +110,7 @@ En este código encontramos solo una regla. Esta regla transforma aristas del gra
 \subsection{Epsilon Generation Language}
 
 [2.1] [2.4] Epsilon Generation Language (EGL) es un lenguaje utilizado para la generación de código basado en la transformación de modelos (Model to Text-M2T).
-EGL puede ser utilizado para transformar los modelos en varios tipos de lenguajes, por ejemplo código ejecutable Java, código HTML o incluso aplicaciones completas que comprenden el código en varios lenguajes (por ejemplo, HTML, Javascript y CSS).
+EGL puede ser utilizado para transformar los modelos en varios tipos de lenguajes, por ejemplo código ejecutable Java, código HTML o incluso aplicaciones completas que comprenden el código en varios lenguajes (por ejemplo, HTML, Javascript y CSS). En este proyecto se utilizara EGL para la generación de código Cassandra Query Language (CQL) a partir de modelos UML.
 
 Cada plantilla de EGL contiene varias secciones. Cada sección puede ser estática o bien dinámica.
 Una sección estática contiene texto que aparecerá en la salida generada por la plantilla. Una sección dinámica comienza con la secuencia '[\%' y termina con la secuencia '\%]'. La sección dinámica contiene el lenguaje (EOL, Epsilon Object Language).
@@ -159,3 +154,5 @@ La figura~\ref{back:code:codigoEGL} muestra como se realiza la generación de cód
 \caption{Ejemplo código EGL}
 \label{back:code:codigoEGL}
 \end{figure} 
+
+Como vemos en el código la integración del código EGL junto con HTML es total, en este sencillo código se genera una página HTML con una tabla que muestra varias filas, una fila por cada conexión entre dos componentes de la red. 

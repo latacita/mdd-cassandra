@@ -14,11 +14,11 @@
   \label{back:fig:twissandra}
 \end{figure}
 
-En esta sección se presenta el siguiente caso de estudio que se analizará lo largo de este proyecto. Para ello se estudiara Twissandra, Twissandra es un proyecto creado para aprender como utilizar Cassandra. El modelo UML correspondiente a Twissandra es el correspondiente a la figura~\ref{back:fig:twissandra}.
+En esta sección se presenta el caso de estudio que se analizará lo largo de este proyecto. El caso de estudio que se analizara trata sobre Twissandra, Twissandra es un proyecto creado para aprender como utilizar Cassandra. El modelo UML correspondiente a Twissandra se puede ver en la figura~\ref{back:fig:twissandra}.
 
-Twissandra es una versión simplificada de Twitter, que es a menudo utilizada para demostrar las capacidades de Cassandra. Twitter es una red social muy conocida que funciona de la siguiente manera: los usuarios registrados pueden publicar tweets. Un tweet es simplemente un texto con un límite de 140 caracteres publicado a una hora determinada. La colección de todos los tweets publicados por un usuario cronológicamente ordenados, están asignados a su Userline.
-Cada usuario registrado en Twissandra puede seguir a otros usuarios registrados. Cuando decimos que Pedro sigue a María significa que Pedro está interesado en saber qué publica María en su tablón. Así, cada usuario registrado tiene también un timeline que vendría a ser la colección de todos los tweets de las personas a las que sigue ordenadas cronológicamente.
+Twissandra es una versión simplificada de Twitter, que es a menudo utilizada para demostrar las capacidades de Cassandra. Twitter es una red social muy conocida que permite escribir a los usuarios pequeños mensajes de texto, funciona de la siguiente manera: los usuarios registrados pueden publicar tweets. Un tweet es simplemente un texto con un límite de 140 caracteres publicado a una hora determinada. La colección de todos los tweets publicados por un usuario cronológicamente ordenados, están asignados a su Userline.
+Cada usuario registrado en Twissandra puede seguir a otros usuarios registrados. Cuando decimos que Pedro sigue a María significa que Pedro está interesado en saber qué publica María en su tablón, por lo que Pedro recibirá todos los mensajes que publique María en su tablón. Así, cada usuario registrado tiene también un timeline que vendría a ser la colección de todos los tweets de las personas a las que sigue ordenadas cronológicamente.
 
 Los principales casos de uso de un sistema de este tipo son: (1) obtener el timeline de un usuario determinado; (2) obtener el Userline de un usuario, (3) obtener la lista de usuarios que un usuario está siguiendo; y (4) obtener la lista de usuarios que están siguiendo a un usuario específico. Estas dos últimas listas deben ser ordenadas cronológicamente.
 
-Una vez entendido en los siguientes capitulos se procede a detallar el proceso de creación de un generador de código de este caso de estudio. 
+Una vez entendido en los siguientes capítulos se procede a detallar el proceso de creación de un generador de código de este caso de estudio. 

@@ -7,21 +7,21 @@
 %% M2M/Reglas Transformación UML a Cassandra                        %%
 %%==================================================================%%
 
-Una vez definido el meta-modelo de Cassandra utilizamos Epsilon Transformation Language (ETL) para establecer las reglas de transformación entre UML y Cassandra CQL. Recordamos que el lenguaje ETL es el lenguaje que utiliza Epsilon para la transformación entre modelos basado en reglas. A continuación se presenta una explicación de las reglas junto con el código correspondiente.
+Una vez definido el meta-modelo de Cassandra utilizamos Epsilon Transformation Language (ETL) para establecer las reglas de transformación entre modelos UML y modelos Cassandra. Recordamos que el lenguaje ETL es el lenguaje que utiliza Epsilon para la transformación entre modelos basado en reglas. A continuación se presenta una explicación de las reglas junto con el código correspondiente.
 Las reglas de transformación son definidas en [docPablo]. A continuación se detalla cómo se han implementado dichas reglas en el lenguaje de definición de reglas de transformación ETL.
 
 \subsection{Transformación del modelo}
-El modelo UML se considera el elemento raíz que contiene los elementos del modelo, este se transforma en el Key Space para el repositorio de Cassandra. Los Key Spaces permiten agrupar entidades tales como Column Families, Columns.. De esta forma, se pueden tener varios Key Spaces en el mismo proyecto independientes entre si.
+El modelo UML se considera el elemento raíz que contiene los elementos del modelo, este se transforma en el keyspace para el repositorio de Cassandra. El nombre del keyspace corresponderá al que se haya escogido para el modelo de datos UML. Los Key Spaces permiten agrupar entidades tales como Column Families, Columns.. De esta forma, se pueden tener varios Key Spaces en el mismo proyecto independientes entre si.
 
 \subsection{Transformación de clases}
 Se han definido dos reglas ETL que transforman una clase definida en UML a una Column Family estática de Cassandra (el equivalente a una tabla en el sistema de bases de datos relacionales).
-La primera regla es definida para las clases que tengan un atributo clave definido, para ello se utiliza la propiedad "isID" de UML la cual define que ese atributo identifica a la clase de forma única. La segunda regla es para las clases sin atributo clave definido. El proceso de transformación es similar en ambas reglas, en primer lugar se asigna la Column Family al Key Space que le corresponde, se copia el nombre de la clase a la Column Family y se añade al conjunto de Column Families del Key Space. Sin embargo en la segunda regla se crea un atributo que va a ser la clave de esa Column Family ya que no tiene, dicha clave tendrá de nombre, el nombre de la clase más el distintivo "\_ID" y será de tipo uuid.
+La primera regla es definida para las clases que tengan un atributo clave definido, para ello se utiliza la propiedad isID de UML la cual define que ese atributo identifica a la clase de forma única. La segunda regla es para las clases sin atributo clave definido. El proceso de transformación es similar en ambas reglas, en primer lugar se transforma la clase UML a una column family de Cassandra, se asigna la column family al keyspace que le corresponde, se copia el nombre de la clase a la column family y se añade al conjunto de column families del keyspace. En la segunda regla utilizada para las clases sin atributo clave, se crea un atributo que va a ser la clave de esa column family ya que esta no tiene, dicha clave tendrá de nombre, el nombre de la clase más el distintivo \_ID y será de tipo uuid.
 Dichas reglas están definidas en el punto 5.3 del documento [docPablo].
 
 \subsection{Transformación de atributos}
-La siguiente regla define como se realiza la transformación de un atributo del modelo UML a una columna del modelo Cassandra. Para ello en primer lugar se define una guarda ETL para que la transformación se haga solo de los atributos de clase y no los atributos de relación. A continuación se realiza un filtro para evitar la adición de columnas que no pertenezcan al modelo de datos. Una vez hecho esto hay que diferenciar dos tipos de atributos, aquellos cuya multiplicidad sea igual a 1 y aquellos cuya multiplicidad sea mayor de 1. En cuanto a los atributos de multiplicidad igual a 1 se realiza la transformación del atributo copiando su tipo de dato. Respecto a los atributos de tamaño mayor de 1 se aplica la siguiente regla: Aquellos atributos que sean únicos y no ordenados son definidos como tipo "set" de Cassandra. En caso contrario se definen como tipo list.
-A continuación en ambos casos se realiza la transformación correspondiente del tipo primitivo UML a Cassandra (viene descrita más abajo), se realiza una copia el nombre y se añade la columna ya transformada a la Column Family correspondiente.
-Finalmente en caso de que el atributo sea clave de la clase se añade a la Column Family como Primary Key. El código correspondiente a esta regla es el siguiente figura~\ref{back:code:reglaTrans}
+La siguiente regla define como se realiza la transformación de un atributo del modelo UML a una columna del modelo Cassandra. La definición básica es que un atributo UML corresponde a una columna Cassandra. Para ello en primer lugar se define una guarda ETL para que la transformación se haga solo de los atributos de las clases y no de los atributos de la relación. A continuación se realiza un filtro para evitar la adición de columnas que no pertenezcan al modelo de datos. Una vez hecho esto hay que diferenciar dos tipos de atributos, aquellos cuya multiplicidad sea igual a 1 y aquellos atributos con multiplicidad mayor de 1. En cuanto a los atributos de multiplicidad igual a 1 se realiza la transformación del atributo a columna copiando su tipo de dato. Respecto a los atributos de tamaño mayor de 1 se aplica la siguiente regla: Aquellos atributos que se hayan definido en el modelo UML como únicos y no ordenados son transformados como tipo set de Cassandra. En caso contrario se definen como tipo list.
+Una vez transformado en set o list, en ambos casos se realiza la transformación correspondiente del tipo primitivo UML a Cassandra (viene descrita en la sub-sección inferior), se realiza una copia del nombre y se añade la columna ya transformada a la column family correspondiente.
+Finalmente en caso de que el atributo sea clave de la clase se añade a la column family como primary key. El código correspondiente a esta regla es el que se puede observar en la figura~\ref{back:code:reglaTrans}
 
 \begin{figure}[!tb]
 \begin{center}
@@ -66,7 +66,6 @@ to column : nosql!Column {
             //5.1 Assignment of keys to classes
             if(attribute.isID)
                 cfamily.primaryKey.add(column);
-
         }
     }
 }
@@ -80,16 +79,17 @@ to column : nosql!Column {
 
 \subsection{Transformación de asociaciones}
 La siguiente regla define como se realiza la transformación de los atributos de las asociaciones entre clases UML.
-En primer lugar hay que diferenciar como se tratan las asociaciones, aquellas asociaciones cuyo extremo tenga una cardinalidad igual a uno y aquellas con una cardinalidad mayor de uno.
-Para los extremos con cardinalidad igual a uno se crea una columna que será añadida en la Column Family (CF) del otro extremo de la relación, esta columna nueva es una copia de la Primary Key (PK) de la CF fuente, el nombre de la nueva columna es la composición del nombre de la CF y del nombre de la PK, el tipo de la nueva columna es el mismo del de la PK de la CF fuente. Esto se comprende mejor con el caso de estudio propuesto en la sección posterior.
+En primer lugar hay que diferenciar como se tratan las asociaciones, existen dos tipos: aquellas asociaciones cuyo extremo tiene una cardinalidad igual a uno y aquellas con una cardinalidad mayor de uno.
 
-Para los extremos con cardinalidad mayor de uno, se crea una Column Family dinámica. En la primera columna se define la Partition Key. El resto de columnas de la Primary Key se utilizan para definir las llamadas Clustering Columns, estas se utilizan para la recuperación de filas de manera eficiente.
-La transformación utilizada para este tipo de CF es la siguiente: Esta CF dinámica está compuesta de dos columnas, la primera columna y segunda columna juegan el papel de Partition Key de la CF, la primera columna se construye de la misma manera que el caso anterior, se copia el nombre y el tipo de la Primary Key del extremo de la asociación fuente. La segunda columna de la misma manera toma los datos (nombre y tipo de la Primary Key) del otro extremo de la asociación. El rol de Cluster Key lo desempeña la primera columna creada.
-El nombre de la CF será la concatenación del nombre de las CF de ambos extremos (primero fuente, segundo extremo fin de la asociación).
-En resumen la definición de la Primary Key en las CF dinámicas es la siguiente:
+Para los extremos con cardinalidad igual a uno se crea una columna que será añadida en la column family del otro extremo de la relación, esta columna nueva es una copia de la primary key de la column family fuente, el nombre de la nueva columna es la composición del nombre de la column family y del nombre de la primary key, el tipo de la nueva columna es el mismo del de la primary key de la column family fuente. Esto se comprende mejor con el caso de estudio propuesto en la sección siguiente.
+
+Para los extremos con cardinalidad mayor de uno, se crea una column family dinámica. Recordamos que la primary key de este tipo de column family esta compuesta de dos tipos de columna: La partition key y la cluster key.
+La transformación utilizada para este tipo de column family es la siguiente: Esta column family dinámica está compuesta de dos columnas, la primera columna y segunda columna juegan el papel de partition key de la column family, la primera columna se construye de la misma manera que el caso anterior, se copia el nombre y el tipo de la primary key de la column family extremo de la asociación fuente. La segunda columna de la misma manera toma los datos nombre y tipo de la primary key del otro extremo de la asociación. El rol de cluster key lo desempeña la primera columna definida.
+El nombre de la column family será la concatenación del nombre de las column family de ambos extremos de la asociación (primero fuente, segundo extremo fin de la asociación).
+En resumen la transformación de la primary key en las column family dinámicas es la siguiente:
 \begin{enumerate}
 \item Partition Key: Primera columna  (fuente de la asociación), segunda columna (extremo de la asociación).
-\item Clustering Columns: Primera columna (fuente de la asociación).
+\item Clustering Key: Primera columna (fuente de la asociación).
 \end{enumerate}
 	
 \subsection{Transformación de tipos primitivos}

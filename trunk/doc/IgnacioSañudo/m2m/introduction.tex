@@ -8,9 +8,10 @@
 %%==================================================================%%
 
 
-El primer paso a la hora de desarrollar un generador de código es establecer una serie de reglas de correspondencia entre el modelo de entrada y el modelo de salida. Estas reglas han de contemplar los distintos tipos de elementos que pueden aparecer en ambos lenguajes, así como elementos que no aparecen en uno de los dos lenguajes y tiene importancia en el otro.
-En este caso, consiste en establecer reglas de correspondencia entre elementos UML 2.0 y el lenguaje Cassandra Query Language (CQL).
-Para la definición de estas reglas se ha utilizado el lenguaje Epsilon Transformation Language (ETL) y el lenguaje Epsilon Object Language (EOL).
+A la hora de desarrollar el generador de código necesitamos establecer en primer lugar cuales van a ser los modelos de origen y de salida, en este proyecto de fin de carrera y como se especifica en capítulos anteriores nuestro objetivo consiste en transformar un modelo UML en modelos Cassandra para ello es necesario contar con un meta-modelo definido en Cassandra el cual es definido en la siguiente sección, en cuanto al meta-modelo origen basado en UML 2.0 utilizaremos el que nos proporciona la propia plataforma Epsilon.
+
+El siguiente paso consiste en establecer una serie de reglas de correspondencia entre el modelo de entrada y el modelo de salida. Estas reglas han de contemplar los distintos tipos de elementos que pueden aparecer en ambos lenguajes, así como elementos que no aparecen en uno de los dos lenguajes y tiene importancia en el otro.
+En este caso, consiste en establecer reglas de correspondencia entre elementos del modelado UML 2.0 y elementos del modelado Cassandra, para así crear el generador de código Cassandra Query Language (CQL).
+Para la definición de estas reglas se ha utilizado el lenguaje Epsilon Transformation Language (ETL) y el lenguaje Epsilon Object Language (EOL) los cuales nos proporciona la plataforma Epsilon.
 Tras implementar estas reglas y comprobar que son funcionales se puede implementar el generador de código pero este tema se trata en el siguiente capitulo.
-En cuanto a la construcción EMF
-El meta-modelo utilizado de UML es el que proporciona la herramienta EMF por defecto.
+

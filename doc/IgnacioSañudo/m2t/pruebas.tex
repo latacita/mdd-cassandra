@@ -10,4 +10,4 @@ Para ello creamos, una serie de pruebas unitarias que permitan comprobar que el 
 
 Estas pruebas unitarias se han implementado en EUnit, el lenguaje de definición de pruebas de la suite Epsilon. EUnit funciona de una manera muy similar a JUnit, pero aplicado a los lenguajes de la suite Epsilon, como EGL. Utilizamos EUnit para comprobar que el funcionamiento del generador de código es correcto, para ello se diseñan una serie de casos de prueba y se crea la salida esperada de cada uno de esos casos de prueba de forma manual.
 A continuación, se ejecuta el caso de prueba creado en EUnit y se comprueba que la salida generada coincide con la esperada, que es la creada manualmente.
-
+El único problema surge por un problema de defecto en la herramienta EUnit, la función de comparación de ficheros llamada assertEqualFiles obliga a que ambos ficheros sean estrictamente iguales por lo que para crear casos de prueba tanto el código de entrada de prueba como el código generado a testear han de ser iguales, espacios y saltos de linea incluidos.

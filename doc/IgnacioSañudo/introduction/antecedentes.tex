@@ -21,15 +21,15 @@ Tanto MDD como MDE aportan varias ventajas respecto a métodos de desarrollo trad
 \item Reutilización de componentes en distintos sistemas.
 \item Alto nivel de abstracción para escribir aplicaciones y artefactos de software a través de la arquitectura de niveles del meta-modelado y las capas de modelado de MDD. Este beneficio favorece diseñar una aplicación partiendo de lo mas general a lo más concreto, es decir, son independientes de la tecnología.
 \item Un menor número de líneas de código escritas, ya que los niveles de abstracción que aporta MDD a través de los modelos y meta-modelos diseñados fomentan el reúso del código y de los modelos.
-\item Si se centran los esfuerzos en el generador de código se puede mejorar la calidad del software, además reducimos la cantidad de errores así como el tiempo incurrido en pruebas e incurrimos en buenas practicas de desarrollo.
+\item Si se centran los esfuerzos en el generador de código se puede mejorar la calidad del software, además reducimos la cantidad de errores así como el tiempo dedicado en pruebas e incurrimos en buenas prácticas de desarrollo.
 \end{enumerate}
 
 Una vez entendidos los conceptos anteriores y los beneficios que nos proporciona este enfoque de desarrollo se presentan los conceptos básicos que nos ayudaran a comprender como funciona MDD.
 
 El enfoque MDD parte del meta-modelo [10], un meta-modelo es la representación del lenguaje que se desea implementar en sintaxis abstracta. Un lenguaje de modelado está formado de sintaxis y semántica. La sintaxis son el conjunto de normas o reglas de escritura del lenguaje. La semántica refleja el significado de la sintaxis.
-La definición de la sintaxis abstracta forma parte del primer paso en el proceso de diseño de un lenguaje, esta sintaxis abstracta especifica la forma del meta-modelo. Clases y relaciones de dominio son los principales elementos que forman parte de un meta-modelo. A su vez los meta-modelos son considerados instancias de estos lenguajes de modelado. Un ejemplo de meta-modelo es la definición de UML [11]. En UML por ejemplo elementos como las clases, paquetes o atributos se pueden usar dentro del propio UML.
+La definición de esta sintaxis abstracta forma parte del primer paso en el proceso de diseño de un lenguaje, esta sintaxis abstracta especifica la forma del meta-modelo. Clases y relaciones de dominio son los principales elementos que forman parte de un meta-modelo. A su vez los meta-modelos son considerados instancias de estos lenguajes de modelado. Un ejemplo de meta-modelo es la definición de UML [11]. En UML por ejemplo elementos como las clases, paquetes o atributos se pueden usar dentro del propio UML.
 
-El siguiente paso consiste en la definición de la sintaxis concreta, este paso consiste en la representación de los elementos bien definidos en la sintaxis abstracta. Véase la creación de un modelo. Un modelo es la representación concreta de los elementos descritos en la sintaxis abstracta o meta-modelo. Por lo tanto un modelo siempre posee las propiedades y cumple las restricciones de su meta-modelo. En la figura~\ref{back:fig:ejALL} se pueden observar representaciones de los elementos descritos.
+El siguiente paso consiste en la definición de la sintaxis concreta, este paso consiste en la representación de los elementos bien definidos en la sintaxis abstracta, esto es la creación de un modelo. Un modelo es la representación concreta de los elementos descritos en la sintaxis abstracta o meta-modelo. Por lo tanto un modelo siempre posee las propiedades y cumple las restricciones de su meta-modelo. En la figura~\ref{back:fig:ejALL} se pueden observar representaciones de los elementos descritos.
 
 \begin{figure}[!tb]
   \centering
@@ -38,14 +38,14 @@ El siguiente paso consiste en la definición de la sintaxis concreta, este paso c
   \label{back:fig:ejALL}
 \end{figure}
 
-Según [10] y formalizando los conceptos anteriores estos son los pasos que hay que realizar para la creación de un nuevo lenguaje de modelado:
+Según [10], formalizando los conceptos anteriores estos son los pasos que hay que realizar para la creación de un nuevo lenguaje de modelado:
 \begin{enumerate}
 \item En primer lugar hay que establecer cuál va a ser la sintaxis de nuestro lenguaje de modelado. Para ello hay que crear un meta-modelo el cual como se comentaba anteriormente establece cuales son las reglas que han de seguir los modelos. El meta-modelo ha de ser construido utilizando un lenguaje de meta-modelado, el lenguaje de modelado utilizado en el presente proyecto es ECore [8]. Además de ECore hay otros lenguajes de modelado como puede ser MOF [9].
 \item El siguiente paso consiste en la definición de la sintaxis concreta de nuestro lenguaje de modelado. La creación de un modelo bien definido a partir del meta-modelo creado en el paso anterior.
 \item La definición de la semántica del lenguaje de modelado es el último paso, por ejemplo crear un generador que transforme los elementos del modelo en elementos de un lenguaje distinto bien definido.
 \end{enumerate}
 
-La herramienta con la que se va a trabajar es EMF un plugin de eclipse que nos permite crear y trabajar con lenguajes de modelado.
+La herramienta con la que se va a trabajar para crear el lenguaje de modelado correspondiente a Cassandra es EMF, un plugin de eclipse que nos permite crear y trabajar con lenguajes de modelado.
 MDD proporciona las transformaciones de modelos como principal herramienta para trabajar con modelos en el proceso de desarrollo software. Existen dos tipos de transformaciones:
 \begin{enumerate}
 \item \emph{Model to model (M2M)}. Dado un modelo de entrada esta transformación produce otro modelo como salida. Este tipo de transformación se puede utilizar de varias formas, la primera transformar un modelo dándole propiedades que no posee el original. La segunda es la que se utilizara en el presente proyecto, dado un modelo origen definido en UML realizar una transformación a un modelo destino definido en Cassandra (Figura~\ref{back:fig:transformacion}). Esta información es ampliada en el siguiente capítulo.
@@ -91,7 +91,7 @@ Una vez obtenido el modelo de tipo Red deseamos representar textualmente el mode
   \label{back:fig:ejGeneradorHTML}
 \end{figure}
 
-El proceso que se ha seguido es explicado más detalladamente en capítulos posteriores, tanto las técnicas de transformación de modelos como la realización del generador de código así como la creación de los modelos.
+El proceso que se ha seguido es explicado más detalladamente en capítulos posteriores con un caso de estudio analizado, tanto las técnicas de transformación de modelos como la realización del generador de código así como la creación de los modelos.
 
 
 

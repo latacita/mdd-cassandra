@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  18 AUG 2014 20:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  19 AUG 2014 23:06
 entering extended mode
 **C:/Program*Files/Epsilon/workspace/IgnacioSañudo/pfc.tex
 ("C:/Program Files/Epsilon/workspace/IgnacioSañudo/pfc.tex"
@@ -449,8 +449,8 @@ File: background/images/ejGeneradorHTML.eps Graphic file (type eps)
 
 <background/images/ejGeneradorHTML.eps>)
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/objetivos.tex"
-) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/roadmap.tex"
-) [8])
+[8])
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/roadmap.tex"))
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/background.tex"
 [9] [10
 
@@ -470,17 +470,24 @@ File: m2m/images/twissandra.eps Graphic file (type eps)
 ])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/EMF.tex"
 [12]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/epsilon.te
-x"
+x" [13]
 File: background/images/ejCasa.eps Graphic file (type eps)
- <background/images/ejCasa.eps> [13] [14] [15])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/cassandra.tex"
-[16] [17]
+ <background/images/ejCasa.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `back:code:estructuraCF' on page 18 undefined on input
+ [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+[16])
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/cassandra.tex"
+[17] [18]
+
+LaTeX Warning: Reference `back:code:estructuraCF' on page 19 undefined on input
  line 54.
 
 File: background/images/estructuraCF.eps Graphic file (type eps)
-<background/images/estructuraCF.eps> [18])
+<background/images/estructuraCF.eps>)
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/planificacion.te
 x" [19] [20])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/sumario.tex"))
@@ -573,7 +580,10 @@ ip_ID),username)[]
 
 ) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/pruebas.tex")
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/despliegue.tex")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/sumario.tex") [36])
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/sumario.tex")
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/desc.tex" [37]
 [38]
 Cap\'{\i }tulo 5.
@@ -610,6 +620,6 @@ Here is how much of TeX's memory you used:
  9591 multiletter control sequences out of 15000+200000
  14655 words of font info for 56 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
- 36i,13n,43p,1325b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,12n,43p,1359b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on pfc.dvi (46 pages, 153620 bytes).
+Output written on pfc.dvi (46 pages, 156016 bytes).

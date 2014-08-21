@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  19 AUG 2014 23:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  21 AUG 2014 18:37
 entering extended mode
 **C:/Program*Files/Epsilon/workspace/IgnacioSañudo/pfc.tex
 ("C:/Program Files/Epsilon/workspace/IgnacioSañudo/pfc.tex"
@@ -470,29 +470,44 @@ File: m2m/images/twissandra.eps Graphic file (type eps)
 ])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/EMF.tex"
 [12]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/epsilon.te
-x" [13]
+x"
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 15.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 15.
+ [13]
 File: background/images/ejCasa.eps Graphic file (type eps)
- <background/images/ejCasa.eps>
+
+<background/images/ejCasa.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
-[16])
+[15])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/cassandra.tex"
-[17] [18]
+[16] [17]
 
-LaTeX Warning: Reference `back:code:estructuraCF' on page 19 undefined on input
+LaTeX Warning: Reference `back:code:estructuraCF' on page 18 undefined on input
  line 54.
 
 File: background/images/estructuraCF.eps Graphic file (type eps)
-<background/images/estructuraCF.eps>)
+<background/images/estructuraCF.eps> [18])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/planificacion.te
-x" [19] [20])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/sumario.tex"))
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/domain.tex" [21]
-[22
+x"
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+[20]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/sumario.te
+x")) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/domain.tex"
+[21] [22
 
 ]
 Cap\'{\i }tulo 3.
@@ -504,46 +519,51 @@ Cap\'{\i }tulo 3.
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/metamodeloCassandra.tex
 "
 File: m2m/images/ecoreDiag.eps Graphic file (type eps)
- <m2m/images/ecoreDiag.eps> [24]) [25]
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/transformation.tex"
-[26]
-Overfull \hbox (145.56912pt too wide) in paragraph at lines 73--73
+ <m2m/images/ecoreDiag.eps> [24]
+Overfull \hbox (46.30643pt too wide) in paragraph at lines 24--25
+[][]\OT1/cmr/m/n/10.95 OldNetworkTopologyStrategy: Se uti-li-za pa-ra pro-por-c
+io-nar retro-compatibilidad
+ []
+
+[25]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/transformation.te
+x"
+Underfull \vbox (badness 3668) has occurred while \output is active []
+
+ [26]
+Overfull \hbox (145.56912pt too wide) in paragraph at lines 75--75
 []    \OT1/cmtt/m/n/9 guard: ((""+attribute.qualifiedName).contains("Data::") a
 nd attribute.type.isKindOf(UML!PrimitiveType))[] 
  []
 
 
-Overfull \hbox (13.27066pt too wide) in paragraph at lines 73--73
+Overfull \hbox (13.27066pt too wide) in paragraph at lines 75--75
 []        \OT1/cmtt/m/n/9 if(attribute.qualifiedName=="Data::"+cfamily.name+"::
 "+attribute.name){[] 
  []
 
 
-Overfull \hbox (88.86978pt too wide) in paragraph at lines 73--73
+Overfull \hbox (88.86978pt too wide) in paragraph at lines 75--75
 []            \OT1/cmtt/m/n/9 //5.5 Attribute with primitive type transformatio
 n->Attributes with upper bound = 1[] 
  []
 
 
-Overfull \hbox (88.86978pt too wide) in paragraph at lines 73--73
+Overfull \hbox (88.86978pt too wide) in paragraph at lines 75--75
 []            \OT1/cmtt/m/n/9 //5.5 Attribute with primitive type transformatio
 n->Attributes with upper bound > 1[] 
  []
 
-[27]
-Underfull \vbox (badness 6445) has occurred while \output is active []
 
- [28])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/casoEstudio.tex"
+Underfull \vbox (badness 6252) has occurred while \output is active []
+
+ [27]
+[28]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/casoEstudio.tex"
 [29]
 LaTeX Font Info:    Try loading font information for U+lasy on input line 13.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-))
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/sumario.tex")
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30])
+) [30])
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/sumario.tex"))
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/application.tex"
 [31] [32
 
@@ -614,12 +634,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6732 strings out of 493922
- 100709 string characters out of 3147305
- 186535 words of memory out of 3000000
- 9591 multiletter control sequences out of 15000+200000
+ 6767 strings out of 493922
+ 101308 string characters out of 3147305
+ 184535 words of memory out of 3000000
+ 9620 multiletter control sequences out of 15000+200000
  14655 words of font info for 56 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
- 36i,12n,43p,1359b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,13n,43p,1375b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on pfc.dvi (46 pages, 156016 bytes).
+Output written on pfc.dvi (46 pages, 156964 bytes).

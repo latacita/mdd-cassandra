@@ -8,11 +8,11 @@
 %===================================================================%%
 
 
-Epsilon es una familia de lenguajes y herramientas para el desarrollo de software dirigido por modelos, entre estas podemos encontrar: la transformación de modelos, validación de modelos, generación de código entre otras funcionalidades. Epsilon es distribuido a través de la plataforma de modelado de lenguajes de Eclipse.
+Epsilon es una familia de lenguajes y herramientas para el desarrollo de software dirigido por modelos, entre estas herramientas podemos encontrar: herramientas de transformación de modelos, validación de modelos o generación de código entre otras funcionalidades. Epsilon es distribuido a través de la plataforma de modelado de lenguajes de Eclipse.
 Epsilon proporciona multitud de lenguajes y herramientas para trabajar con modelos. Los lenguajes utilizados en este proyecto son EOL (Epsilon Object Language), ETL (Epsilon Transformation Language) y EGL (Epsilon Generation Language) también ha sido utilizado EUnit como herramienta para validar el código escrito por el generador de código Cassandra-CQL. Estos lenguajes y herramientas son descritos a continuación.
 
 \subsection{Epsilon Object Language}
-[2.1] Epsilon Object Language (EOL) es un lenguaje de programación imperativo utilizado para crear, consultar y modificar los modelos EMF. Según [2.1], EOL se puede considerar un lenguaje mezcla de Javascript y OCL, que combina lo mejor de ambos lenguajes. Como tal, proporciona todas las características habituales imperativas que se encuentran en Javascript (por ejemplo, la secuencia de la declaración, las variables, bucles for y while, etc) y todas las características interesantes de OCL como las operaciones sobre las colecciones (por ejemplo Sequence{1..5}.select (x | x> 3)). 
+[2.1] Epsilon Object Language (EOL) es un lenguaje de programación imperativo utilizado para crear, consultar y modificar los modelos EMF. Según [2.1], EOL se puede considerar un lenguaje mezcla de Javascript y OCL, que combina lo mejor de ambos lenguajes. Como tal, proporciona todas las características habituales imperativas que se encuentran en Javascript (por ejemplo, la secuencia de la declaración, las variables, bucles for y while, etc) y todas las características interesantes de OCL como las operaciones sobre colecciones, por ejemplo Sequence\{1..5\}.select(x \textbar\ x \textgreater\ 3).
 
 
 \begin{figure}[!tb]
@@ -65,14 +65,6 @@ La figura~\ref{back:code:codigoETL} muestra el código que realiza el proceso de 
 \begin{footnotesize}
 \begin{verbatim}
 
-pre {
-    "Running ETL".println();
-    var Red : new Red!Red;
-    Red.nameRed="Red1";
-    var iPC:new Integer=1;
-    var iRouter:new Integer=1;
-}
-
 rule Arista2Cable
 transform a : Grafo!Arista
 to r : Red!Cable {	
@@ -103,18 +95,16 @@ to r : Red!Cable {
 \label{back:code:codigoETL}
 \end{figure}
 
-La sección de código inicial define algunas variables previa ejecución de las reglas. En ella se inicializan variables que se utilizaran posteriormente.
-En este código encontramos solo una regla. Esta regla transforma aristas del grafo a cables de la red. La primera instrucción copia el nombre de la arista al cable. A continuación la primera condicional cuestiona si esa arista tiene un padre definido en caso afirmativo asigna el cable a la red. A continuación por cada nodo se crea o bien un PC o un router dependiendo del color del nodo que se esté analizando (rojo-PC, azul-Router). En siguiente lugar se asigna el nodo creado al cable correspondiente y finalmente se añade a la red. Este proceso se repite por cada arista del grafo. Una vez ejecutado este código dado un modelo de entrada de tipo Grafo obtenemos un modelo de tipo Red que cumple las reglas definidas en el meta-modelo.
+En este código encontramos solo una regla. Esta regla transforma aristas del grafo a cables de la red. La primera instrucción copia el nombre de la arista al cable. A continuación la primera condicional cuestiona si esa arista tiene un padre definido en caso afirmativo asigna el cable a la red. A continuación por cada nodo se crea o bien un PC o un router dependiendo del color del nodo que se esté analizando (rojo-PC, azul-Router). En siguiente lugar se asigna el nodo creado al cable correspondiente y finalmente se añade a la red. Este proceso se repite por cada arista del grafo. Una vez ejecutado este código dado un modelo de entrada de tipo Grafo obtenemos un modelo equivalente de tipo Red que cumple las reglas definidas en el meta-modelo.
 
 
 \subsection{Epsilon Generation Language}
 
 [2.1] [2.4] Epsilon Generation Language (EGL) es un lenguaje utilizado para la generación de código basado en la transformación de modelos (Model to Text-M2T).
-EGL puede ser utilizado para transformar los modelos en varios tipos de lenguajes, por ejemplo código ejecutable Java, código HTML o incluso aplicaciones completas que comprenden el código en varios lenguajes (por ejemplo, HTML, Javascript y CSS). En este proyecto se utilizara EGL para la generación de código Cassandra Query Language (CQL) a partir de modelos UML.
+EGL puede ser utilizado para transformar modelos en cualquier tipo de lenguaje, por ejemplo código ejecutable Java, código HTML o incluso aplicaciones completas que comprenden el código en varios lenguajes (por ejemplo, HTML, Javascript y CSS). En este proyecto se utilizara EGL para la generación de código Cassandra Query Language (CQL) a partir de modelos UML 2.0.
 
 Cada plantilla de EGL contiene varias secciones. Cada sección puede ser estática o bien dinámica.
-Una sección estática contiene texto que aparecerá en la salida generada por la plantilla. Una sección dinámica comienza con la secuencia '[\%' y termina con la secuencia '\%]'. La sección dinámica contiene el lenguaje (EOL, Epsilon Object Language).
-
+Una sección estática contiene texto que aparecerá en la salida generada por la plantilla. Una sección dinámica comienza con la secuencia '[\%' y termina con la secuencia '\%]'. La sección dinámica contiene lenguaje EOL.
 La figura~\ref{back:code:codigoEGL} muestra como se realiza la generación de código HTML utilizando para ello el modelo generado de una red a partir de un grafo (ver sección anterior).
 
 \begin{figure}[!tb]
@@ -146,13 +136,12 @@ La figura~\ref{back:code:codigoEGL} muestra como se realiza la generación de cód
         </table>
     </body>
 </html>
-
 --------------------------------------------------------
 \end{verbatim}
 \end{footnotesize}
 \end{center}
 \caption{Ejemplo código EGL}
 \label{back:code:codigoEGL}
-\end{figure} 
+\end{figure}
 
 Como vemos en el código la integración del código EGL junto con HTML es total, en este sencillo código se genera una página HTML con una tabla que muestra varias filas, una fila por cada conexión entre dos componentes de la red. 

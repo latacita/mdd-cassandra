@@ -2,9 +2,9 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Metamodelo Cassandra}{\reset@font\mtcSfont 24}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Transformaci\'on de Modelo UML a Cassandra}{\reset@font\mtcSfont 26}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Transformaci\'on del modelo}{\reset@font\mtcSSfont 26}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Transformaci\'on de clases}{\reset@font\mtcSSfont 26}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Transformaci\'on de clases}{\reset@font\mtcSSfont 27}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.3}Transformaci\'on de atributos}{\reset@font\mtcSSfont 27}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.4}Transformaci\'on de asociaciones}{\reset@font\mtcSSfont 27}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.4}Transformaci\'on de asociaciones}{\reset@font\mtcSSfont 28}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.5}Transformaci\'on de tipos primitivos}{\reset@font\mtcSSfont 29}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Caso de estudio transformaci\'on modelo a modelo}{\reset@font\mtcSfont 29}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.5}Sumario}{\reset@font\mtcSfont 31}}

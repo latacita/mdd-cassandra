@@ -7,12 +7,21 @@
 %% m2t/Sumario                                                      %%
 %%==================================================================%%
 
-Esta sección analiza el proceso de creación del generador de código. Para crear este generador de código se utiliza el lenguaje Epsilon Generation Language (EGL), como se comentaba en el capitulo 2 es un lenguaje utilizado para la generación de código basado en la transformación de modelos, el lenguaje a generar es Cassandra Query Language (CQL) este lenguaje de consultas es muy similar a SQL, sin embargo existen pequeñas diferencias que se han citado a lo largo del proyecto por ejemplo: la definición de claves, tipos de dato etc.
-En la figura~\ref{back:code:m2t} se muestra parte del código del generador de código. Esta sección de código muestra código EGL. En primer lugar se realiza la definición del keyspace para ello hay que definir el nombre del keyspace que parte del modelo transformado Cassandra y la estrategia de replicación (ver capitulo 3, sección 2).
-A continuación se realiza la creación de una column family en CQL. En primer lugar se definen las columnas de la tabla. Por cada columna de la column family se obtiene el nombre de la columna y se define el tipo de dato (primitivo,map,set/list) junto con su nombre. El resto de código se ha omitido por razones de espacio sin embargo se detalla a continuación.
-Tras la definición de la columna se define la primary key. Para la definición de la primary key hay que diferenciar si la column family es dinámica o estática. En caso de ser estática la definición sería la clásica: PRIMARY KEY(ColumnaClave).
+Esta sección analiza el proceso de creación del generador de código. El desarrollo del generador de código utiliza el lenguaje Epsilon Generation Language (EGL), como se comentaba en el capítulo 2 es un lenguaje utilizado para la generación de código basado en la transformación de modelos, el lenguaje a generar es Cassandra Query Language (CQL). Este lenguaje de consultas es muy similar a SQL, sin embargo existen pequeñas diferencias que se han citado a lo largo del proyecto por ejemplo: la definición de claves, tipos de dato etc.
+
+El proceso de transformación modelo-código es el siguiente.
+En primer lugar se realiza la definición del keyspace para ello hay que tomar el nombre del keyspace que parte del modelo transformado Cassandra y la estrategia de replicación (ver capitulo 3, sección 2).
+A continuación se define la creación de una column family en CQL. Tras determinar el bloque de creación de la column family (CREATE TABLE) se definen las columnas de la tabla. Por cada columna de la column family se obtiene el nombre de la columna y se fija el tipo de dato de la columna (primitivo,map,set/list) junto con su nombre.  La definición de estas columnas sería la siguiente.
+\begin{enumerate}
+\item Tipo básico: "nombre columna-tipo primitivo".
+\item Map: "nombre columna-map-(tipo primitivo 1,tipo primitivo 2)".
+\item Set/list: "nombre columna-set-tipo primitivo)".
+\end{enumerate} 
+En la figura~\ref{back:code:m2t} se muestra parte del código para realizar esto (lenguaje ETL). El resto de código se ha omitido por razones de espacio sin embargo se detalla a continuación.
+
+Tras la definición de la columna se define la primary key. Para la definición de la primary key debemos diferenciar si la column family es dinámica o estática. En caso de ser estática la definición sería la clásica: PRIMARY KEY(ColumnaClave).
 En el caso de tratarse de una column family dinámica la construcción modelo-código es distinta, la más frecuente es la siguiente: PRIMARY KEY(partitioning key, clustering key\_1 ... clustering key\_n)
-Sin embargo hay que tener en cuenta que en la construcción también es posible tener una partition key compuesta, es decir, una partition key formada por varias columnas, para ello se utilizan paréntesis y así delimitamos el conjunto de partición. Quedando una posible definición de la primary key de la siguiente manera: PRIMARY KEY((partitioning key\_1, ... partitioning key\_n), clustering key\_1 ... clustering key\_n). Este proceso se repite por cada column family del modelo.
+Sin embargo hay que tener en cuenta que en la construcción y según la documentación de CQL también es posible tener una partition key compuesta, es decir, una partition key formada por varias columnas, para realizar esto se utilizan paréntesis y así delimitamos el conjunto de partición. Quedando una posible definición de la primary key de la siguiente manera: PRIMARY KEY((partitioning key\_1, ... partitioning key\_n), clustering key\_1 ... clustering key\_n). Este proceso se repite por cada column family del modelo.
 
 \begin{figure}[!tb]
 \begin{center}
@@ -47,6 +56,8 @@ CREATE TABLE [%=cf.name%](
 \end{verbatim}
 \end{footnotesize}
 \end{center}
-\caption{Regla de transformación XX}
+\caption{Regla de transformación Primary Key}
 \label{back:code:m2t}
-\end{figure} 
+\end{figure}
+
+Una vez definido el código EGL podemos poner en funcionamiento el generador de código. El proceso completo sería el siguiente: En primer lugar creamos un modelo UML con cualquier herramienta de modelado, por ejemplo el modelo UML de Twissandra ha sido realizado con la herramienta Magic Draw. A continuación transformamos este modelo UML al modelo Cassandra con los métodos de transformación definidos en el capítulo anterior, una vez obtenido este modelo de Cassandra podemos poner en funcionamiento el generador de código, este proceso con el caso de estudio de Twissandra es descrito en la siguiente sección. Con el código ya generado podemos crear el repositorio de datos Cassandra. 

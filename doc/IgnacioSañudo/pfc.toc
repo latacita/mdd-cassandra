@@ -21,17 +21,16 @@
 \contentsline {subsection}{\numberline {3.3.1}Transformaci\'on del modelo}{26}
 \contentsline {subsection}{\numberline {3.3.2}Transformaci\'on de clases}{27}
 \contentsline {subsection}{\numberline {3.3.3}Transformaci\'on de atributos}{27}
-\contentsline {subsection}{\numberline {3.3.4}Transformaci\'on de asociaciones}{28}
+\contentsline {subsection}{\numberline {3.3.4}Transformaci\'on de asociaciones}{29}
 \contentsline {subsection}{\numberline {3.3.5}Transformaci\'on de tipos primitivos}{29}
-\contentsline {section}{\numberline {3.4}Caso de estudio transformaci\'on modelo a modelo}{29}
+\contentsline {section}{\numberline {3.4}Caso de estudio transformaci\'on modelo a modelo}{30}
 \contentsline {section}{\numberline {3.5}Sumario}{31}
 \contentsline {chapter}{\numberline {4}Transformaci\'on modelo a texto}{33}
 \contentsline {section}{\numberline {4.1}Introducci\'on}{33}
 \contentsline {section}{\numberline {4.2}Generador de c\'odigo}{34}
-\contentsline {section}{\numberline {4.3}Caso de estudio Twissandra}{34}
-\contentsline {section}{\numberline {4.4}Pruebas}{36}
-\contentsline {section}{\numberline {4.5}Despliegue}{37}
-\contentsline {section}{\numberline {4.6}Sumario}{37}
+\contentsline {section}{\numberline {4.3}Caso de estudio Twissandra}{36}
+\contentsline {section}{\numberline {4.4}Pruebas}{37}
+\contentsline {section}{\numberline {4.5}Sumario}{37}
 \contentsline {chapter}{\numberline {5}Sumario y Trabajos Futuros}{39}
 \contentsline {section}{\numberline {5.1}Sumario}{39}
 \contentsline {section}{\numberline {5.2}Experiencia personal}{39}

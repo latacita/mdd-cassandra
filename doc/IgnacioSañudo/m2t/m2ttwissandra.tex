@@ -10,7 +10,7 @@
 Una vez definido el funcionamiento del generador de código podemos continuar con el caso de estudio planteado en el segundo capítulo sobre Twissandra. Como se presentó anteriormente el objetivo de este caso de estudio es la generación de código CQL a partir de un modelo UML 2.0. Para ello definimos una serie de reglas de transformación entre modelos y obtuvimos un modelo de Cassandra a partir de un modelo UML que representaba una versión simplificada de Twitter llamada Twissandra.
 En esta sección se presenta el resultado de la transformación del modelo de Twissandra a código.
 
-Tras obtener el modelo Cassandra de Twissandra (figura~\ref{back:code:modeloTwissandra}) y tras la definición del generador de código se pone en funcionamiento la transformación modelo-código. El resultado de la transformación se detalla a continuación.
+Tras obtener el modelo Cassandra de Twissandra (figura~\ref{back:code:modeloTwissandra}) y tras la definición del generador de código se pone en funcionamiento la transformación modelo-código. El resultado de la transformación se detalla a continuación.El código resultante tras ejecutar el generador de código es el siguiente (figura~\ref{back:code:codigoCass}).
 
 \begin{figure}[!tb]
   \centering
@@ -19,9 +19,8 @@ Tras obtener el modelo Cassandra de Twissandra (figura~\ref{back:code:modeloTwis
   \label{back:fig:modeloTwissandra}
 \end{figure}
 
-El código resultante tras ejecutar el generador de código es el siguiente (figura~\ref{back:code:codigoCass}).
-Como vemos en el código las tres primeras líneas son para borrar el keyspace en caso de que existiera, crearlo y configurar la arquitectura según estaba especificada en el modelo Cassandra. A continuación se conecta la sesión con el keyspace correspondiente.
-Por cada column family (sea estática o dinámica) se genera un bloque "CREATE TABLE". Cada columna de la column family es transformado en una columna de la tabla. La transformación como se contaba en la sección anterior es trivial, sin embargo el problema del generador de código surge a la hora de definir la estructura de la primary key. Como se comentó en secciones anteriores las column family estáticas siguen una definición de claves tradicional, sin embargo las column families dinámicas tienen que tener en cuenta que las claves de partición (partition keys) pueden ser compuestas (aunque en este ejemplo no existen). Por ejemplo el caso de user\_userline las columnas user\_name y tweet\_id son designadas como primary key, user\_username será la clave de partición.
+Como vemos en el código las tres primeras líneas son para borrar el keyspace en caso de que existiera, crearlo y configurar la arquitectura de replicación según estaba especificado en el modelo Cassandra. A continuación se conecta la sesión con el keyspace correspondiente.
+Por cada column family (sea estática o dinámica) se genera un bloque "CREATE TABLE". Cada columna de la column family es transformada en una columna de la tabla. La transformación como se contaba en la sección anterior es trivial, sin embargo el problema del generador de código surge a la hora de definir la estructura de la primary key. Como se comentó en secciones anteriores las column family estáticas siguen una definición de claves tradicional, sin embargo las column families dinámicas tienen que tener en cuenta que las claves de partición (partition keys) pueden ser compuestas (aunque en este ejemplo no existen). Por ejemplo el caso de user\_userline las columnas user\_name y tweet\_id son designadas como primary key, user\_username será la clave de partición.
 
 
 \begin{figure}[!tb]
@@ -82,7 +81,7 @@ CREATE TABLE FollowingRelationship_followers(
 \end{verbatim}
 \end{footnotesize}
 \end{center}
-\caption{Código resultante}
+\caption{Código resultante Twissandra}
 \label{back:code:codigoCass}
 \end{figure}
 

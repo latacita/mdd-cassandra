@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  24 AUG 2014 21:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  25 AUG 2014 01:55
 entering extended mode
 **C:/Program*Files/Epsilon/workspace/IgnacioSañudo/pfc.tex
 ("C:/Program Files/Epsilon/workspace/IgnacioSañudo/pfc.tex"
@@ -494,20 +494,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [15])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/cassandra.tex"
 [16] [17]
-
-LaTeX Warning: Reference `back:code:estructuraCF' on page 18 undefined on input
- line 54.
-
 File: background/images/estructuraCF.eps Graphic file (type eps)
-<background/images/estructuraCF.eps> [18])
+ <background/images/estructuraCF.eps> [18])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/planificacion.te
-x"
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
-[20]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/sumario.te
-x")) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/domain.tex"
-[21] [22
+x" [19] [20])
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/sumario.tex"))
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/domain.tex" [21]
+[22
 
 ]
 Cap\'{\i }tulo 3.
@@ -581,12 +574,8 @@ tegy%]', 'replication_factor':[%=keyspace.replicationFactor%]};[]
 
 ) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/m2ttwissandra.tex"
 [35]
-
-LaTeX Warning: Reference `back:code:modeloTwissandra' on page 36 undefined on i
-nput line 13.
-
 File: m2t/images/modeloTwissandra.eps Graphic file (type eps)
-<m2t/images/modeloTwissandra.eps>
+ <m2t/images/modeloTwissandra.eps>
 Overfull \hbox (3.82077pt too wide) in paragraph at lines 81--81
 []       \OT1/cmtt/m/n/9 PRIMARY KEY((FollowingRelationship_FollowingRelationsh
 ip_ID),username)[] 
@@ -623,19 +612,16 @@ Package minitoc(hints) Warning: W0024
 
 [41] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.aux")
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6767 strings out of 493922
- 101195 string characters out of 3147305
+ 6765 strings out of 493922
+ 101143 string characters out of 3147305
  182535 words of memory out of 3000000
- 9623 multiletter control sequences out of 15000+200000
+ 9621 multiletter control sequences out of 15000+200000
  14655 words of font info for 56 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
- 36i,13n,43p,1375b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,13n,43p,1359b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on pfc.dvi (47 pages, 167016 bytes).
+Output written on pfc.dvi (47 pages, 167560 bytes).

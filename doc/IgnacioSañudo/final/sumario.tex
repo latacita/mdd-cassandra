@@ -7,4 +7,20 @@
 %% m2t/Sumario                                                      %%
 %%==================================================================%%
 
-Esta memoria de Proyecto Fin de Carrera ha descrito el proceso de desarrollo de un generador de código Cassandra bajo el desarrollo dirigido por modelos. 
+Esta memoria de Proyecto Fin de Carrera ha descrito el proceso de desarrollo de un generador de código Cassandra bajo el desarrollo dirigido por modelos.
+
+Como hemos visto el Desarrollo Dirigido por Modelos aporta multiples ventajas a los desarrolladores software, la automatización de los procesos de producción nos permite crear software más rápido llegando a considerar a este paradigma como la verdadera industrialización de la producción de software esto permite a las empresas ahorro en tiempo y costes.
+La base de la utilización de Cassandra se sostiene en aspectos como la disponibilidad o el manejo de gran cantidad de datos, aspectos que no son facilitados mediante la utilización de bases de datos relacionales tradicionales. Además dentro de las bases de datos no relacionales orientadas a columnas Cassandra es el sistema utilizado por excelencia.
+En cuanto a la utilización de UML como lenguaje de modelado 'origen', consideramos que la utilización de modelos UML respecto a modelos diseñados en Cassandra a la hora de crear una base de datos no relacional proporciona una abstracción para aquellos desarrolladores que no estén muy familiarizados con el modelado de bases de datos no relacionales.
+
+A nivel de implementación, el desarrollo del generador de código fue laborioso en términos de adquisición de conceptos ya que el plan de estudios de la carrera de Ingeniería Informática aporta pocos conocimientos en este area. Para ello en primer lugar se estudiaron conceptos relacionados con el modelado de lenguajes [kleppe] para entender y poder trabajar con el meta-modelo de Cassandra, a continuación todo lo vinculado con el Desarrollo y la Ingeniería Dirigida por Modelos, técnicas de transformación (M2M,M2T), ventajas etc.. Finalmente el estudio de todos los lenguajes y herramientas que ofrece la plataforma de Epsilon (ETL, EGL, EOL, EUnit..).
+Una vez dominados estos conceptos se pusieron en practica todas las nociones aprendidas con una serie de ejemplos sencillos propuestos por el director del proyecto que han sido descritos a lo largo de esta memoria.
+
+Tras estas tareas de estudio, se procedió a la realización del principal objetivo del proyecto: la creación de un generador de código Cassandra que transforma modelos UML a modelos Cassandra. Para ello en primer lugar se hicieron una serie de cambios en el meta-modelo que nos proporcionaron de Cassandra mediante EMF. A continuación se definieron las reglas de correspondencia entre modelos UML y Cassandra y se desarrollaron mediante el lenguaje ETL. Seguidamente y tras realizar el proceso de transformación entre modelos (M2M), se desarrollaron las plantillas para la transformación modelo-código (M2T), para lograr esto se crearon plantillas para generar código CQL, de esta manera obtuvimos el código necesario para crear repositorios de datos en Cassandra.
+Por último se realizaron una serie de casos de prueba con la herramienta EUnit para comprobar el correcto funcionamiento del generador de código.
+
+La siguiente sección describe las experiencias personales vividas a lo largo del proyecto.
+
+
+
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  22 AUG 2014 13:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  24 AUG 2014 21:13
 entering extended mode
 **C:/Program*Files/Epsilon/workspace/IgnacioSañudo/pfc.tex
 ("C:/Program Files/Epsilon/workspace/IgnacioSañudo/pfc.tex"
@@ -604,12 +604,12 @@ ip_ID),username)[]
 [38]
 Cap\'{\i }tulo 5.
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc5")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/sumario.tex")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/experienciaPersonal.t
-ex" [39
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/sumario.tex" [39
 
 
 ])
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/experienciaPersonal.t
+ex" [40])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/trabajosFuturos.tex")
 )
 Package minitoc Info: I0009
@@ -621,7 +621,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the pfc.log file.
 
-[40] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.aux")
+[41] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.aux")
 
 LaTeX Warning: There were undefined references.
 
@@ -630,12 +630,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6764 strings out of 493922
- 101164 string characters out of 3147305
- 183535 words of memory out of 3000000
- 9620 multiletter control sequences out of 15000+200000
+ 6767 strings out of 493922
+ 101195 string characters out of 3147305
+ 182535 words of memory out of 3000000
+ 9623 multiletter control sequences out of 15000+200000
  14655 words of font info for 56 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
  36i,13n,43p,1375b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on pfc.dvi (46 pages, 160552 bytes).
+Output written on pfc.dvi (47 pages, 167016 bytes).

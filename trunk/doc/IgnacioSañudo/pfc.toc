@@ -33,5 +33,5 @@
 \contentsline {section}{\numberline {4.5}Sumario}{37}
 \contentsline {chapter}{\numberline {5}Sumario y Trabajos Futuros}{39}
 \contentsline {section}{\numberline {5.1}Sumario}{39}
-\contentsline {section}{\numberline {5.2}Experiencia personal}{39}
-\contentsline {section}{\numberline {5.3}Trabajos futuros}{40}
+\contentsline {section}{\numberline {5.2}Experiencia personal}{40}
+\contentsline {section}{\numberline {5.3}Trabajos futuros}{41}

@@ -16,7 +16,7 @@ Como habíamos descrito en el capitulo anterior la base del proceso de transforma
   \label{back:fig:metamodeloCassandra}
 \end{figure}
 
-De acuerdo con la arquitectura de Cassandra, el elemento raíz de cualquier esquema orientado a columnas es el keyspace, el keyspace es el equivalente a una base de datos en el modelo relacional, la meta-clase keyspace cuenta con los meta-atributos: nombre utilizado para denominar el keyspace, [cassandra] replicationFactor que representa el número de servidores de Cassandra de los que se debe guardar un registro u obtener una respuesta al recuperar algún registro y replicaPlacementStrategy es la estrategia de replicación que se va a tomar, dentro de estas estrategias de replicación encontramos tres tipos: %[http://www.datastax.com/docs/1.0/cluster_architecture/replication]:
+De acuerdo con la arquitectura de Cassandra, el elemento raíz de cualquier esquema orientado a columnas es el keyspace, el keyspace es el equivalente a una base de datos en el modelo relacional, la meta-clase keyspace cuenta con los meta-atributos: nombre utilizado para denominar el keyspace, (\cite{diego:2012}) replicationFactor que representa el número de servidores de Cassandra de los que se debe guardar un registro u obtener una respuesta al recuperar algún registro y replicaPlacementStrategy es la estrategia de replicación que se va a tomar, dentro de estas estrategias de replicación encontramos tres tipos (\cite{cass:2014}): %[http://www.datastax.com/docs/1.0/cluster_architecture/replication]:
 
 \begin{enumerate}
 \item SimpleStrategy: Es la estrategia de replicación utilizada por defecto al crear un keyspace utilizando Cassandra. Es utilizada para clústeres de datacenters simples.

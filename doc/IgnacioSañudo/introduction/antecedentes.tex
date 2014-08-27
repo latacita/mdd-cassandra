@@ -6,7 +6,7 @@
 %% Introduccion/Antecedentes MDE-MDD                                %%
 %%==================================================================%%
 
-Según [6] la Ingeniería Dirigida por Modelos (MDE) puede ser definida como la \emph{"técnica que hace uso, de forma sistemática y reiterada, de modelos como elementos primordiales a largo de todo el proceso de desarrollo. MDE trabaja con modelos como entradas al proceso y produce modelos como salidas del mismo"}. El concepto de Desarrollo Dirigido por Modelos (MDD) es como se puede observar en la Figura~\ref{back:fig:MDA}, un subconjunto de la Ingeniería Dirigida por Modelos (MDE). A diferencia de MDD,[7] MDE va más allá de las actividades de desarrollo puros y abarca otras tareas basadas en el proceso de modelado por ejemplo, aplicar ingeniería inversa a un modelo.
+Según (\cite{diegoAlsonso:2011}) la Ingeniería Dirigida por Modelos (MDE) puede ser definida como la \emph{"técnica que hace uso, de forma sistemática y reiterada, de modelos como elementos primordiales a largo de todo el proceso de desarrollo. MDE trabaja con modelos como entradas al proceso y produce modelos como salidas del mismo"}. El concepto de Desarrollo Dirigido por Modelos (MDD) es como se puede observar en la Figura~\ref{back:fig:MDA}, un subconjunto de la Ingeniería Dirigida por Modelos (MDE). A diferencia de MDD,(\cite{whittle:2014}) MDE va más allá de las actividades de desarrollo puros y abarca otras tareas basadas en el proceso de modelado por ejemplo, aplicar ingeniería inversa a un modelo.
 
 \begin{figure}[!tb]
   \centering
@@ -15,7 +15,7 @@ Según [6] la Ingeniería Dirigida por Modelos (MDE) puede ser definida como la \e
   \label{back:fig:MDA}
 \end{figure}
 
-Tanto MDD como MDE aportan varias ventajas respecto a métodos de desarrollo tradicionales, podemos encontrar las siguientes ventajas [8], [9]:
+Tanto MDD como MDE aportan varias ventajas respecto a métodos de desarrollo tradicionales, podemos encontrar las siguientes ventajas (\cite{johan:2009}), (\cite{jose:2013}):
 \begin{enumerate}
 \item Tiempo de desarrollo menor.
 \item Reutilización de componentes en distintos sistemas.
@@ -26,8 +26,8 @@ Tanto MDD como MDE aportan varias ventajas respecto a métodos de desarrollo trad
 
 Una vez entendidos los conceptos anteriores y los beneficios que nos proporciona este enfoque de desarrollo se presentan los conceptos básicos que nos ayudaran a comprender como funciona MDD.
 
-El enfoque MDD parte del meta-modelo [10], un meta-modelo es la representación del lenguaje que se desea implementar definido en sintaxis abstracta. Un lenguaje de modelado está formado de sintaxis y semántica. La sintaxis se puede entender como el conjunto de normas o reglas de escritura que ha de tener el lenguaje. La semántica refleja el significado de la sintaxis.
-La definición de esta sintaxis abstracta forma parte del primer paso en el proceso de diseño de un lenguaje, esta sintaxis abstracta especifica la forma del meta-modelo. Clases y relaciones de dominio son los principales elementos que forman parte de un meta-modelo. A su vez los meta-modelos son considerados instancias de estos lenguajes de modelado. Un ejemplo de meta-modelo es la definición de UML [11]. En UML por ejemplo elementos como las clases, paquetes o atributos se pueden usar dentro de UML.
+El enfoque MDD parte del meta-modelo (\cite{kleppe:2008}), un meta-modelo es la representación del lenguaje que se desea implementar definido en sintaxis abstracta. Un lenguaje de modelado está formado de sintaxis y semántica. La sintaxis se puede entender como el conjunto de normas o reglas de escritura que ha de tener el lenguaje. La semántica refleja el significado de la sintaxis.
+La definición de esta sintaxis abstracta forma parte del primer paso en el proceso de diseño de un lenguaje, esta sintaxis abstracta especifica la forma del meta-modelo. Clases y relaciones de dominio son los principales elementos que forman parte de un meta-modelo. A su vez los meta-modelos son considerados instancias de estos lenguajes de modelado. Un ejemplo de meta-modelo es la definición de UML (\cite{omg:uml:2005}). En UML por ejemplo elementos como las clases, paquetes o atributos se pueden usar dentro de UML.
 
 El siguiente paso consiste en la definición de la sintaxis concreta, este paso se basa en la representación de los elementos bien definidos en la sintaxis abstracta, esto es la creación de un modelo. Un modelo es la representación concreta de los elementos descritos en la sintaxis abstracta o meta-modelo. Por lo tanto un modelo siempre posee las propiedades y cumple las restricciones de su meta-modelo. En la figura~\ref{back:fig:ejALL} se pueden observar representaciones de los elementos descritos.
 
@@ -38,9 +38,9 @@ El siguiente paso consiste en la definición de la sintaxis concreta, este paso s
   \label{back:fig:ejALL}
 \end{figure}
 
-Según [10], formalizando los conceptos anteriores estos son los pasos que hay que realizar para la creación de un nuevo lenguaje de modelado, esto nos servirá para establecer las bases que ha de tener el lenguaje de modelado de Cassandra:
+Según (\cite{kleppe:2008}), formalizando los conceptos anteriores estos son los pasos que hay que realizar para la creación de un nuevo lenguaje de modelado, esto nos servirá para establecer las bases que ha de tener el lenguaje de modelado de Cassandra:
 \begin{enumerate}
-\item En primer lugar hay que establecer cuál va a ser la sintaxis de nuestro lenguaje de modelado. Para ello hay que crear un meta-modelo. El meta-modelo ha de ser construido utilizando un lenguaje de meta-modelado, el lenguaje de modelado utilizado en el presente proyecto es ECore [8]. Además de ECore hay otros lenguajes de modelado como puede ser MOF [9].
+\item En primer lugar hay que establecer cuál va a ser la sintaxis de nuestro lenguaje de modelado. Para ello hay que crear un meta-modelo. El meta-modelo ha de ser construido utilizando un lenguaje de meta-modelado, el lenguaje de modelado utilizado en el presente proyecto es ECore (\cite{budinsky:2008}). Además de ECore hay otros lenguajes de modelado como puede ser MOF (\cite{omg:xmi:2007}).
 \item El siguiente paso consiste en la definición de la sintaxis concreta de nuestro lenguaje de modelado. La creación de un modelo bien definido a partir del meta-modelo creado en el paso anterior.
 \item La definición de la semántica del lenguaje de modelado es el último paso, por ejemplo crear un generador que transforme los elementos del modelo en elementos de un lenguaje distinto bien definido.
 \end{enumerate}

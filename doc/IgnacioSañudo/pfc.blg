@@ -1,5 +1,60 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: pfc.aux
-I found no \citation commands---while reading file pfc.aux
-I found no \bibdata command---while reading file pfc.aux
-I found no \bibstyle command---while reading file pfc.aux
-(There were 3 error messages)
+The style file: apa.bst
+Database file #1: references/references.bib
+Warning--entry type for "cass:2014" isn't style-file defined
+--line 184 of file references/references.bib
+Too many commas in name 1 of "Lakshman, A., Malik, P." for entry lakshman:2010
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Lakshman, A., Malik, P." for entry lakshman:2010
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Plugge, E., Hawkins, T., Membrey, P." for entry plugge:2010
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Plugge, E., Hawkins, T., Membrey, P." for entry plugge:2010
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Plugge, E., Hawkins, T., Membrey, P." for entry plugge:2010
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Plugge, E., Hawkins, T., Membrey, P." for entry plugge:2010
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Plugge, E., Hawkins, T., Membrey, P." for entry plugge:2010
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Plugge, E., Hawkins, T., Membrey, P." for entry plugge:2010
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Jose Texier, Marisa De Giusti, Nestor Oviedo, Gonzalo Villarreal et al." for entry jose:2013
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Jose Texier, Marisa De Giusti, Nestor Oviedo, Gonzalo Villarreal et al." for entry jose:2013
+while executing---line 1048 of file apa.bst
+Warning--to sort, need author or key in uml:2010
+Too many commas in name 1 of "Dave Steinberg, Frank Budinsky, Marcelo Paternostro, Ed Merks" for entry dave:2008
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Dave Steinberg, Frank Budinsky, Marcelo Paternostro, Ed Merks" for entry dave:2008
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Dimitris Kolovos, Louis Rose, Antonio García-Domínguez, Richard Paige" for entry kolovos:2014
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Dimitris Kolovos, Louis Rose, Antonio García-Domínguez, Richard Paige" for entry kolovos:2014
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Louis M. Rose,Richard F. Paige,Dimitrios S. Kolovos,Fiona A. C. Polack" for entry louis:2008
+while executing---line 1048 of file apa.bst
+Too many commas in name 1 of "Louis M. Rose,Richard F. Paige,Dimitrios S. Kolovos,Fiona A. C. Polack" for entry louis:2008
+while executing---line 1048 of file apa.bst
+Warning--empty journal in diegoAlsonso:2011
+Too many commas in name 1 of "Dave Steinberg, Frank Budinsky, Marcelo Paternostro, Ed Merks" for entry dave:2008
+while executing---line 1123 of file apa.bst
+Warning--empty journal in johan:2009
+Too many commas in name 1 of "Dimitris Kolovos, Louis Rose, Antonio García-Domínguez, Richard Paige" for entry kolovos:2014
+while executing---line 1123 of file apa.bst
+Too many commas in name 1 of "Jose Texier, Marisa De Giusti, Nestor Oviedo, Gonzalo Villarreal et al." for entry jose:2013
+while executing---line 1123 of file apa.bst
+Warning--empty journal in jose:2013
+Too many commas in name 1 of "Lakshman, A., Malik, P." for entry lakshman:2010
+while executing---line 1123 of file apa.bst
+Too many commas in name 1 of "Louis M. Rose,Richard F. Paige,Dimitrios S. Kolovos,Fiona A. C. Polack" for entry louis:2008
+while executing---line 1123 of file apa.bst
+Warning--empty journal in diego:2012
+Warning--empty journal in pablo:2013
+Too many commas in name 1 of "Plugge, E., Hawkins, T., Membrey, P." for entry plugge:2010
+while executing---line 1123 of file apa.bst
+Too many commas in name 1 of "Plugge, E., Hawkins, T., Membrey, P." for entry plugge:2010
+while executing---line 1123 of file apa.bst
+Too many commas in name 1 of "Plugge, E., Hawkins, T., Membrey, P." for entry plugge:2010
+while executing---line 1123 of file apa.bst
+(There were 24 error messages)

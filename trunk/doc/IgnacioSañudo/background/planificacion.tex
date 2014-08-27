@@ -9,12 +9,12 @@
 
 El objetivo de este proyecto de fin de carrera es la implementación de un generador de código Cassandra a partir de modelos UML. El proceso de desarrollo así como el de aprendizaje que se ha seguido para la realización del proyecto es descrito a continuación.
 
-La primera tarea como es evidente consistió en adquirir los conocimientos necesarios para el desarrollo del proyecto. En primer lugar todo lo relacionado con el proceso de modelado de un lenguaje y transformación de lenguajes [kleppe]. También fueron necesarios conocimientos sobre la Ingeniería y el Desarrollo Dirigido por Modelos, así como de la sintaxis, arquitectura y funcionamiento de Cassandra.
+La primera tarea como es evidente consistió en adquirir los conocimientos necesarios para el desarrollo del proyecto. En primer lugar todo lo relacionado con el proceso de modelado de un lenguaje y transformación de lenguajes (\cite{kleppe:2008}). También fueron necesarios conocimientos sobre la Ingeniería y el Desarrollo Dirigido por Modelos, así como de la sintaxis, arquitectura y funcionamiento de Cassandra.
 
 A continuación se comenzó a trabajar con la herramienta Epsilon, sus lenguajes EOL, EGL, ETL y finalmente EUnit como herramienta para las pruebas de los modelos y código generados. Además el lenguaje para la definición de lenguajes de modelado Eclipse Modeling Framework (EMF).
 Para conocer cómo funcionaban estos lenguajes se desarrollaron una serie de casos prácticos para familiarizarse con los métodos de transformación así como con la herramienta, para ello se realizo el proceso completo para crear un generador de código desde la transformación entre modelos hasta la transformación modelo-código. Estos casos de prueba son los que se exponen en la sección de Epsilon (sección 2.3).
 
-Una vez conocido estos conceptos se estudiaron las reglas de transformación a aplicar para transformar un modelo UML a un modelo Cassandra, estas reglas fueron propuestas por [pabloCassandra].
+Una vez conocido estos conceptos se estudiaron las reglas de transformación a aplicar para transformar un modelo UML a un modelo Cassandra, estas reglas fueron propuestas por \cite{pablo:2013}.
 
 Tras estas tareas de adquisición de conocimientos se comenzó a trabajar en el generador de código Cassandra empezando por la transformación de modelos UML a modelos Cassandra. Estas transformaciones son expuestas en el siguiente capítulo. Una vez finalizada la transformación se comenzó a trabajar en el generador de código Cassandra, esta tarea es descrita en el capítulo 5. Tras realizar dicha tarea se realizaron una serie de casos de prueba para verificar si los resultados que otorgaba el generador de código eran los esperados, para esta tarea utilizamos la herramienta EUnit.
 Finalmente y tras generar varios casos de ejemplo se instalo DataStax OpsCenter y Apache Cassandra, se ejecutaron los resultados generados y se comprobó su correcto funcionamiento. 

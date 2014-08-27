@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  26 AUG 2014 18:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  27 AUG 2014 23:16
 entering extended mode
 **C:/Program*Files/Epsilon/workspace/IgnacioSañudo/pfc.tex
 ("C:/Program Files/Epsilon/workspace/IgnacioSañudo/pfc.tex"
@@ -335,18 +335,18 @@ TextBlockOrigin set to 0pt x 0pt
 LaTeX Warning: Label `m2t:sec:intro' multiply defined.
 
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
 \c@lstlisting=\count113
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: rotating package is loaded.
@@ -361,10 +361,117 @@ Package minitoc(hints) Warning: W0028
 (minitoc(hints))                after minitoc.
 
 ABD: EveryShipout initializing macros
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\config/begin.tex")
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\cover/cover.tex"
+File: images/ingInformatica.eps Graphic file (type eps)
+
+<images/ingInformatica.eps>
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (84.40457pt too wide) in paragraph at lines 38--38
+ [][] 
+ []
+
+[1
+
+] [2
+
+]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\cover/firstPage.tex"
+File: images/uc.eps Graphic file (type eps)
+ <images/uc.eps>
+Overfull \hbox (41.0pt too wide) in paragraph at lines 16--22
+[][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+
+Overfull \hbox (12.35838pt too wide) in paragraph at lines 43--44
+[][]\OT1/cmr/m/n/10.95 Este Tri-bu-nal ha re-suel-to otor-gar la ca-li-fi-ca-ci
+on de: ...................................... 
+ []
+
+
+Overfull \hbox (21.69989pt too wide) in paragraph at lines 46--65
+ [][] 
+ []
+
+) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\config/begin.tex")
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\cover/acknowledgements.tex"
+[1
+
+] [2
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 9--70
+
+ []
+
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/preface.tex"
+[3
+
+] [4
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+)
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/preface(englis
+h).tex" [5
+
+] [6
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+)
+Overfull \hbox (3.64397pt too wide) in paragraph at lines 19--74
+[][]\OT1/cmr/m/n/10.95 Model-Driven Development,Model-Driven En-gi-nee-ring, Co
+-de Ge-ne-ra-tion,
+ []
+
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\config/toc.tex"
 Package minitoc Info: I0024
 (minitoc)             PREPARING MINITOCS FROM pfc.toc on input line 2.
+
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode 
+Palabras Clave}{\reset@font\mtcPfont V}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode 
+Keywords}{\reset@font\mtcPfont VII}}
 Package minitoc Info: I0033
 (minitoc)             Writing pfc.mtc1.
 Package minitoc Info: I0033
@@ -375,36 +482,28 @@ Package minitoc Info: I0033
 (minitoc)             Writing pfc.mtc4.
 Package minitoc Info: I0033
 (minitoc)             Writing pfc.mtc5.
+Package minitoc Info: I0033
+(minitoc)             Writing pfc.mtc6.
+[7
 
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.toc"
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+] [8
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-])
+] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.toc" [9])
 \tf@toc=\write4
- [2]
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.lof")
-\tf@lof=\write5
- [3
 
-] [4
+[10] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.lof")
+\tf@lof=\write5
+ [11
 
 ]
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.lot")
-\tf@lot=\write6
- [5] [6
+[12
 
-])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\Config/headers.tex")
+] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.lot")
+\tf@lot=\write6
+ [13]
+[14
+
+]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\Config/headers.tex")
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\config/chapters.tex")
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/introduction.t
 ex"
@@ -444,10 +543,10 @@ File: background/images/grafoMetamodelo.eps Graphic file (type eps)
  <background/images/grafoMetamodelo.eps>
 File: background/images/metamodeloRed.eps Graphic file (type eps)
 
-<background/images/metamodeloRed.eps> [7]
+<background/images/metamodeloRed.eps>
 File: background/images/ejGeneradorHTML.eps Graphic file (type eps)
-
-<background/images/ejGeneradorHTML.eps>)
+ <background/images/ejGeneradorHTML.eps>
+[7])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/objetivos.tex"
 [8])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/roadmap.tex"))
@@ -470,7 +569,7 @@ File: m2m/images/twissandra.eps Graphic file (type eps)
 ])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/EMF.tex"
 [12]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/epsilon.te
-x"
+x" [13]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -484,26 +583,21 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 15.
- [13]
 File: background/images/ejCasa.eps Graphic file (type eps)
 
-<background/images/ejCasa.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<background/images/ejCasa.eps> [14]
+Underfull \vbox (badness 4229) has occurred while \output is active []
 
- [14]
-[15])
+ [15])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/cassandra.tex"
-[16] [17]
+[16] [17] [18]
 File: background/images/estructuraCF.eps Graphic file (type eps)
- <background/images/estructuraCF.eps> [18])
+ <background/images/estructuraCF.eps> [19])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/planificacion.te
-x"
-Underfull \vbox (badness 3407) has occurred while \output is active []
-
- [19]
-[20]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/sumario.te
-x")) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/domain.tex"
-[21] [22
+x" [20])
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/sumario.tex"))
+("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/domain.tex" [21]
+[22
 
 ]
 Cap\'{\i }tulo 3.
@@ -606,7 +700,13 @@ Cap\'{\i }tulo 5.
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/experienciaPersonal.t
 ex" [40])
 ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/trabajosFuturos.tex")
-)
+) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\config/bibliography.tex"
+[41] [42
+
+]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.bbl"
+[43
+
+])
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the pfc.maf file.
@@ -616,18 +716,18 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the pfc.log file.
 
-[41] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.aux")
+[44] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.aux")
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6764 strings out of 493922
- 101114 string characters out of 3147305
+ 6873 strings out of 493922
+ 103771 string characters out of 3147305
  183535 words of memory out of 3000000
- 9620 multiletter control sequences out of 15000+200000
- 14655 words of font info for 56 fonts, out of 3000000 for 9000
+ 9703 multiletter control sequences out of 15000+200000
+ 14954 words of font info for 57 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
- 36i,13n,43p,1383b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,12n,43p,1383b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on pfc.dvi (47 pages, 167028 bytes).
+Output written on pfc.dvi (60 pages, 185600 bytes).

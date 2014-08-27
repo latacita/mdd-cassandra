@@ -8,7 +8,7 @@
 %%==================================================================%%
 
 Una vez definido el meta-modelo de Cassandra podemos establecer las reglas de transformación entre modelos UML y modelos Cassandra, para ello utilizaremos Epsilon Transformation Language (ETL). Recordamos que el lenguaje ETL es el lenguaje que utiliza Epsilon para la transformación entre modelos basado en reglas.
-Las reglas de transformación son definidas en [docPablo]. A continuación se detalla cómo se han implementado dichas reglas.
+Las reglas de transformación son definidas en (\cite{pablo:2013}). A continuación se detalla cómo se han implementado dichas reglas.
 
 \subsection{Transformación del modelo}
 El modelo UML se considera el elemento raíz que contiene como es evidente, todos los elementos del modelo, este modelo de datos se transforma en el keyspace para el repositorio de Cassandra. El nombre del keyspace corresponderá al que se haya escogido para el modelo de datos UML. Los keyspaces permiten agrupar entidades tales como column families, columns.. De esta forma, se pueden tener varios Key Spaces en el mismo proyecto independientes entre sí.
@@ -16,7 +16,7 @@ El modelo UML se considera el elemento raíz que contiene como es evidente, todos
 \subsection{Transformación de clases}
 Se han definido dos reglas ETL que transforman una clase definida en UML a una static column family de Cassandra (el equivalente a una tabla en el sistema de bases de datos relacionales).
 La primera regla es definida para las clases que tengan un atributo clave definido, para ello se utiliza la propiedad isID de UML, esta propiedad define que ese atributo identifica a la clase de forma única. La segunda regla es para las clases sin atributo clave definido. El proceso de transformación es similar en ambas reglas, en primer lugar se transforma la clase UML a una column family de Cassandra, se asigna la column family al keyspace que le corresponde, se copia el nombre de la clase a la column family y se añade al conjunto de column families del keyspace. La segunda regla es utilizada para las clases sin atributo clave, en este caso se crea un atributo que va a ser la clave de esa column family (ya que esta no tiene), dicha clave tendrá de nombre, el nombre de la clase más el distintivo \_ID y será de tipo uuid.
-Dichas reglas están definidas en el punto 5.3 del documento [docPablo].
+
 
 \subsection{Transformación de atributos}
 La siguiente regla define como se ha transformado un atributo del modelo UML a una columna del modelo Cassandra. La definición básica es que un atributo UML corresponde a una columna de Cassandra. Para ello definimos una guarda ETL para que la transformación se haga solo de los atributos de las clases y no de los atributos de la relación ya que al importar los modelos UML existen atributos ajenos al modelo de datos que son importados a Epsilon. A continuación se realiza un filtro para evitar la adición de columnas que no pertenezcan al modelo de datos. Una vez hecho esto hay que diferenciar dos tipos de atributos, aquellos cuya multiplicidad sea igual a 1 y aquellos atributos con multiplicidad mayor de 1.

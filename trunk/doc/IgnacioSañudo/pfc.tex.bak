@@ -25,6 +25,7 @@
 \usepackage{longtable}
 \usepackage{natbib}
 \usepackage{graphicx}
+
 % File with main configuration
 \input{config/pfc_options.tex}
 
@@ -57,9 +58,9 @@
 
 
 % Cover page
-% \input{cover/cover.tex}
+\input{cover/cover.tex}
 
-% \input{cover/firstPage.tex}
+\input{cover/firstPage.tex}
 
 % reset page numbering
 \input{config/begin.tex}
@@ -95,7 +96,7 @@
 \input{final/desc.tex}
 
 %Capítulo 6: Manual
-\input{manual/application.tex}
+%\input{manual/application.tex}
 
 % CONTENT: Appendices, if desired
 %\input{config/appendix.tex}
@@ -104,7 +105,7 @@
 %\input{populo/populo.tex} % Appendix I
 
 % CONFIG: Bibliography style
-%\input{config/bibliography.tex}
-%\bibliography{references/references}
+\input{config/bibliography.tex}
+\bibliography{references/references}
 
 \end{document}

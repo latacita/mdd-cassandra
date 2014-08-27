@@ -25,6 +25,7 @@
 \usepackage{longtable}
 \usepackage{natbib}
 \usepackage{graphicx}
+
 % File with main configuration
 \input{config/pfc_options.tex}
 
@@ -57,19 +58,19 @@
 
 
 % Cover page
-% \input{cover/cover.tex}
+\input{cover/cover.tex}
 
-% \input{cover/firstPage.tex}
+\input{cover/firstPage.tex}
 
 % reset page numbering
 \input{config/begin.tex}
 
 % acknowledgement
-% \input{cover/acknowledgements.tex} % acknowledgements
+\input{cover/acknowledgements.tex} % acknowledgements
 
 % Preface
-% \input{introduction/preface.tex}   % prefacio español
-% \input{introduction/preface(english).tex}   % prefacio inglés
+\input{introduction/preface.tex}   % prefacio español
+\input{introduction/preface(english).tex}   % prefacio inglés
 
 % Toc
 \input{config/toc.tex}
@@ -104,7 +105,7 @@
 %\input{populo/populo.tex} % Appendix I
 
 % CONFIG: Bibliography style
-%\input{config/bibliography.tex}
-%\bibliography{references/references}
+\input{config/bibliography.tex}
+\bibliography{references/references}
 
 \end{document}

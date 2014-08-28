@@ -3,7 +3,7 @@
 \contentsline {xchapter}{Introducci\'on}{1}
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Capas del modelado de lenguajes\relax }}{4}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces (a) Meta-modelo, (b) Sintaxis concreta, (c) Sintaxis grafica\relax }}{5}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Proceso de transformaci\'on de un modelo\relax }}{6}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Proceso de transformaci\'on de un modelo\relax }}{7}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Meta-modelo del grafo\relax }}{7}
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Meta-modelo de la red\relax }}{8}
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Resultado transformaci\'on HTML\relax }}{8}
@@ -19,7 +19,7 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Transformaci\'on modelo a modelo}{23}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Metamodelo Cassandra\relax }}{25}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Regla de transformaci\'on XX\relax }}{28}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Regla de transformaci\'on atributo-columna\relax }}{29}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Transformaci\'on modelo a texto}{33}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Regla de transformaci\'on Primary Key\relax }}{35}

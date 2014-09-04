@@ -1,22 +1,19 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2014.5.28)  28 AUG 2014 21:25
+This is pdfTeX, Version 3.1415926-1.40.10 (MiKTeX 2.8) (preloaded format=latex 2011.5.21)  4 SEP 2014 18:56
 entering extended mode
-**C:/Program*Files/Epsilon/workspace/IgnacioSañudo/pfc.tex
-("C:/Program Files/Epsilon/workspace/IgnacioSañudo/pfc.tex"
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\itsas_pfc.cls"
+**C:/Documents*and*Settings/Administrador/Mis*documentos/My*Dropbox/Alumnos/Sa�
+udo/PFC/pfc.tex
+
+("C:/Documents and Settings/Administrador/Mis documentos/My Dropbox/Alumnos/Sa�
+udo/PFC/pfc.tex"
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, sp
+anish, loaded.
+
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\itsas_pfc.cls"
 Document Class: itsas_pfc 2007/03/06 Itsas document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk11.clo"
-File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(C:\UtilidadesEscritura\Miktex\tex\latex\base\bk11.clo
+File: bk11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -31,15 +28,15 @@ File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2008/03/30 v1.1d Input encoding file
+(C:\UtilidadesEscritura\Miktex\tex\latex\base\inputenc.sty
+Package: inputenc 2006/05/05 v1.1b Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
-File: latin1.def 2008/03/30 v1.1d Input encoding file
+(C:\UtilidadesEscritura\Miktex\tex\latex\base\latin1.def
+File: latin1.def 2006/05/05 v1.1b Input encoding file
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\tools\longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip43
 \LTright=\skip44
@@ -57,53 +54,53 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count92
 \LT@p@ftn=\toks16
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+(C:\UtilidadesEscritura\Miktex\tex\latex\tools\array.sty
+Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
 \col@sep=\dimen104
 \extrarowheight=\dimen105
 \NC@list=\toks17
 \extratabsurround=\skip47
 \backup@length=\skip48
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\ltxmisc\url.sty
 \Urlmuskip=\muskip10
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+(C:\UtilidadesEscritura\Miktex\tex\latex\amsfonts\amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \@emptytoks=\toks18
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+(C:\UtilidadesEscritura\Miktex\tex\generic\babel\babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+(C:\UtilidadesEscritura\Miktex\tex\latex\00miktex\bblopts.cfg
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\spanish.ldf"
-Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
+(C:\UtilidadesEscritura\Miktex\tex\generic\babel\spanish.ldf
+Language: spanish.ldf 2008/07/06 v5.0e Spanish support from the babel system
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+(C:\UtilidadesEscritura\Miktex\tex\generic\babel\babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count93
 \U@D=\dimen106
 )
 \es@datefmt=\count94
 \es@quottoks=\toks19
 \es@quotdepth=\count95
-Package babel Info: Making " an active character on input line 492.
-Package babel Info: Making . an active character on input line 585.
-Package babel Info: Making < an active character on input line 630.
-Package babel Info: Making > an active character on input line 630.
-Package babel Info: Making ' an active character on input line 657.
+Package babel Info: Making " an active character on input line 490.
+Package babel Info: Making . an active character on input line 583.
+Package babel Info: Making < an active character on input line 628.
+Package babel Info: Making > an active character on input line 628.
+Package babel Info: Making ' an active character on input line 655.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\tools\tabularx.sty
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@col@width=\dimen107
 \TX@old@table=\dimen108
@@ -113,8 +110,8 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@cols=\count96
 \TX@ftn=\toks20
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\listings\listings.sty
+(C:\UtilidadesEscritura\Miktex\tex\latex\graphics\keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks21
 )
@@ -131,30 +128,28 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \lst@lineno=\count102
 \lst@maxwidth=\dimen115
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+(C:\UtilidadesEscritura\Miktex\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count103
 \lst@skipnumbers=\count104
 \lst@framebox=\box31
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2014/03/04 1.5c listings configuration
+(C:\UtilidadesEscritura\Miktex\tex\latex\listings\listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
-Package: listings 2014/03/04 1.5c (Carsten Heinz)
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+(C:\UtilidadesEscritura\Miktex\tex\latex\caption\caption.sty
+Package: caption 2011/11/10 v3.2e Customizing captions (AR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+(C:\UtilidadesEscritura\Miktex\tex\latex\caption\caption3.sty
+Package: caption3 2011/11/01 v1.4a caption3 kernel (AR)
 \captionmargin=\dimen116
 \captionmargin@=\dimen117
 \captionwidth=\dimen118
-\caption@tempdima=\dimen119
-\caption@indent=\dimen120
-\caption@parindent=\dimen121
-\caption@hangindent=\dimen122
+\caption@indent=\dimen119
+\caption@parindent=\dimen120
+\caption@hangindent=\dimen121
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 )
@@ -170,49 +165,50 @@ tempboxa \hfil }\fi \vskip \belowcaptionskip .
 \c@ContinuedFloat=\count105
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
-Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+(C:\UtilidadesEscritura\Miktex\tex\latex\caption\ltcaption.sty
+Package: ltcaption 2011/09/12 v1.3 longtable captions (AR)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen123
+(C:\UtilidadesEscritura\Miktex\tex\latex\multirow\multirow.sty
+\bigstrutjot=\dimen122
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tabulary\tabulary.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\tabulary\tabulary.sty
 Package: tabulary 2008/12/01 v0.9 tabulary package (DPC)
 \TY@count=\count106
-\TY@linewidth=\dimen124
-\tymin=\dimen125
-\tymax=\dimen126
-\TY@tablewidth=\dimen127
+\TY@linewidth=\dimen123
+\tymin=\dimen124
+\tymax=\dimen125
+\TY@tablewidth=\dimen126
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip49
 \bibsep=\skip50
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count107
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\graphics\graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(C:\UtilidadesEscritura\Miktex\tex\latex\graphics\graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\graphics\trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+(C:\UtilidadesEscritura\Miktex\tex\latex\00miktex\graphics.cfg
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: dvips.def on input line 91.
+Package graphics Info: Driver file: dvips.def on input line 90.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvips.def"
+(C:\UtilidadesEscritura\Miktex\tex\latex\graphics\dvips.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen128
-\Gin@req@width=\dimen129
+\Gin@req@height=\dimen127
+\Gin@req@width=\dimen128
 )
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\config/pfc_options.tex"
-("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\config/pfc_options.tex"
+(C:\UtilidadesEscritura\Miktex\tex\latex\fancyhdr\fancyhdr.sty
 \fancy@headwidth=\skip51
 \f@ncyO@elh=\skip52
 \f@ncyO@erh=\skip53
@@ -223,21 +219,21 @@ File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 \f@ncyO@olf=\skip58
 \f@ncyO@orf=\skip59
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\graphics\color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(C:\UtilidadesEscritura\Miktex\tex\latex\00miktex\color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: dvips.def on input line 130.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
+(C:\UtilidadesEscritura\Miktex\tex\latex\graphics\dvipsnam.def
 File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\rotating\rotating.sty
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\base\ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count108
@@ -246,10 +242,10 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box32
 \rot@mess@toks=\toks23
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\minitoc.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\minitoc\minitoc.sty
 Package: minitoc 2008/07/16 v60 Package minitoc (JPFD)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\mtcmess.sty"
+(C:\UtilidadesEscritura\Miktex\tex\latex\minitoc\mtcmess.sty
 Package: mtcmess 2006/03/14
 )
 Package minitoc Info: I0001
@@ -269,7 +265,8 @@ Package minitoc Info: I0003
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc0")
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\pfc.mtc0")
 Package minitoc Info: I0012
 (minitoc)             Long extensions (Unix-like) will be used.
 Package minitoc Info: I0031
@@ -283,58 +280,55 @@ Package minitoc Info: I0031
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
 (minitoc)              on input line 4910.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\english.mld"
+ (C:\UtilidadesEscritura\Miktex\tex\latex\minitoc\english.mld
 File: english.mld 2006/01/13
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\english.mld"
+) (C:\UtilidadesEscritura\Miktex\tex\latex\minitoc\english.mld
 File: english.mld 2006/01/13
 )
 Package minitoc Info: I0010
 (minitoc)             The spanish language is selected.
 (minitoc)              on input line 4911.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\spanish.mld"
+(C:\UtilidadesEscritura\Miktex\tex\latex\minitoc\spanish.mld
 File: spanish.mld 2008/04/03
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\epsf\epsf.sty"
-This is `epsf.tex' v2.7.4 <14 February 2011>
+(C:\UtilidadesEscritura\Miktex\tex\latex\epsf\epsf.sty
+This is `epsf.tex' v2.7.3 <23 July 2005>
 \epsffilein=\read1
-\epsfframemargin=\dimen130
-\epsfframethickness=\dimen131
-\epsfrsize=\dimen132
-\epsftmp=\dimen133
-\epsftsize=\dimen134
-\epsfxsize=\dimen135
-\epsfysize=\dimen136
-\pspoints=\dimen137
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\textpos\textpos.sty"
-Package: textpos 2014/01/03 v1.7j
+\epsfframemargin=\dimen129
+\epsfframethickness=\dimen130
+\epsfrsize=\dimen131
+\epsftmp=\dimen132
+\epsftsize=\dimen133
+\epsfxsize=\dimen134
+\epsfysize=\dimen135
+\pspoints=\dimen136
+) (C:\UtilidadesEscritura\Miktex\tex\latex\textpos\textpos.sty
+Package: textpos 2010/09/30 v1.7g
 
-Package: textpos 2014/01/03 1.7j, absolute positioning of text on the page
-("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: `textpos' 1.7g <2010 September 30>
+(C:\UtilidadesEscritura\Miktex\tex\latex\ms\everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
 \TP@textbox=\box35
 \TP@holdbox=\box36
-\TPHorizModule=\dimen138
-\TPVertModule=\dimen139
-\TP@margin=\dimen140
-\TP@absmargin=\dimen141
+\TPHorizModule=\dimen137
+\TPVertModule=\dimen138
+\TP@margin=\dimen139
+\TP@absmargin=\dimen140
 
 Grid set 16 x 16 = 37.34424pt x 52.81541pt
-\TPboxrulesize=\dimen142
-\TP@ox=\dimen143
-\TP@oy=\dimen144
+\TPboxrulesize=\dimen141
+\TP@ox=\dimen142
+\TP@oy=\dimen143
 \TP@tbargs=\toks25
-\TP@prevdepth=\dimen145
+\TP@prevdepth=\dimen144
 TextBlockOrigin set to 0pt x 0pt
-)) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\config/rename.tex")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.aux"
-
-LaTeX Warning: Label `m2t:sec:intro' multiply defined.
-
-)
+))
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\config/rename.tex")
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\pfc.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
 LaTeX Font Info:    ... okay on input line 57.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
@@ -354,26 +348,20 @@ Package caption Info: End \AtBeginDocument code.
 Package minitoc(hints) Info: I0049
 (minitoc(hints))             ==> You requested the hints option. 
 (minitoc(hints))             Some hints are eventually given below.
-
-
-Package minitoc(hints) Warning: W0028
-(minitoc(hints))                --- The \chapter command is altered 
-(minitoc(hints))                after minitoc.
-
-ABD: EveryShipout initializing macros
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\cover/cover.tex"
+ ABD: EveryShipout initializing macros
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\cover/cover.tex"
 File: images/ingInformatica.eps Graphic file (type eps)
-
-<images/ingInformatica.eps>
+ <images/ingInformatica.eps>
 LaTeX Font Info:    Try loading font information for U+msa on input line 38.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+(C:\UtilidadesEscritura\Miktex\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 38.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+(C:\UtilidadesEscritura\Miktex\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 Overfull \hbox (84.40457pt too wide) in paragraph at lines 38--38
  [][] 
@@ -383,41 +371,11 @@ Overfull \hbox (84.40457pt too wide) in paragraph at lines 38--38
 
 ] [2
 
-]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\cover/firstPage.tex"
-File: images/uc.eps Graphic file (type eps)
- <images/uc.eps>
-Overfull \hbox (41.0pt too wide) in paragraph at lines 16--22
-[][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
-
- []
-
-
-Overfull \hbox (12.35838pt too wide) in paragraph at lines 43--44
-[][]\OT1/cmr/m/n/10.95 Este Tri-bu-nal ha re-suel-to otor-gar la ca-li-fi-ca-ci
-on de: ...................................... 
- []
-
-
-Overfull \hbox (21.69989pt too wide) in paragraph at lines 46--65
- [][] 
- []
-
-) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\config/begin.tex")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\cover/acknowledgements.tex"
-[1
-
-] [2
-
-]
+])
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\config/begin.tex")
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\cover/acknowledgements.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -433,25 +391,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 9--70
+Underfull \hbox (badness 10000) in paragraph at lines 9--71
 
  []
 
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/preface.tex"
-[3
 
-] [4
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\introduction/preface.tex" [1
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
- []
 
-)
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/preface(englis
-h).tex" [5
-
-] [6
+] [2
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 17--18
@@ -459,281 +409,125 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
  []
 
 )
-Overfull \hbox (3.64397pt too wide) in paragraph at lines 19--74
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\introduction/preface(english).tex" [3
+
+] [4
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+)
+Overfull \hbox (3.64397pt too wide) in paragraph at lines 19--75
 [][]\OT1/cmr/m/n/10.95 Model-Driven Development,Model-Driven En-gi-nee-ring, Co
 -de Ge-ne-ra-tion,
  []
 
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\config/toc.tex"
+
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\config/toc.tex"
 Package minitoc Info: I0024
 (minitoc)             PREPARING MINITOCS FROM pfc.toc on input line 2.
+ [5
 
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode 
-Palabras Clave}{\reset@font\mtcPfont V}}
-{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode 
-Keywords}{\reset@font\mtcPfont VII}}
-Package minitoc Info: I0033
-(minitoc)             Writing pfc.mtc1.
-Package minitoc Info: I0033
-(minitoc)             Writing pfc.mtc2.
-Package minitoc Info: I0033
-(minitoc)             Writing pfc.mtc3.
-Package minitoc Info: I0033
-(minitoc)             Writing pfc.mtc4.
-Package minitoc Info: I0033
-(minitoc)             Writing pfc.mtc5.
-Package minitoc Info: I0033
-(minitoc)             Writing pfc.mtc6.
-[7
-
-] [8
-
-] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.toc" [9])
-\tf@toc=\write4
-
-[10] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.lof")
-\tf@lof=\write5
- [11
+] [6
 
 ]
-[12
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\pfc.toc")
+\tf@toc=\write4
+ [7] [8
 
-] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.lot")
+]
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\pfc.lof")
+\tf@lof=\write5
+ [9] [10
+
+]
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\pfc.lot")
 \tf@lot=\write6
- [13]
-[14
+ [11] [12
 
-]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\Config/headers.tex")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\config/chapters.tex")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/introduction.t
-ex"
+])
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\Config/headers.tex")
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\config/chapters.tex")
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\introduction/introduction.tex"
 Cap\'{\i }tulo 1.
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc1")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/theIntroductio
-n.tex" [1
+
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\pfc.mtc1")
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\introduction/theIntroduction.tex"
+
+Package natbib Warning: Citation `forbes:amazon' on page 1 undefined on input l
+ine 13.
+
+[1
 
 
-] [2])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/antecedentes.t
-ex"
+]
 
-Package Fancyhdr Warning: \headheight is too small (15.0pt): 
- Make it at least 25.2842pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+Package natbib Warning: Citation `stonebraker:2010' on page 2 undefined on inpu
+t line 15.
+
+
+Package natbib Warning: Citation `lakshman:2010' on page 2 undefined on input l
+ine 17.
+
+
+Package natbib Warning: Citation `george:2011' on page 2 undefined on input lin
+e 17.
+
+
+Package natbib Warning: Citation `plugge:2010' on page 2 undefined on input lin
+e 17.
+
+
+Package natbib Warning: Citation `elsmari:2010' on page 2 undefined on input li
+ne 21.
+
+
+Package natbib Warning: Citation `olive:2007' on page 2 undefined on input line
+ 23.
+
+
+Package natbib Warning: Citation `lakshman:2010' on page 2 undefined on input l
+ine 23.
+
+
+Package natbib Warning: Citation `brambilla:2012' on page 2 undefined on input 
+line 25.
+
+)
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sa�
+udo\PFC\introduction/antecedentes.tex"
+
+Package natbib Warning: Citation `diegoAlsonso:2011' on page 2 undefined on inp
+ut line 9.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+
+Package natbib Warning: Citation `kleppe:2008' on page 3 undefined on input lin
+e 66.
+
+
+Package natbib Warning: Citation `budinsky:2008' on page 3 undefined on input l
+ine 66.
+
+
+Package natbib Warning: Citation `omg:xmi:2007' on page 3 undefined on input li
+ne 66.
 
 [3]
-File: background/images/MDAMDDMDEMBE.eps Graphic file (type eps)
- <background/images/MDAMDDMDEMBE.eps>
-Overfull \hbox (1.62415pt too wide) in paragraph at lines 18--19
-\OT1/cmr/m/n/10.95 desa-rro-llo tra-di-cio-na-les, po-de-mos en-con-trar las si
--guien-tes ven-ta-jas (den Haan
- []
 
-[4]
-File: background/images/ejALL.eps Graphic file (type eps)
- <background/images/ejALL.eps>
-Overfull \hbox (36.0022pt too wide) in paragraph at lines 36--36
- [][][] 
- []
-
-[5]
-File: background/images/transformacion.eps Graphic file (type eps)
- <background/images/transformacion.eps>
-Overfull \hbox (18.0011pt too wide) in paragraph at lines 58--58
- [][][] 
- []
-
-File: background/images/grafoMetamodelo.eps Graphic file (type eps)
-<background/images/grafoMetamodelo.eps> [6]
-File: background/images/metamodeloRed.eps Graphic file (type eps)
-
-<background/images/metamodeloRed.eps>
-File: background/images/ejGeneradorHTML.eps Graphic file (type eps)
- <background/images/ejGeneradorHTML.eps>
-[7])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/objetivos.tex"
-[8])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\introduction/roadmap.tex"))
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/background.tex"
-[9] [10
-
-]
-Cap\'{\i }tulo 2.
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc2"
-Overfull \hbox (16.02876pt too wide) in paragraph at lines 1--1
- [][][] []\OT1/cmr/bx/n/10 Caso de es-tu-dio: Ge-ne-ra-dor de codi-go CQL-Cass
-andra [][]  
- []
-
-) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/casoEstudio.te
-x"
-File: m2m/images/twissandra.eps Graphic file (type eps)
- <m2m/images/twissandra.eps> [11
-
-])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/EMF.tex"
-[12]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/epsilon.te
-x" [13]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 15.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
-File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 15.
-File: background/images/ejCasa.eps Graphic file (type eps)
-
-<background/images/ejCasa.eps> [14]
-Underfull \vbox (badness 4229) has occurred while \output is active []
-
- [15])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/cassandra.tex"
-Overfull \hbox (4.66685pt too wide) in paragraph at lines 13--14
-[][]\OT1/cmr/m/n/10.95 Esta sec-cion rea-li-za una bre-ve des-crip-cion so-br
-e \OT1/cmss/m/n/10 Cas-san-dra \OT1/cmr/m/n/10.95 (Lith A. (2010)),
- []
-
-[16] [17] [18]
-File: background/images/estructuraCF.eps Graphic file (type eps)
- <background/images/estructuraCF.eps> [19])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/planificacion.te
-x" [20])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\background/sumario.tex"))
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/domain.tex" [21]
-[22
-
-]
-Cap\'{\i }tulo 3.
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc3")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/introduction.tex"
-[23
-
-])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/metamodeloCassandra.tex
-"
-File: m2m/images/ecoreDiag.eps Graphic file (type eps)
- <m2m/images/ecoreDiag.eps> [24]
-Overfull \hbox (40.3268pt too wide) in paragraph at lines 24--25
-[][]\OT1/cmr/m/it/10.95 OldNetworkTopologyStrategy\OT1/cmr/m/n/10.95 : Se uti-l
-i-za pa-ra pro-por-cio-nar retro-compatibilidad
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-[][]$\OT1/cmtt/m/n/9 http : / / www . datastax . com / docs / 1 . 1 / ddl / col
-umn _ family #
- []
-
-[25]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/transformation.te
-x" [26] [27]
-Overfull \hbox (145.56912pt too wide) in paragraph at lines 75--75
-[]    \OT1/cmtt/m/n/9 guard: ((""+attribute.qualifiedName).contains("Data::") a
-nd attribute.type.isKindOf(UML!PrimitiveType))[] 
- []
-
-
-Overfull \hbox (13.27066pt too wide) in paragraph at lines 75--75
-[]        \OT1/cmtt/m/n/9 if(attribute.qualifiedName=="Data::"+cfamily.name+"::
-"+attribute.name){[] 
- []
-
-
-Overfull \hbox (88.86978pt too wide) in paragraph at lines 75--75
-[]            \OT1/cmtt/m/n/9 //5.5 Attribute with primitive type transformatio
-n->Attributes with upper bound = 1[] 
- []
-
-
-Overfull \hbox (88.86978pt too wide) in paragraph at lines 75--75
-[]            \OT1/cmtt/m/n/9 //5.5 Attribute with primitive type transformatio
-n->Attributes with upper bound > 1[] 
- []
-
-[28]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/casoEstudio.tex"
-[29]
-LaTeX Font Info:    Try loading font information for U+lasy on input line 13.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [30])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2m/sumario.tex"))
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/application.tex"
-[31] [32
-
-]
-Cap\'{\i }tulo 4.
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc4")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/introduccion.tex"
-[33
-
-]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/m2t.tex" [34]
-Overfull \hbox (225.89319pt too wide) in paragraph at lines 56--56
-[]\OT1/cmtt/m/n/9 WITH replication = {'class':'[%=keyspace.replicaPlacementStra
-tegy%]', 'replication_factor':[%=keyspace.replicationFactor%]};[] 
- []
-
-) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/m2ttwissandra.tex"
-[35]
-File: m2t/images/modeloTwissandra.eps Graphic file (type eps)
- <m2t/images/modeloTwissandra.eps>
-Overfull \hbox (3.82077pt too wide) in paragraph at lines 81--81
-[]       \OT1/cmtt/m/n/9 PRIMARY KEY((FollowingRelationship_FollowingRelationsh
-ip_ID),username)[] 
- []
-
-
-Overfull \hbox (3.82077pt too wide) in paragraph at lines 81--81
-[]       \OT1/cmtt/m/n/9 PRIMARY KEY((FollowingRelationship_FollowingRelationsh
-ip_ID),username)[] 
- []
-
-) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/pruebas.tex" [36])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\m2t/sumario.tex"))
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/desc.tex" [37]
-[38]
-Cap\'{\i }tulo 5.
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.mtc5")
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/sumario.tex" [39
-
-
-])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/experienciaPersonal.t
-ex" [40])
-("C:\Program Files\Epsilon\workspace\IgnacioSañudo\final/trabajosFuturos.tex")
-) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\config/bibliography.tex"
-[41] [42
-
-]) ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.bbl"
-[43
-
-])
-Package minitoc Info: I0009
-(minitoc)             Listing minitoc auxiliary files. 
-(minitoc)             Creating the pfc.maf file.
-
-
-Package minitoc(hints) Warning: W0024
-(minitoc(hints))                Some hints have been written 
-(minitoc(hints))                in the pfc.log file.
-
-[44] ("C:\Program Files\Epsilon\workspace\IgnacioSañudo\pfc.aux")
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
-Here is how much of TeX's memory you used:
- 6873 strings out of 493922
- 103735 string characters out of 3147305
- 184535 words of memory out of 3000000
- 9699 multiletter control sequences out of 15000+200000
- 16505 words of font info for 63 fonts, out of 3000000 for 9000
- 842 hyphenation exceptions out of 8191
- 36i,12n,43p,1389b,422s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on pfc.dvi (60 pages, 186748 bytes).
+LaTeX Warning: Reference `back:fig:gra

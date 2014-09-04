@@ -8,9 +8,11 @@
 
 \cdpchapter{Resumen}
 
-Ciertas aplicaciones de alta demanda, accesibles a través de internet, como Twitter o Amazon, poseen requisitos muy particulares que resultan complejos de satisfacer utilizando los tradicionales sistemas gestores de bases de datos relacionales. Para resolver este problema, han ido apareciendo en los últimos años una serie de tecnologías de almacenamiento y recuperación de datos conocidas como NoSQL. No obstante, dichas tecnologías han aparecido a nivel de implementación, no siendo posible aún construir sistemas no relacionales desde modelos conceptuales de alto nivel, tal como se ha venido realizando para el caso relacional desde hace décadas.
+En la última década, ciertas aplicaciones surgidas a raíz de la expansión de internet, tales como Twitter o Amazon, han impuesto una serie de nuevos requisitos, como altas disponibilidades o tiempo de respuestas concretos para situaciones muy particulares, que no pueden ser satisfechos mediante el uso de los gestores de bases de datos relacionales tradicionales. Con objeto de satisfacer estos nuevos requisitos han ido apareciendo una serie de nuevas tecnologías de almacenamiento, denominadas genéricamente NoSQL (\emph{Not Only SQL}). Dichas tecnologías sacrifican ciertos aspectos de los sistemas relaciones tradicionales, como la ausencia de redundancia, con el objetivo de mejorar otros aspectos, como el tiempo de consulta o de escritura de un datos.
 
-El objetivo de este proyecto es crear haciendo uso de las modernas tecnologías de desarrollo software dirigido por modelos, una herramienta que permita transformar un modelo de datos conceptual de alto nivel expresado en UML 2.0 en una implementación para un sistema de almacenamiento de datos NoSQL. Concretamente se utilizará el sistema de datos basado en columnas llamado Cassandra.
+Hasta ahora las tecnologías NoSQL han proporcionado sistemas gestores de almacenamiento, lo que permite trabajar exclusivamente con ellos a nivel de implementación. Por tanto, no existen actualmente procesos de desarrollo bien definidos que permitan generar implementaciones de modelos de datos NoSQL a partir de modelos conceptuales de alto nivel. 
+
+El objetivo de este proyecto es crear, haciendo uso de modernas técnicas de desarrollo software dirigido por modelos, una herramienta que permita transformar un modelo de datos conceptual de alto nivel expresado en UML 2.0 en una implementación para Cassandra, un sistema de almacenamiento de datos NoSQL basado en columnas.
 
 \paragraph{Palabras Clave} \ \\
 

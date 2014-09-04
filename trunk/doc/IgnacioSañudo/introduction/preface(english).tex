@@ -8,11 +8,11 @@
 
 \cdpchapter{Preface}
 
-Certain high demand applications accessible via internet like Twitter or Amazon, have very specific requirements that are complex to meet using traditional relational databases.
-To resolve this problem have appeared in the last few years technologies of data storage known as NoSQL.
-However, these technologies have appeared at the implementation level, still not possible to build non-relational systems from high-level conceptual models, as has been done for relational systems for decades.
+Several applications, such as Twitter or Amazon, which have emerged as a consequence of the massive internet adoption, have starting to demand certain requirements, such as very high availability or reduced response times for particular situations. These new requirements can be hardly satisfied using traditional relational data management systems. Thus, new data storage systems, named NoSQL (\emph{Not Only SQL}) systems. These systems resign to certain properties of relational systems, such as being redundancy-free, in order to fulfill these new challenging requirements. 
 
-The objective of this project is create a tool using modern techniques known as Model-Driven Development, this tool must transform a conceptual data model expressed in high-level (UML 2.0) in a data repository for a NoSQL storage system data. Specifically, we will use the data system based on columns called Cassandra.
+Until now, several NoSQL data management systems have been released. This allows developers can work with NoSQL technologies at the implementation level, but they lack of development processes that assist them on the mapping of a data conceptual model into a NoSQL implementation. 
+
+Thus, the goal of this project is to develop a tool that, using model-driven technologies, accepts as input a conceptual data model, described in UML 2.0, and automatically generates an implementation of this data model for Cassandra, a NoSQL column-oriented data store system.
 
 \paragraph{Keywords} \ \\
 

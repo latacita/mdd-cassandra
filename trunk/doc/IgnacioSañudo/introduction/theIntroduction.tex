@@ -6,27 +6,81 @@
 %% Introducción                                                     %%
 %%==================================================================%%
 
-El término conocido como modelado ha sido asociado a las bases de datos y a la gestión de datos durante décadas.
-El modelo entidad-relación (ER) y el conjunto de reglas para la transformación de un modelo ER en un esquema relacional es un ejemplo bien conocido y utilizado.
-Recientemente las nuevas tecnologías de gestión de bases datos, también conocidas como tecnologías \emph{NoSQL}, han surgido como respuesta a los nuevos retos y demandas de las aplicaciones de internet modernas.
-Estas tecnologías se han centrado en el nivel de aplicación, al carecer de un soporte de modelado adecuado.
-Algunas de las aplicaciones de internet de uso extendido y masificado, como las redes sociales (por ejemplo, Twitter) o tiendas online (por ejemplo, Amazon), están generando nuevos desafíos en materia de almacenamiento y gestión de datos. Por ejemplo, la disponibilidad se está convirtiendo en un aspecto critico en estos sistemas, ya que una caída del sistema puede generar pérdidas multimillonarias a estas empresas. Además, estas aplicaciones tienen que mantener su funcionalidad ante las peticiones de una gran cantidad de usuarios, en los que estos usuarios ejecutan operaciones muy similares (por ejemplo, publicar un mensaje en una red social después de un evento popular, como la final de la Super Bowl o unas elecciones a la presidencia).
+La irrupción de internet en diferentes ámbitos de nuestra vida diaria ha dado origen a diversas aplicaciones, tales como \emph{Amazon}, \emph{iCloud}, \emph{Skype} o \emph{Twitter}, las cuales, poco a poco se han ido incorporando de una manera u otra a nuestra rutina diaria. Hoy en día, por ejemplo, se mide el impacto de un evento a partir de su repercusión en Twitter, las familias dispersas geográficamente se comunican a través de Skype y como indicador del éxito de una nueva canción se usa su número de descargas desde Amazon. 
 
-En este contexto las bases de datos relacionales han resultado ser insuficientes de cara a satisfacer estas nuevas exigencias. Las tecnologías NoSQL (Not Only SQL) (\cite{stonebraker:2010}) tienen como objetivo hacer frente a estas nuevas exigencias. NoSQL sacrifica algunas de las ventajas bien conocidas de los sistemas de gestión de bases de datos relacionales, como la integridad o la manipulación de transacciones, con el fin de proporcionar una mejor escalabilidad y un mayor rendimiento. Siguiendo esta idea, varios sistemas NoSQL \footnote{\url{http://nosql-database.org/}}, como \emph{Cassandra} (\cite{lakshman:2010}), HBase (\cite{george:2011}) o MongoDB (\cite{plugge:2010}), han aparecido en los últimos años.
+Dichas aplicaciones, por sus peculiaridades propias y por el hecho de estar disponibles globalmente a través de internet, presentan ciertos requisitos, normalmente no funcionales, que son, en cierto modo, muy diferentes de los requisitos que presentaban las aplicaciones que se habían venido desarrollando hasta ahora. 
 
-Sin embargo, las tecnologías NoSQL no están aún integradas en los procesos de desarrollo software, su integración puede ayudar a los ingenieros software en la construcción de repositorios NoSQL desde las primeras etapas del ciclo de vida del software hasta la finalización del producto. El modelado de datos de un sistema NoSQL como Cassandra dista del modelado de las bases de datos relacionales. Cassandra por ejemplo, utiliza como unidad básica las columns cuyo equivalente sería el campo en el modelo relacional o como unidad de almacenamiento de estas columns utiliza las column families como tablas etc.. Este trabajo tiene como objetivo contribuir con una herramienta para superar esta barrera, proporcionando un generador de código que genera repositorios de datos NoSQL.
+Por ejemplo, la disponibilidad (\emph{availability}, en inglés) se está convirtiendo en un aspecto critico en estos sistemas, ya que una caída del sistema puede generar pérdidas multimillonarias. Por ejemplo, las pérdidas por interrupción del servicio de Amazon se estiman en más de 60.000\$~\cite{forbes:amazon}. En otros casos, como por ejemplo Twitter, la aplicación debe soportar una alta carga de usuarios concurrentes, donde estos usuarios realizan acciones muy simples y sencillas, que apenas precisan de soporte transaccional.  
 
-Por lo tanto, este trabajo se centrará en la creación de un generador de código que transforma un modelo de datos desarrollado en UML, en código para la creación de un repositorio de datos NoSQL. Para este trabajo, nos centraremos en los sistemas orientados a columnas. Las razones son las siguientes: (1) los sistemas orientados a columnas son sistemas de propósito general, mientras que otros sistemas NoSQL, tales como, las bases de datos documentales que como su propio nombre indica están orientadas a la gestión de documentos, este tipo de bases de datos son más específicos a ese dominio; (2) los estudios cursados en Ingeniería Informática nos han proporcionado experiencia previa en el manejo de estos sistemas. Más concretamente, hemos decidido utilizar Cassandra como sistema NoSQL orientado a columnas debido a su creciente popularidad. Se ha decidido que el lenguaje de modelado utilizado en este proyecto de fin de carrera sea \imp{UML 2.0} por varias razones: (1) es un estándar de la OMG (Object Management Group), (2) es un lenguaje de modelado conocido y utilizado durante la carrera; y, (3) UML tiene un gran número de herramientas que dan soporte de cara al desarrollo.
+Los sistemas gestores de bases de datos relacionales suelen presentar dificultades a la hora de satisfacer esta clase de nuevos requisitos. Por tanto, con el objetivo de adecuarse a estas nuevas aplicaciones, han ido apareciendo en los últimos años una serie de nuevas tecnologías para la gestión y almacenamiento de datos que se han ido denominando comúnmente como NoSQL (\emph{Not Only SQL})~\cite{stonebraker:2010}. 
 
+Las tecnologías NoSQL sacrifican algunas de las ventajas bien conocidas de los sistemas de gestión de bases de datos relacionales, como la integridad de datos o el soporte transaccional, con el fin de proporcionar una mejor escalabilidad y un mayor rendimiento. Siguiendo esta idea, varios sistemas NoSQL, como \emph{Cassandra}~\cite{lakshman:2010}, HBase~\cite{george:2011}) o MongoDB~\cite{plugge:2010}, han aparecido en los últimos años.
 
-Para realizar este generador de código se utilizan una serie de técnicas de transformación entre modelos conocidas como \emph{Desarrollo Dirigido por Modelos} (MDD). \imp{MDD} se puede definir como un enfoque de la Ingeniería del software y de la Ingeniería dirigida por modelos (MDE) que utiliza el modelo para crear un producto. ¿Y que es un modelo?. Un modelo se puede entender como la descripción o representación de un sistema en un lenguaje bien definido.
-Para entender lo que representa un modelo dentro de MDE hay que saber previamente lo que es un meta-modelo. Un meta-modelo es un modelo usado para especificar un lenguaje, básicamente describe las características del lenguaje. Por lo tanto un modelo se puede entender como la instancia de un meta-modelo. Estos conceptos son ampliados en siguientes secciones.
+Estas tecnologías han ido apareciendo hasta ahora en el nivel de aplicación. Es decir, actualmente se dispone de sistemas gestores de datos que dan soporte a estas nuevas tecnologías NoSQL. Sin embargo, las tecnologías NoSQL no están aún adecuadamente integradas en procesos de desarrollo software. Es decir, los ingenieros software no disponen de procesos bien definidos para generar una implementación NoSQL de un modelo de datos de alto nivel. 
 
-El resultado de la utilización del desarrollo dirigido por modelos es traducido en reducción de costes debido a que el recurso humano requerido es menor, un aumento de la productividad y reutilización de componentes, además se puede aumentar el nivel de abstracción a la hora de realizar el diseño de un software.
+Cabe destacar que, por contra, estos procesos bien definidos sí existen en el caso de los sistemas relacionales, donde han estado disponible desde hace décadas. El ejemplo más conocido sea quizás el proceso de transformación de modelos entidad-relación en implementaciones relaciones~\cite{elsmari:2010}.
+ 
+Dentro del Departamento de Ingeniería Informática y Electrónica de la Universidad de Cantabria, varios profesores han definido una serie de reglas para transformar modelos conceptuales de datos, expresados en UML 2.0~\cite{olive:2007}, en implementaciones para Cassandra~\cite{lakshman:2010}, un sistema gestor de datos NoSQL basado en columnas. 
 
-En resumen la utilización de modelos UML respecto a modelos especificados en Cassandra a la hora de crear una base de datos no relacional proporciona una abstracción para aquellos desarrolladores que no estén muy familiarizados con el modelado de bases de datos no relacionales. La utilización de modelos diseñados en UML proporciona las siguientes ventajas: (1) UML es un lenguaje de modelado bien conocido por toda la comunidad. (2) La automatización de estos procesos nos permite crear software más rápido, más fiable y de mayor calidad lo que nos lleva a mantener buenas prácticas. En definitiva este trabajo pretende contribuir a satisfacer las carencias y virtudes citadas, proporcionando una herramienta que bajo las bases de un proceso de transformación dirigido por modelos, transforma modelos UML y genera key spaces para sistemas NoSQL orientado a columnas. Esperamos que esto permita a los equipos de desarrollo ahorrar esfuerzos y, por lo tanto, reducir costes.
+El objetivo de este presente Proyecto Fin de Carrera es el de construir una herramienta o generador de código que permita automatizar dichas reglas de transformación, utilizando para ello técnicas de desarrollo software dirigido por modelos~\cite{brambilla:2012}. Las siguientes secciones describen una serie de conceptos sobre las técnicas de desarrollo software dirigido por modelos que son necesarios para comprender la metodología de trabajo seguida en este proyecto, la cual se describe al final de este capítulo.
 
-En las siguientes secciones se desarrollan los siguientes apartados: El apartado 1.2 expande información sobre la Ingeniería dirigida por modelos y el Desarrollo Dirigido por Modelos. El apartado 1.3 presenta la motivación y objetivos del proyecto. Finalmente el apartado 1.4 describe la estructura que tendrá el documento presente.
+%%=======================================================================================%%
+%% NOTA(Pablo): Esto actualmente sobra                                                   %%
+%%=======================================================================================%%
+%%
+%% Por lo tanto, este trabajo se centrará en la creación de un generador de código que 
+%% transforma un modelo de datos desarrollado en UML, en código para la creación de un 
+%% repositorio de datos NoSQL. Para este trabajo, nos centraremos en los sistemas ç
+%% orientados a columnas. Las razones son las siguientes: (1) los sistemas orientados a 
+%% columnas son sistemas de propósito general, mientras que otros sistemas NoSQL, 
+%% tales como, las bases de datos documentales que como su propio nombre indica están 
+%% orientadas a la gestión de documentos, este tipo de bases de datos son más 
+%% específicos a ese dominio; (2) los estudios cursados en Ingeniería Informática nos 
+%% han proporcionado experiencia previa en el manejo de estos sistemas. 
+%% Más concretamente, hemos decidido utilizar Cassandra como sistema NoSQL orientado a 
+%% columnas debido a su creciente popularidad. Se ha decidido que el lenguaje de 
+%% modelado utilizado en este proyecto de fin de carrera sea \imp{UML 2.0} por varias
+%% razones: (1) es un estándar de la OMG (Object Management Group), (2) es un lenguaje 
+%% de modelado conocido y utilizado durante la carrera; y, (3) UML tiene un gran número
+%% de herramientas que dan soporte de cara al desarrollo.
+%%
+%%=======================================================================================%%
+
+%%=======================================================================================%%
+%% NOTA(Pablo): Esto mejor en los antecedente
+%%=======================================================================================%%
+%% Para realizar este generador de código se utilizan una serie de técnicas de 
+%% transformación entre modelos conocidas como \emph{Desarrollo Dirigido por Modelos} 
+%% (MDD). \imp{MDD} se puede definir como un enfoque de la Ingeniería del software y de 
+%% la Ingeniería dirigida por modelos (MDE) que utiliza el modelo para crear un 
+%% producto. ¿Y que es un modelo?. Un modelo se puede entender como la descripción o
+%% representación de un sistema en un lenguaje bien definido.
+%%
+%% Para entender lo que representa un modelo dentro de MDE hay que saber previamente 
+%% lo que es un meta-modelo. Un meta-modelo es un modelo usado para especificar un 
+%% lenguaje, básicamente describe las características del lenguaje. Por lo tanto un 
+%% modelo se puede entender como la instancia de un meta-modelo. Estos conceptos son 
+%% ampliados en siguientes secciones.
+%% 
+%% El resultado de la utilización del desarrollo dirigido por modelos es traducido en
+%% reducción de costes debido a que el recurso humano requerido es menor, un aumento 
+%% de la productividad y reutilización de componentes, además se puede aumentar 
+%% el nivel de abstracción a la hora de realizar el diseño de un software.
+
+%% En resumen la utilización de modelos UML respecto a modelos especificados en Cassandra 
+%% a la hora de crear una base de datos no relacional proporciona una abstracción para
+%% aquellos desarrolladores que no estén muy familiarizados con el modelado de 
+%% bases de datos no relacionales. La utilización de modelos diseñados en UML 
+%% proporciona las siguientes ventajas: (1) UML es un lenguaje de modelado bien conocido 
+%% por toda la comunidad. (2) La automatización de estos procesos nos permite crear 
+%% software más rápido, más fiable y de mayor calidad lo que nos lleva a mantener buenas
+%% prácticas.
+%% En definitiva este trabajo pretende contribuir a satisfacer las carencias y virtudes
+%% citadas, proporcionando una herramienta que bajo las bases de un proceso de 
+%%  transformación dirigido por modelos, transforma modelos UML y genera key spaces para 
+%% sistemas NoSQL orientado a columnas. Esperamos que esto permita a los equipos de 
+%% desarrollo ahorrar esfuerzos y, por lo tanto, reducir costes.
+%%
 
 
 

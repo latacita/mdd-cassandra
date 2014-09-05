@@ -6,17 +6,72 @@
 %% Memoria del Proyecto Fin de Carrera                              %%
 %% Background/EMF                                                   %%
 %===================================================================%%
-Para comenzar el desarrollo del proyecto bajo el paradigma del desarrollo software dirigido por modelos necesitamos definir que lenguajes de modelado vamos a utilizar. En el capítulo anterior comentábamos que es necesario definir el lenguaje de modelado que utilizara Cassandra para ello usaremos EMF. Eclipse Modeling Framework (EMF) (\cite{dave:2008}) es un framework de modelado que nos proporciona la base para la elaboración de lenguajes de modelado. Para la creación de meta-modelos EMF (\cite{kolovos:2014}) utiliza dos modelos de meta-datos: \emph{Ecore} y \emph{Genmodel}. Ecore contiene la información sobre las clases que se han definido. Genmodel contiene información adicional para la generación del código, por ejemplo la ruta y la información del archivo. Genmodel también contiene atributos que sirven de control a la hora de generar el código, encontramos los siguientes parámetros de control:
-\begin{enumerate}
-\item EClass: representa una clase, con cero o más atributos y cero o más referencias.
-\item EAttribute: representa un atributo que tiene un nombre y un tipo.
-\item EReference: representa un extremo de una asociación entre dos clases.
-\item EDataType: representa el tipo de un atributo, por ejemplo, int, float.
-\end{enumerate}
-Estos atributos nos servirán a la hora de crear las reglas de transformación entre modelos UML y modelos Cassandra.
 
-Utilizando EMF se pueden crear meta-modelos de forma gráfica muy similar a los diagramas de clases en UML.
-EMF permite crear un meta-modelo a través de diferentes medios, por ejemplo, XMI, anotaciones Java, XML o UML. Además EMF proporciona un framework para almacenar la información del modelo.
-Un ejemplo sencillo de la utilidad de EMF es el siguiente: Imaginemos que deseamos construir una aplicación para manipular mensajes escritos en XML. El primer paso que daríamos sería empezar definiendo el schema del mensaje sin embargo con EMF se puede trabajar ignorando este nivel. Con EMF podemos crear plugins que generen por ejemplo un diagrama de clases UML a partir de este mensaje XML o directamente generar el código Java que implemente las clases del mensaje XML.
+%%======================================================================%%
+%% NOTA(Pablo): Esto es paja, hay que ir un poco más directo al grano   %%
+%%======================================================================%%
+%% 
+%% Para comenzar el desarrollo del proyecto bajo el paradigma del 
+%% desarrollo software dirigido por modelos necesitamos definir que 
+%% lenguajes de modelado vamos a utilizar. En el capítulo anterior 
+%% comentábamos que es necesario definir el lenguaje de modelado que 
+%% utilizara Cassandra para ello usaremos EMF. 
 
+Eclipse Modeling Framework (EMF)~\cite{dave:2008} es un framework de modelado que nos proporciona la base para la elaboración de lenguajes de modelado. Para ello proporciona un lenguaje de metamodelado denominado Ecore, que puede considerarse un subconjunto de los diagramas de clase UML. Por ello, utilizando EMF se pueden crear metamodelos de forma gráfica muy similar a los diagramas de clases en UML.
+
+%%================================================================================%%
+%% NOTA(Pablo): Volver a poner el metamodelo del grafo del capítulo anterior como %% 
+%%              decir que viene del capítulo anterior y no describirlo mucho      %%
+%%================================================================================%%
+
+%%================================================================================%%
+%% NOTA(Pablo): El genmodel en realidad no se utiliza en todo el proyecto,        %%
+%%              por lo que no es necesario describirlo                            %% 
+%%================================================================================%%
+%% Para la creación de meta-modelos EMF (\cite{kolovos:2014}) utiliza dos modelos 
+%% de meta-datos: \emph{Ecore} y \emph{Genmodel}. Ecore contiene la información 
+%% sobre las clases que se han definido. Genmodel contiene información adicional 
+%% para la generación del código, por ejemplo la ruta y la información del archivo. 
+%% Genmodel también contiene atributos que sirven de control a la hora de generar 
+%% el código, encontramos los siguientes parámetros de control:
+%% \begin{enumerate}
+%% \item EClass: representa una clase, con cero o más atributos y cero o más 
+%% referencias.
+%% \item EAttribute: representa un atributo que tiene un nombre y un tipo.
+%% \item EReference: representa un extremo de una asociación entre dos clases.
+%% \item EDataType: representa el tipo de un atributo, por ejemplo, int, float.
+%% 
+%% \end{enumerate}
+%% Estos atributos nos servirán a la hora de crear las reglas de transformación entre 
+%% modelos UML y modelos Cassandra.
+
+%%================================================================================%%
+%% NOTA(Pablo): Esto es paja                                                      %%
+%%================================================================================%%
+%%
+%% EMF permite crear un meta-modelo a través de diferentes medios, por ejemplo, 
+%% XMI,anotaciones Java, XML o UML. Además EMF proporciona un framework para 
+%% almacenar la información del modelo.
+%%
+%%================================================================================%%
+
+%%================================================================================%%
+%% NOTA(Pablo): Esto no aporta nada al proyecto, así que se elimina
+%%================================================================================%%
+%% 
+%% Un ejemplo sencillo de la utilidad de EMF es el siguiente: Imaginemos que 
+%% deseamos construir una aplicación para manipular mensajes escritos en XML. El 
+%% primer paso que daríamos sería empezar definiendo el schema del mensaje sin 
+%% embargo con EMF se puede trabajar ignorando este nivel. Con EMF podemos crear 
+%% plugins que generen por ejemplo un diagrama de clases UML a partir de este 
+%% mensaje XML o directamente generar el código Java que implemente las clases 
+%% del mensaje XML.
+%% 
+%%================================================================================%%
+
+Una vez que hemos definido un metamodelo en Ecore, es posible crear instancias del mismo, aún no disponiendo de sintaxis concreta para el mismo. Además, EMF permite generar una serie de clases Java para la manipulación de dicho modelo, un esquema XML para poder persistir los modelos creados y las facilidades necesarias para poder crear una instancia de dicho esquema para un modelo dado. 
+
+Con el paso de los años, EMF y Ecore se han convertido en los estándares de facto para la ingeniería software dirigida por modelos. De esta forma, cada nueva herramienta de modelado que ha ido surgiendo, no sólo es compatible con Ecore, sino que exige que los modelos que manipula posean un metamodelo definido en Ecore. Por ejemplo, prácticamente la totalidad de los lenguajes de transformación de modelos sólo aceptan como entrada y generan como salida modelos conformes a metamodelos definidos en Ecore. En adelante, nos referiremos a los modelos conformes a metamodelos definidos en Ecore simplemente como modelos Ecore, por simplicidad.  
+
+Dentro de este Proyecto Fin de Carrera, Ecore se ha utilizado para definir un metamodelo para Cassandra, que sirva como representación intermedia del código Cassandra y que facilite su posterior generación.
 

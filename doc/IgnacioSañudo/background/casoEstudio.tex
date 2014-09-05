@@ -14,10 +14,27 @@
   \label{back:fig:twissandra}
 \end{figure}
 
-En esta sección se presenta el caso de estudio que se analizará lo largo de este proyecto. El caso de estudio trata sobre \emph{Twissandra}, Twissandra es un proyecto creado para aprender como utilizar Cassandra. El modelo UML correspondiente a Twissandra se puede ver en la figura~\ref{back:fig:twissandra}.
-Twissandra es una versión simplificada de Twitter, que es a menudo utilizada para demostrar las capacidades de Cassandra. Twitter es una red social de microblogging que actualmente está muy extendida, Twitter permite escribir a los usuarios pequeños mensajes de texto, los usuarios registrados pueden publicar tweets. Un tweet es simplemente un texto con un límite de 140 caracteres publicado a una hora determinada. La colección de todos los tweets publicados por un usuario cronológicamente ordenados, están asignados a su \imp{Userline}.
-Cada usuario registrado en Twitter puede seguir a otros usuarios registrados. Cuando decimos que Pedro sigue a María significa que Pedro está interesado en saber qué publica María en su tablón, por lo que Pedro recibirá todos los mensajes que publique María en su tablón. Así, cada usuario registrado tiene también un \imp{timeline} que vendría a ser la colección de todos los tweets de las personas a las que sigue ordenadas cronológicamente.
+Esta sección presenta \emph{Twissandra}, el caso de estudio que se utilizará lo largo de este proyecto. Twissandra es un proyecto creado para aprender como utilizar Cassandra. El modelo UML correspondiente a Twissandra se puede ver en la figura~\ref{back:fig:twissandra}. Twissandra es una versión simplificada de Twitter.
 
-Los principales casos de uso de un sistema de este tipo son: (1) obtener el Timeline de un usuario determinado; (2) obtener el Userline de un usuario, (3) obtener la lista de usuarios que un usuario está siguiendo; y (4) obtener la lista de usuarios que están siguiendo a un usuario específico. Estas dos últimas listas deben ser ordenadas cronológicamente.
+Twitter\footnote{} es una red social de microblogging, actualmente está muy extendida, que permite escribir a sus usuarios pequeños mensajes de texto, denominados \emph{tweets}. Un \emph{tweet} es simplemente un texto con un límite de 140 caracteres publicado a una hora determinada. La colección de todos los tweets publicados por un usuario cronológicamente ordenados determinan su \emph{userline}.
 
-Como vemos \imp{Twissandra} es una versión simplificada de Twitter sin embargo se considera un buen ejemplo a analizar ya que Twitter goza de gran popularidad y es una de las redes sociales más usadas del mundo. Una vez entendido esto en los siguientes capítulos se procede a detallar el proceso de creación de un repositorio de datos en Cassandra que cubra los casos de usos citados anteriormente describiendo los procesos de transformación entre modelos que se realizaran así como la generación de código del repositorio de datos en Twissandra. 
+Cada usuario registrado en Twitter puede seguir a otros usuarios registrados. Cuando decimos, por ejemplo, que Pedro sigue a María significa que Pedro recibirá en su cuenta todos los mensajes que publique María. En este caso, se dice que Pedro es un \emph{follower} de María. De esta forma, cada usuario tiene asociado un \emph{timeline} que no es más que la colección de todos los \emph{tweets} publicados por las personas a las que sigue ordenados cronológicamente, es decir, por fecha de publicación. 
+
+Los principales casos de uso de \emph{Twissandra} son: 
+
+\begin{enumerate}
+    \item Obtener el \emph{timeline} de un usuario determinado. 
+    \item Obtener el \emph{userline} de un usuario determinado. 
+    \item Obtener la lista de usuarios que un usuario está siguiendo.  
+    \item Obtener la lista de usuarios que están siguiendo a un usuario específico. 
+\end{enumerate}
+
+Las dos últimas listas deben se deben devolver ordenadas cronológicamente.
+
+%%========================================================================================%%
+%% NOTA(Pablo): Esta justificación es débil, así que mejor quitarla                       %%
+%%========================================================================================%%
+
+Como vemos \imp{Twissandra} es una versión simplificada de Twitter. Sin embargo, se considera un buen ejemplo a analizar ya que Twitter goza de gran popularidad y es una de las redes sociales más usadas del mundo. 
+
+Una vez entendido esto en los siguientes capítulos se procede a detallar el proceso de creación de un repositorio de datos en Cassandra que cubra los casos de usos citados anteriormente describiendo los procesos de transformación entre modelos que se realizaran así como la generación de código del repositorio de datos en Twissandra.

@@ -10,33 +10,93 @@
 %[chalmers]
 %http://www.acens.com/wp-content/images/2014/02/bbdd-nosql-wp-acens.pdf
 %http://www.strozzi.it/cgi-bin/CSA/tw7/I/en_US/NoSQL/Philosophy%20of%20NoSQL
-Esta sección realiza una breve descripción sobre \imp{Cassandra} (\cite{lith:2010}), desde su historia, arquitectura, sintaxis y otras características que explican como es el sistema de bases de datos no relacional escogido para este proyecto de fin de carrera.
+
+Esta sección realiza una breve descripción sobre \imp{Cassandra}~\cite{lith:2010}, un sistema gestor de datos NoSQL basado en columnas. Describiremos brevemente su modelo de datos y la sintaxis de su lenguaje de gestión de datos. 
+
+%% Por último, justificaremos el por qué de la elección de Cassandra dentro de este Proyecto Fin de Carrera.
 
 %http://books.google.es/books?id=tv5iO9MnObUC&printsec=frontcover&dq=nosql+books&hl=es&sa=X&ei=XHjrU7mWFpGg7Abk6oCIDw&ved=0CDoQ6AEwAA#v=onepage&q=nosql%20books&f=false
-Desde que nació \imp{SQL} en el año 1974 se ha convertido en el lenguaje de consultas utilizado por excelencia. En los últimos años ha surgido otra vertiente denominada NoSQL, esta vertiente surge por la necesidad de manejo de grandes volúmenes de información no estructurada, distribuida y accedida con la mayor rapidez posible.
-NoSQL es literalmente (como es evidente) la combinación de dos palabras: No y SQL, hoy en día este término se utiliza para denominar todas las bases de datos que no siguen los principios de los sistema de gestión de bases de datos relacionales tradicionales. Es usado en plataformas como Facebook o Twitter. Podemos encontrar varios tipos de bases de datos no relacionales, por ejemplo: Bases de datos documentales, bases de datos orientadas a columnas, orientadas a grafos ente otros.
+%%=====================================================================%%
+%% NOTA(Pablo): Esto es paja y se contradice en parte con lo que está  %%
+%%              escrito en la introducción, aparte de no aportar nada  %%
+%%              al proyecto en sí                                      %%
+%%=====================================================================%%
+%%
+%% Desde que nació \imp{SQL} en el año 1974, éste  se ha convertido en el lenguaje de
+%% consultas utilizado por excelencia. En los últimos años ha surgido otra vertiente
+%% denominada NoSQL, esta vertiente surge por la necesidad de manejo de grandes
+%% volúmenes de información no estructurada, distribuida y accedida con la mayor rapidez
+%% posible.
+%%
+%% NoSQL es literalmente (como es evidente) la combinación de dos palabras: No y SQL,
+%% hoy en día este término se utiliza para denominar todas las bases de datos que no
+%% siguen los principios de los sistema de gestión de bases de datos relacionales
+%% tradicionales. Es usado en plataformas como Facebook o Twitter. Podemos encontrar
+%% varios tipos de bases de datos no relacionales, por ejemplo: Bases de datos
+%% documentales, bases de datos orientadas a columnas, orientadas a grafos ente otros.
+%%
+%%=====================================================================%%
+Cassandra es un sistema gestor de datos NoSQL. En general, existen varias diferencias entre estos sistemas NoSQL y los tradicionales sistemas SQL (\emph{Structured Query Language})~\cite{}, que son:
 
-Existen varias diferencias entre estos sistemas NoSQL y sistemas SQL, las principales características de NoSQL que difieren de SQL son:
 \begin{enumerate}
-\item NoSQL no garantiza las propiedades \imp{ACID} (atomicidad, coherencia, aislamiento y durabilidad).
-\item No utiliza SQL como lenguaje de consultas. Algunas bases de datos no relacionales utilizan SQL como lenguaje de apoyo sin embargo la mayoría utilizan su propio lenguaje de consultas como por ejemplo Cassandra que utiliza CQL.
-\item No está permitido el uso de joins ya que al manejar grandes volúmenes de información una consulta con un join puede llegar a sobrecargar el sistema.
-\item Escalan horizontalmente y trabajan de manera distribuida por lo que la información puede estar en distintas maquinas y el añadir nodos mejora el rendimiento.
-\item Resuelven problemas de altos volúmenes de información
+    \item Los sistemas NoSQL no garantizan las propiedades \emph{ACID} (\emph{Atomicity, Consistency, Isolation y Durability}). Por ejemplo, en ciertos casos, Cassandra no garantiza la integridad de los datos, pudiendo contener datos incongruentes. Por ejemplo, una asignatura podría aparecer en la lista de materias cursadas por un alumno, pero dicho alumno podría no aparecer en la lista de alumnos de esa asignatura, lo que sería no consistente. Esto se debe a que sistemas como Cassandra introducen cierta redundancia para favorecer ciertos tipos de consultas.
+    \item Los sistemas NoSQL no utilizan SQL como lenguaje de consultas (de ahí su nombre). Algunos bases de datos NoSQL utilizan SQL como lenguaje de apoyo. Sin embargo, la mayoría utilizan su propio lenguaje de gestión de datos. Por ejemplo, Cassandra  utiliza CQL (\emph{Cassandra Query Language})~\cite{}.
+    \item Ciertos operadores de los sistemas relacionales, como los \emph{joins}, suelen eliminarse de estos sistemas, ya que al manejar grandes volúmenes de información pueden llegar a sobrecargar el sistema.
+    \item Escalan horizontalmente y trabajan de manera distribuida. De esta forma, se puede aumentar la capacidad o rendimiento del sistema simplemente añadiendo nuevos nodos.
 \end{enumerate}
 
-En este proyecto de fin de carrera se utiliza Cassandra como sistema de bases de datos no relacional. Apache Cassandra fue diseñado por Avinash Lakshman (uno de los creadores de Amazon's Dynamo) y Prashant Malik (Ingeniero de Facebook), en estos momentos se encuentra en producción para Facebook. Dentro del mundo de las bases de datos no relaciones Cassandra es considerada un híbrido de los sistemas orientados a columnas y las bases de datos basadas en clave-valor. Las basadas en clave-valor tienen como peculiaridad que almacenan los datos en forma de columna. Esto permite el acceso a los datos de forma rápida, básicamente, utilizan una tabla hash en la que existe una clave única y un puntero a un elemento de datos en particular.
-Los sistemas basados en clave-valor son aquellos que asocian los valores a una determinada clave esto permite la recuperación y escritura de información de forma muy rápida y eficiente.
+%%=====================================================================%%
+%% NOTA(Pablo): Esto es paja                                           %%
+%%=====================================================================%%
+%%
+%% Cassandra fue diseñado por Avinash Lakshman (uno de los creadores
+%% de Amazon's Dynamo) y Prashant Malik (Ingeniero de Facebook), en
+%% estos momentos se encuentra en producción para Facebook.
+%%
+%%=====================================================================%%
 
-Cassandra reúne las  tecnologías de sistemas distribuidos de Amazon Dynamo y el modelo de datos BigTable de Google. Por ejemplo, al igual que Dynamo, es consistente. Como BigTable, proporciona un modelo de datos basado en column families siendo considerado el sistema orientado a columnas más popular.
-Las bases de datos basadas en Cassandra son soluciones utilizadas cuando es necesaria escalabilidad y alta disponibilidad sin comprometer el rendimiento. Escalabilidad lineal y tolerancia a fallos o infraestructura en la nube lo convierten en la plataforma idónea para datos de misión critica. Además proporciona gran estabilidad en cuanto a la replicación de datos a través de múltiples datacenters, consiguiendo una menor latencia para sus usuarios y la tranquilidad de que no existan perdidas de datos ante caídas. Cassandra utiliza el lenguaje de consultas \imp{CQL (Cassandra Query Language)} con una sintaxis muy similar a SQL aunque mas limitado que este. Como herramienta de manipulación y administración de datos se utiliza \imp{DataStax OpsCenter} que ofrece una interfaz de usuario basada en navegador que sirve para la gestión y monitorización de los cluster Cassandra en una única terminal de administración.
+Dentro del mundo de las bases de datos no relaciones Cassandra es considerada
+un híbrido de los sistemas \emph{orientados a columnas} y las bases de datos \emph{basadas en clave-valor}. Los basados en columnas tienen como peculiaridad que almacenan los datos en forma de columna. Esto permite el acceso a los datos de forma rápida, básicamente, utilizan una tabla hash en la que existe una clave única y un puntero a un elemento de datos en particular. Los sistemas basados en clave-valor son aquellos que asocian los valores a una determinada clave esto permite la recuperación y escritura de información de forma muy rápida y eficiente.
+
+%%=====================================================================%%
+%% NOTA(Pablo): Hay que que poner una imagen que ilustre claramente
+%%              la diferencia entre ambos casos
+%%=====================================================================%%
+
+%%=====================================================================%%
+%% NOTA(Pablo): Esto es paja                                           %%
+%%=====================================================================%%
+%%
+%% Cassandra reúne las  tecnologías de sistemas distribuidos de
+%% Amazon Dynamo y el modelo de datos BigTable de Google. Por ejemplo,
+%% al igual que Dynamo, es consistente. Como BigTable, proporciona un
+%% modelo de datos basado en column families siendo considerado el
+%% sistema orientado a columnas más popular.
+%%
+%%=====================================================================%%
 
 %https://cassandra.apache.org/ http://www.datastax.com/documentation/cql/3.0/cql/ddl/ddl_intro_c.html
 
-A continuación se explican brevemente algunos términos que hay que tener en cuenta a la hora de trabajar con Cassandra.
+%%=====================================================================%%
+%% NOTA(Pablo): Aquí hay que poner una imagen que describa exactamente %%
+%%              cómo es el modelo de datos de Cassandra, y luego       %%
+%%              explicar cada elemento con relación al modelo          %%
+%%              Decribir el modelo sin hacer referencia a las bases de %%
+%%              datos relacionales.                                    %%
+%%=====================================================================%%
+
+A continuación se explican brevemente el modelo de datos en el cual se basa Cassandra.
 En Cassandra un \imp{keyspace} es el equivalente a un schema en los sistemas de bases de datos relacionales.
 El conocido término de tabla en las bases de datos relacionales tiene su equivalente en Cassandra llamado \imp{column family}, las column families se guardan en ficheros separados y son ordenadas por su key.
 Una \imp{columna} es la unidad de almacenamiento básica, está formada de tres campos: Nombre, valor y timestamp. El nombre y el valor se almacena como una matriz de bytes sin procesar y pueden ser de cualquier tamaño. Los tres valores anteriores son introducidos por el cliente, incluido el timestamp. Un ejemplo de la estructura de una column:
+
+%%=====================================================================%%
+%% NOTA(Pablo): Esta imagen hay que sustituirla por otra que se vea    %%
+%%              más clara, aunque si haces una en la cual se vea el    %%
+%%              modelo de datos de Cassandra, la                       %%
+%%=====================================================================%%
+
+
 \begin{table}[!hbt]
 \begin{center}
 \begin{tabular}{||l | c | r||}
@@ -61,8 +121,15 @@ Por lo tanto un keyspace puede contener varias column families y una column fami
 \end{figure}
 
 	
-En cuanto a la sintaxis del lenguaje \imp{CQL} es muy similar a \imp{SQL}, CQL contiene sintaxis ya conocida de SQL como \imp{INSERT}, \imp{DELETE}, \imp{UPDATE}, \imp{INSERT},  ...
+En cuanto a la sintaxis del lenguaje \imp{CQL} es muy similar a \imp{SQL}, CQL contiene sintaxis ya conocida de SQL como \imp{INSERT}, \imp{DELETE} o \imp{UPDATE}.
+
 La Figura~\ref{back:code:codigoCQL} refleja un ejemplo breve de código CQL ejecutable.
+
+%%=====================================================================%%
+%% NOTA(Pablo): Igual que antes, ponle números al código y luego       %%
+%%              lo comentas                                            %%
+%%=====================================================================%%
+
 
 \begin{figure}[!tb]
 \begin{center}
@@ -99,6 +166,36 @@ CREATE TABLE User(
 \label{back:code:codigoCQL}
 \end{figure}
 
-Conceptos relacionados con Cassandra son ampliados en el siguiente capitulo a la hora de definir el meta-modelo de Cassandra.
+%%=====================================================================%%
+%% NOTA(Pablo): En realidad esos conceptos deberías comentárlos aquí   %%
+%%=====================================================================%%
+%%
+%% Conceptos relacionados con Cassandra son ampliados en el siguiente 
+%% capitulo a la hora de definir el meta-modelo de Cassandra.
+%%
+%%=====================================================================%%
 
+%%=====================================================================%%
+%% NOTA(Pablo): Estaría bien poner algo de esto, pero si dice algo se  %%
+%%              debe justificar. Sino, mejor no ponerlo                %% 
+%%=====================================================================%%
+%% 
+%% Las bases de datos basadas en Cassandra se suelen utilizar cuando es 
+%% necesaria proporciona una buena escalabilidad y alta disponibilidad 
+%% sin comprometer el rendimiento. Además proporciona gran estabilidad 
+%% en cuanto a la replicación de datos a través de múltiples centros de 
+%% datos, consiguiendo una menor latencia para sus usuarios 
+%% y la tranquilidad de que no existan perdidas de datos ante caídas.
+%%
+%%=====================================================================%%
 
+%%=====================================================================%%
+%% NOTA(Pablo): En realidad esos conceptos deberías comentárlos aquí   %%
+%%=====================================================================%%
+%%
+%% Cassandra utiliza el lenguaje de consultas \imp{CQL (Cassandra Query Language)} con una sintaxis muy similar 
+%% a SQL aunque mas limitado que este. Como herramienta de manipulación y administración de datos se utiliza 
+%% \imp{DataStax OpsCenter} que ofrece una interfaz de usuario basada en navegador que sirve para la gestión 
+%% y monitorización de los cluster Cassandra en una única terminal de administración.
+%%
+%%=====================================================================%%

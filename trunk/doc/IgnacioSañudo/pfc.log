@@ -530,4 +530,146 @@ ne 66.
 
 [3]
 
-LaTeX Warning: Reference `back:fig:gra
+LaTeX Warning: Reference `back:fig:grafoMetamodelo' on page 4 undefined on inpu
+t line 175.
+
+File: background/images/grafoMetamodelo.eps Graphic file (type eps)
+<background/images/grafoMetamodelo.eps>
+
+LaTeX Warning: Reference `back:fig:metamodeloRed' on page 4 undefined on input 
+line 188.
+
+File: background/images/metamodeloRed.eps Graphic file (type eps)
+<background/images/metamodeloRed.eps> [4]
+
+LaTeX Warning: Reference `back:fig:ejGeneradorHTML' on page 5 undefined on inpu
+t line 204.
+
+File: background/images/ejGeneradorHTML.eps Graphic file (type eps)
+<background/images/ejGeneradorHTML.eps>)
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sañ
+udo\PFC\introduction/objetivos.tex"
+
+Package natbib Warning: Citation `uml:2010' on page 5 undefined on input line 3
+3.
+
+[5])
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sañ
+udo\PFC\introduction/roadmap.tex"))
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sañ
+udo\PFC\background/background.tex" [6]
+Cap\'{\i }tulo 2.
+Package minitoc Info: I0006
+(minitoc)             pfc.mtc2 is empty on input line 16.
+
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sañ
+udo\PFC\background/casoEstudio.tex"
+File: m2m/images/twissandra.eps Graphic file (type eps)
+ <m2m/images/twissandra.eps>
+
+LaTeX Warning: Reference `back:fig:twissandra' on page 7 undefined on input lin
+e 17.
+
+[7
+
+
+])
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sañ
+udo\PFC\background/EMF.tex"
+
+Package natbib Warning: Citation `dave:2008' on page 8 undefined on input line 
+9.
+
+
+Package natbib Warning: Citation `kolovos:2014' on page 8 undefined on input li
+ne 9.
+
+[8])
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sañ
+udo\PFC\background/epsilon.tex"
+
+Package natbib Warning: Citation `kolovos:2014' on page 9 undefined on input li
+ne 12.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
+(C:\UtilidadesEscritura\Miktex\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 15.
+
+(C:\UtilidadesEscritura\Miktex\tex\latex\base\omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 15.
+File: background/images/ejCasa.eps Graphic file (type eps)
+
+<background/images/ejCasa.eps>
+
+LaTeX Warning: Reference `back:fig:ejMetamodeloCasa' on page 9 undefined on inp
+ut line 26.
+
+
+LaTeX Warning: Reference `back:code:codigoEOL' on page 9 undefined on input lin
+e 27.
+
+[9] [10]
+
+LaTeX Warning: Reference `back:code:codigoETL' on page 11 undefined on input li
+ne 61.
+
+[11]
+
+Package natbib Warning: Citation `louis:2008' on page 12 undefined on input lin
+e 103.
+
+
+LaTeX Warning: Reference `back:code:codigoEGL' on page 12 undefined on input li
+ne 108.
+
+)
+("C:\Documents and Settings\Administrador\Mis documentos\My Dropbox\Alumnos\Sañ
+udo\PFC\background/cassandra.tex"
+
+Package natbib Warning: Citation `lith:2010' on page 12 undefined on input line
+ 13.
+
+[12] [13]
+
+LaTeX Warning: Reference `back:fig:estructuraCF' on page 14 undefined on input 
+line 55.
+
+
+LaTeX Warning: File `background/images/estructuraCF.eps' not found on input lin
+e 58.
+
+
+! LaTeX Error: File `background/images/estructuraCF.eps' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 ...width]{background/images/estructuraCF.eps}
+                                                   \\
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.58 ...width]{background/images/estructuraCF.eps}
+                                                   \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
+Here is how much of TeX's memory you used:
+ 6593 strings out of 495306
+ 98716 string characters out of 3181652
+ 178900 words of memory out of 3000000
+ 9434 multiletter control sequences out of 15000+200000
+ 15153 words of font info for 57 fonts, out of 3000000 for 9000
+ 15 hyphenation exceptions out of 8191
+ 36i,12n,43p,1106b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
+Output written on pfc.dvi (27 pages, 64632 bytes).

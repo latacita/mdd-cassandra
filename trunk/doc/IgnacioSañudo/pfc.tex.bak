@@ -85,7 +85,7 @@
 
 % Capítulo 2: Antecedentes
 %             MDD, Metamodelo, M2M, M2T, NoSQL, Cassandra
-% \input{background/background.tex}
+\input{background/background.tex}
 
 % Capítulo 3: M2M
 % \input{m2m/domain.tex}
